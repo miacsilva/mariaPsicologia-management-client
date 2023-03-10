@@ -13,7 +13,7 @@ function Home() {
     try {
       const response = await projectService.getAllBooks();
       console.log(response.data);
-      /* setBooks(response.data); */
+      setBooks(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -35,7 +35,8 @@ function Home() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="2000">
-            <img src={book1} className="d-block w-100" alt="book1" />
+            <img src={book1} className="d-block w-100" alt="" />
+            {/* <h1>{books[0].title}</h1> */}
           </div>
           <div className="carousel-item" data-bs-interval="2000">
             <img src={book2} className="d-block w-100" alt="book2" />

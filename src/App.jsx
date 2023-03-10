@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import MonthlySubject from "./components/MonthlySubject";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 //CSS
 
@@ -27,6 +29,8 @@ function App() {
         <Route path="/books" element={<Books />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/monthly-subject" element={<MonthlySubject />} />
       </Routes>
 
