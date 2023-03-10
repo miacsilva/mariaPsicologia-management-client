@@ -8,16 +8,26 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__left">
-        <NavLink className={"teste"} to="/">
+        <NavLink className={"navbar__navlinks"} to="/">
           Home
         </NavLink>
       </div>
       <div className="navbar__right">
-        <NavLink to="/about">About | </NavLink>
-        <NavLink to="/books">Books | </NavLink>
-        <NavLink to="/monthly-subject">Monthly Subject | </NavLink>
-        <NavLink to="/appointments">Appointments | </NavLink>
-        <NavLink to="/contacts">Contacts</NavLink>
+        <NavLink className={"navbar__navlinks"} to="/about">
+          About
+        </NavLink>
+        <NavLink className={"navbar__navlinks"} to="/books">
+          Books
+        </NavLink>
+        <NavLink className={"navbar__navlinks"} to="/monthly-subject">
+          Monthly Subject
+        </NavLink>
+        <NavLink className={"navbar__navlinks"} to="/appointments">
+          Appointments
+        </NavLink>
+        <NavLink className={"navbar__navlinks"} to="/contacts">
+          Contacts
+        </NavLink>
       </div>
     </nav>
   );

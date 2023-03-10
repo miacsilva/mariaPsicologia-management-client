@@ -1,11 +1,17 @@
+//PACKAGES
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+
+//COMPONENTS
 import projectService from "../services/project.service";
+import AboutHome from "../components/AboutHome";
 import book1 from "../assets/images/book1.jpg";
 import book2 from "../assets/images/book2.jpg";
 import fnac1 from "../assets/images/fnac1.jpg";
 import fnac2 from "../assets/images/fnac2.jpg";
+
+//CSS
 
 function Home() {
   const [books, setBooks] = useState([]);
@@ -103,6 +109,8 @@ function Home() {
           </button>
         </div>
       )}
+
+      <AboutHome />
     </>
   );
 }

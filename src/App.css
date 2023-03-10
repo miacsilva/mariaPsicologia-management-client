@@ -2,6 +2,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("./assets/images/linhasPrancheta.png");
 }
 
 /* ---------- END BODY ---------- */
@@ -10,16 +11,55 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: grey;
-  padding: 20px;
+  background-color: #6fa5a7;
+  padding: 15px;
+  border-bottom: 3px solid yellow;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+.navbar__navlinks {
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+  font-size: 14px;
 }
 
 /* ---------- END NAVBAR ---------- */
+/* ------------ ABOUT ------------ */
+.aboutSection {
+  display: flex;
+  justify-content: space-between;
+  background-color: #6fa5a7;
+  padding: 15px;
+  border-bottom: 3px solid yellow;
+  gap: 50px;
+  padding: 40px;
+  align-items: center;
+}
+
+.photoAbout {
+  width: 30vh;
+}
+
+/* ---------- END ABOUT ---------- */
 
 /* ------------ FOOTER ------------ */
 footer {
-  background-color: grey;
-  padding: 20px;
+  background-color: rgba(4, 4, 4, 0.83);
+  color: white;
+  padding: 80px 0;
+  width: 90vw;
+  margin: 400px auto 50px;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+}
+
+footer h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .carouselImage {
@@ -27,3 +67,8 @@ footer {
   margin: auto;
 }
 /* ---------- END FOOTER ---------- */
+
+/* colors 
+yellow: #fad305
+bluish grey: #6FA5A7
+*/
