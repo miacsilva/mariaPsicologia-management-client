@@ -1,7 +1,12 @@
 import React from "react";
 
 function Therapies() {
-  return <div>Therapies</div>;
+  return (
+    <>
+      {/* cards */}
+      {/* map therapies */}
+    </>
+  );
 }
 
 export default Therapies;

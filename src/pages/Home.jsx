@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 import projectService from "../services/project.service";
 import book1 from "../assets/images/book1.jpg";
@@ -28,51 +29,80 @@ function Home() {
   //call effect
   return (
     <>
-      <div
-        id="carouselExampleInterval"
-        className="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="2000">
-            <img src={book1} className="d-block w-100" alt="" />
-            {/* <h1>{books[0].title}</h1> */}
+      {books.length && (
+        <div
+          id="carouselExampleInterval"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <NavLink to="/about">
+              <div className="carousel-item active" data-bs-interval="2000">
+                <img
+                  src={book1}
+                  className="d-block w-100 carouselImage"
+                  alt="book1"
+                />
+                <h1>{books[0].title}</h1>
+              </div>
+            </NavLink>
+            <NavLink to="/books">
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={book2}
+                  className="d-block w-100 carouselImage"
+                  alt="book2"
+                />
+                <h1>{books[0].description}</h1>
+              </div>
+            </NavLink>
+
+            {/* add monthly subject with onclick to monthly subject */}
+            <NavLink to="/appointments">
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={fnac1}
+                  className="d-block w-100 carouselImage"
+                  alt="fnac2"
+                />
+              </div>
+            </NavLink>
+            <NavLink to="/contacts">
+              <div className="carousel-item" data-bs-interval="2000">
+                <img
+                  src={fnac2}
+                  className="d-block w-100 carouselImage"
+                  alt="fnac2"
+                />
+              </div>
+            </NavLink>
           </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img src={book2} className="d-block w-100" alt="book2" />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img src={fnac1} className="d-block w-100" alt="fnac2" />
-          </div>
-          <div className="carousel-item" data-bs-interval="2000">
-            <img src={fnac2} className="d-block w-100" alt="fnac2" />
-          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleInterval"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      )}
     </>
   );
 }

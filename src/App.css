@@ -17,9 +17,13 @@ body {
 /* ---------- END NAVBAR ---------- */
 
 /* ------------ FOOTER ------------ */
-.footer {
+footer {
   background-color: grey;
   padding: 20px;
 }
 
+.carouselImage {
+  height: 90vh;
+  margin: auto;
+}
 /* ---------- END FOOTER ---------- */
