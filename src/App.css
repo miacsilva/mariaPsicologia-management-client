@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   background-image: url("./assets/images/linhasPrancheta.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* ---------- END BODY ---------- */
@@ -28,44 +31,98 @@ body {
 }
 
 /* ---------- END NAVBAR ---------- */
-/* ------------ ABOUT ------------ */
+/* ------------ HOME ------------ */
+.carouselImage {
+  height: 90vh;
+  margin: auto;
+}
+
+/* About Section */
 .aboutSection {
   display: flex;
   justify-content: space-between;
+  margin-left: 10vw;
   background-color: #6fa5a7;
-  padding: 15px;
-  border-bottom: 3px solid yellow;
+  box-shadow: 0 0 10px 1px black;
   gap: 50px;
   padding: 40px;
-  align-items: center;
+  position: relative;
+  bottom: 50px;
+}
+
+.aboutSectionTwo {
+  padding: 0 40px;
 }
 
 .photoAbout {
   width: 30vh;
 }
 
-/* ---------- END ABOUT ---------- */
+.buttonAbout {
+  text-align: right;
+  margin-top: 50px;
+}
+
+.buttonAbout button {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition-duration: 0.5s;
+}
+
+.buttonAbout button:hover {
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0px rgb(91, 91, 91);
+  transition-duration: 1s;
+}
+
+/* Monthly Subject */
+.monthlySubjectSection {
+  background-image: url("/src/assets/images/temadomes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 97vw;
+  margin: auto;
+}
+
+/* ---------- END HOME ---------- */
 
 /* ------------ FOOTER ------------ */
 footer {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
   background-color: rgba(4, 4, 4, 0.83);
   color: white;
-  padding: 80px 0;
+  padding: 70px 0;
   width: 90vw;
-  margin: 400px auto 50px;
+  margin: 40px auto 50px;
   border-top: 2px solid yellow;
   border-bottom: 2px solid yellow;
 }
 
-footer h1 {
-  margin: 0;
-  padding: 0;
+.footerLinks {
+  text-decoration: none;
 }
 
-.carouselImage {
-  height: 90vh;
-  margin: auto;
+.footerLinks p {
+  color: white;
 }
+
+footer h5 {
+  color: #6fa5a7;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+.iconSocialMedia {
+  width: 2vw;
+}
+
 /* ---------- END FOOTER ---------- */
 
 /* colors 

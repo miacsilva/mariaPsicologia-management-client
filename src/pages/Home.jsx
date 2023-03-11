@@ -6,6 +6,7 @@ import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
 import AboutHome from "../components/AboutHome";
+import MonthlySubject from "../components/MonthlySubject";
 import book1 from "../assets/images/book1.jpg";
 import book2 from "../assets/images/book2.jpg";
 import fnac1 from "../assets/images/fnac1.jpg";
@@ -19,7 +20,7 @@ function Home() {
   const getBooks = async () => {
     try {
       const response = await projectService.getAllBooks();
-      console.log(response.data);
+      /* console.log(response.data); */
       setBooks(response.data);
     } catch (error) {
       console.log(error);
@@ -49,7 +50,7 @@ function Home() {
                   className="d-block w-100 carouselImage"
                   alt="book1"
                 />
-                <h1>{books[0].title}</h1>
+                {/* <h1>{books[0].title}</h1> */}
               </div>
             </NavLink>
             <NavLink to="/books">
@@ -59,7 +60,7 @@ function Home() {
                   className="d-block w-100 carouselImage"
                   alt="book2"
                 />
-                <h1>{books[0].description}</h1>
+                {/* <h1>{books[0].description}</h1> */}
               </div>
             </NavLink>
 
@@ -111,6 +112,7 @@ function Home() {
       )}
 
       <AboutHome />
+      <MonthlySubject />
     </>
   );
 }

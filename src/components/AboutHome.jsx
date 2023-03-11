@@ -1,29 +1,48 @@
-import React from "react";
+//PACKAGES
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+
+//COMPONENTS
+import projectService from "../services/project.service";
 import fotoSobre from "../assets/images/sobre.jpg";
 
 function AboutHome() {
+  const [about, setAbout] = useState([]);
+
+  const getAbout = async () => {
+    try {
+      const response = await projectService.getAbout();
+      console.log(response.data);
+      setAbout(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAbout();
+  }, []);
   return (
-    <section className="aboutSection">
-      <div className="aboutSectionOne">
-        <img src={fotoSobre} alt="" className={"photoAbout"} />
-      </div>
-      <div className="aboutSectionTwo">
-        <h1>Sobre</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, inventore
-          tempora fugiat at iusto maxime eos provident perspiciatis est facere
-          debitis minima incidunt commodi vel! Corporis veniam aliquam
-          exercitationem corrupti commodi magni reiciendis ullam iste debitis
-          aut asperiores autem numquam animi sequi velit dolorum doloremque
-          explicabo est esse rem, optio perferendis consequuntur qui placeat!
-          Quidem magni qui iste et est fugiat expedita repudiandae, nihil
-          voluptatem vel itaque vitae a. Nam, ratione quae nesciunt dolorum
-          laboriosam modi pariatur, quis veniam saepe, natus voluptates eveniet.
-          Maiores, non quae maxime possimus asperiores numquam quam a eius
-          temporibus eveniet sit, atque molestias doloremque quas.
-        </p>
-      </div>
-    </section>
+    <>
+      {about.length && (
+        <section className="aboutSection">
+          <div className="aboutSectionOne">
+            <img src={fotoSobre} alt="" className={"photoAbout"} />
+          </div>
+          <div className="aboutSectionTwo">
+            <h1>Sobre {about[0].name}</h1>
+            <p>{about[0].smallAbout}</p>
+
+            <div className={"buttonAbout"}>
+              <NavLink to="/about">
+                <button>Saber mais</button>
+              </NavLink>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 }
 
