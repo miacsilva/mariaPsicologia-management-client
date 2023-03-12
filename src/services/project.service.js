@@ -40,6 +40,11 @@ class ProjectService {
     return this.api.get("/api/contacts");
   };
 
+  //Get Montly Subject
+  getMonthlySubject = () => {
+    return this.api.get("/api/monthly-subject");
+  };
+
   /* //Create a project
   //requestData refers to the object with title and description
   createProject = (requestData) => {

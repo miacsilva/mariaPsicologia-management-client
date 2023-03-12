@@ -7,22 +7,7 @@ import axios from "axios";
 import projectService from "../services/project.service";
 import fotoSobre from "../assets/images/sobre.jpg";
 
-function AboutHome() {
-  const [about, setAbout] = useState([]);
-
-  const getAbout = async () => {
-    try {
-      const response = await projectService.getAbout();
-      console.log(response.data);
-      setAbout(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getAbout();
-  }, []);
+function AboutHome({ about }) {
   return (
     <>
       {about.length && (

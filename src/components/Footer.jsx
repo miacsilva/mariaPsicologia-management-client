@@ -7,34 +7,7 @@ import axios from "axios";
 import projectService from "../services/project.service";
 import icon1 from "../assets/images/facebooklight.svg";
 
-function Footer() {
-  const [books, setBooks] = useState([]);
-  const [contacts, setContacts] = useState([]);
-
-  const getBooks = async () => {
-    try {
-      const response = await projectService.getAllBooks();
-      /* console.log(response.data); */
-      setBooks(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const getContacts = async () => {
-    try {
-      const response = await projectService.getContacts();
-      console.log(response.data);
-      setContacts(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getContacts();
-    getBooks();
-  }, []);
+function Footer({ books, contacts }) {
   return (
     <>
       {contacts.length && books.length && (
@@ -45,23 +18,33 @@ function Footer() {
             </NavLink>
           </div>
           <div>
-            <h5>Books</h5>
+            <NavLink to="/books" className={"footerLinks"}>
+              <h5>Books</h5>
+            </NavLink>
             {books.map((book) => {
               return (
-                <NavLink to={`/books/${book._id}`} className={"footerLinks"}>
+                <NavLink
+                  to={`/books/${book._id}`}
+                  className={"footerLinks"}
+                  key={book._id}
+                >
                   <p>{book.title}</p>
                 </NavLink>
               );
             })}
           </div>
           <div>
-            <h5>Appointments</h5>
+            <NavLink to="/appointments" className={"footerLinks"}>
+              <h5>Appointments</h5>
+            </NavLink>
             <NavLink className={"footerLinks"}>
               <p>Book an appointment</p>
             </NavLink>
           </div>
           <div>
-            <h5>Contacts</h5>
+            <NavLink to="/contacts" className={"footerLinks"}>
+              <h5>Contacts</h5>
+            </NavLink>
             <p>{contacts[0].address}</p>
             <p>{contacts[0].email}</p>
             <p>{contacts[0].phoneNumber}</p>
