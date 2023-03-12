@@ -144,11 +144,11 @@ function App() {
         </div>
       )}
 
-      <Routes>
+      <Routes className="sections">
         <Route path="/about" element={<About />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/contacts" element={<Contacts contacts={contacts} />} />
         <Route path="/" element={<Home about={about} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

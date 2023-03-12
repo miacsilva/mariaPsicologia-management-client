@@ -30,29 +30,31 @@ function Contacts() {
           <section className="contactsSection">
             <h1>Contacts</h1>
           </section>
-          <section className="contactsSectionContacts">
-            <div>
-              <p>Email</p>
-              <p>{contacts[0].email}</p>
-            </div>
+          <section className="contactsSectionBox">
+            <section className="contactsSectionContacts">
+              <div>
+                <p>Email</p>
+                <p>{contacts[0].email}</p>
+              </div>
 
-            <div>
-              <p>Phone</p>
-              <p>{contacts[0].phoneNumber}</p>
-            </div>
-            <div>
-              <p>Adress</p>
-              <p>{contacts[0].address}</p>
-            </div>
-          </section>
-          <div className="separator"></div>
-          <section className="contactsSectionLinks">
-            <NavLink target="_blank" to={contacts[0].facebook[0]}>
-              <img src={icon1} alt="" className="iconContacts" />
-            </NavLink>
-            <NavLink target="_blank" to={contacts[0].instagram[0]}>
-              <img src={icon1} alt="" className="iconContacts" />
-            </NavLink>
+              <div>
+                <p>Phone</p>
+                <p>{contacts[0].phoneNumber}</p>
+              </div>
+              <div>
+                <p>Adress</p>
+                <p>{contacts[0].address}</p>
+              </div>
+            </section>
+            <div className="separator"></div>
+            <section className="contactsSectionLinks">
+              <NavLink target="_blank" to={contacts[0].facebook[0]}>
+                <img src={icon1} alt="" className="iconContacts" />
+              </NavLink>
+              <NavLink target="_blank" to={contacts[0].instagram[0]}>
+                <img src={icon1} alt="" className="iconContacts" />
+              </NavLink>
+            </section>
           </section>
         </>
       )}

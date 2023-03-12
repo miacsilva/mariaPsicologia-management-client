@@ -1,5 +1,7 @@
 //PACKAGES
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
 import axios from "axios";
 
 //COMPONENTS

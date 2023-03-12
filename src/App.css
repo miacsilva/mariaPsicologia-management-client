@@ -130,19 +130,27 @@ body {
 
 /* ------------ END APPOINTMENTS ------------ */
 /* ------------ CONTACTS ------------ */
+.contactsSectionBox {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 5px 20px -5px black;
+  width: 60vw;
+  margin: auto;
+  padding: 20vh 0;
+}
 .contactsSectionContacts,
 .contactsSectionLinks {
   display: flex;
   justify-content: center;
   width: 40vw;
   margin: auto;
-  gap: 60px;
 }
 
 .contactsSectionContacts {
-  margin-top: 25vh;
   padding-bottom: 5vh;
   text-align: center;
+  gap: 100px;
 }
 
 .separator {
@@ -153,7 +161,7 @@ body {
 
 .contactsSectionLinks {
   margin-top: 5vh;
-  margin-bottom: 20vh;
+  gap: 50px;
 }
 
 .iconContacts {

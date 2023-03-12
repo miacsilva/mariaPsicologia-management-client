@@ -28,6 +28,7 @@ function Navbar() {
           to="/about"
           onClick={() =>
             scroller.scrollTo("aboutSection", {
+              duration: 500,
               offset: -70,
               spy: true,
             })
@@ -76,6 +77,8 @@ function Navbar() {
           to="/contacts"
           onClick={() =>
             scroller.scrollTo("contactsSection", {
+              duration: 500,
+              delay: 100,
               offset: -70,
               spy: true,
             })
