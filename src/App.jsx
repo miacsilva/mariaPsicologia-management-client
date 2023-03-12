@@ -79,7 +79,7 @@ function App() {
         >
           <div className="carousel-inner">
             <NavLink to="/about">
-              <div className="carousel-item active" data-bs-interval="2000">
+              <div className="carousel-item active" data-bs-interval="4000">
                 <img
                   src={book1}
                   className="d-block w-100 carouselImage"
@@ -88,7 +88,7 @@ function App() {
               </div>
             </NavLink>
             <NavLink to="/books">
-              <div className="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="4000">
                 <img
                   src={book2}
                   className="d-block w-100 carouselImage"
@@ -99,7 +99,7 @@ function App() {
 
             {/* add monthly subject with onclick to monthly subject */}
             <NavLink to="/appointments">
-              <div className="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="4000">
                 <img
                   src={fnac1}
                   className="d-block w-100 carouselImage"
@@ -108,7 +108,7 @@ function App() {
               </div>
             </NavLink>
             <NavLink to="/contacts">
-              <div className="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="4000">
                 <img
                   src={fnac2}
                   className="d-block w-100 carouselImage"
@@ -144,7 +144,7 @@ function App() {
         </div>
       )}
 
-      <Routes className={"sections"}>
+      <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />

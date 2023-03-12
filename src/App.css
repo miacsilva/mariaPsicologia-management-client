@@ -39,7 +39,10 @@ body {
 
 /* About Section */
 .aboutSection,
-.contactsSection {
+.contactsSection,
+.booksSection,
+.monthlySubjectSection,
+.appointmentSection {
   display: flex;
   justify-content: space-between;
   margin-left: 10vw;
@@ -49,7 +52,7 @@ body {
   padding: 40px;
   position: relative;
   bottom: 50px;
-  border-bottom-left-radius: 10px;
+  /* border-bottom-left-radius: 10px; */
   border-top-left-radius: 10px;
 }
 
@@ -81,7 +84,7 @@ body {
 }
 
 /* Monthly Subject */
-.monthlySubjectSection {
+.monthlySubjectComponentSection {
   background-image: url("/src/assets/images/temadomes.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -94,7 +97,8 @@ body {
 .aboutSectionAbout,
 .aboutSectionEducation {
   box-shadow: 0 5px 20px -5px black;
-  border-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   padding: 5vw;
 }
 
@@ -188,8 +192,14 @@ footer p {
   font-size: 12px;
 }
 
+.footerIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .iconSocialMedia {
-  width: 2vw;
+  width: 3vw;
 }
 
 /* ---------- END FOOTER ---------- */

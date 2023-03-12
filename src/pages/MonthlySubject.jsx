@@ -25,7 +25,7 @@ function MonthlySubject() {
     <>
       {monthlySubject.length && (
         <>
-          <section className="aboutSection">
+          <section className="monthlySubjectSection">
             <h1>Monthly Subject</h1>
             <p>{monthlySubject[0].description}</p>
           </section>
