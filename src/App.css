@@ -14,13 +14,14 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #6fa5a7;
-  padding: 15px;
-  border-bottom: 3px solid yellow;
+  background: linear-gradient(#6fa5a7, transparent);
+  /* background-color: #6fa5a7; */
+  padding: 25px 25px 60px;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 10;
+  transition-duration: 1s;
 }
 
 .navbar__navlinks {

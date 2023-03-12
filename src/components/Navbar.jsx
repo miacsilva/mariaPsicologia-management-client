@@ -7,7 +7,7 @@ function Navbar() {
   const { loggedIn, user, logout } = useContext(AuthContext);
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <div className="navbar__left">
         <NavLink
           className={"navbar__navlinks"}
@@ -29,7 +29,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -70,
+              offset: -20,
               spy: true,
             })
           }

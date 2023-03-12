@@ -68,6 +68,27 @@ function App() {
     getContacts();
   }, []);
 
+  /*--- NAVBAR HIDE/SHOW --- */
+  let lastScrollUp; // This Varibale will store the top position
+
+  let navbar = document.getElementById("navbar"); // Get The NavBar
+
+  window.addEventListener("scroll", function () {
+    //on every scroll this funtion will be called
+    let scrollUp = window.pageYOffset || document.documentElement.scrollUp;
+    //This line will get the location on scroll
+
+    if (scrollUp > lastScrollUp) {
+      //if it will be greater than the previous
+      navbar.style.top = "-80px";
+      //set the value to the negetive of height of navbar
+    } else {
+      navbar.style.top = "0";
+    }
+
+    lastScrollUp = scrollUp; //New Position Stored
+  });
+  /*--- NAVBAR HIDE/SHOW END--- */
   return (
     <div className="App">
       <Navbar />
