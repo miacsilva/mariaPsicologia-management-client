@@ -1,9 +1,11 @@
 //PACKAGES
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
+import icon1 from "../assets/images/facebookyellow.svg";
 
 function Contacts() {
   const [contacts, setContacts] = useState([]);
@@ -25,10 +27,33 @@ function Contacts() {
     <>
       {contacts.length && (
         <>
-          <section className="aboutSection">
+          <section className="contactsSection">
             <h1>Contacts</h1>
           </section>
-          <h1>teste</h1>
+          <section className="contactsSectionContacts">
+            <div>
+              <p>Email</p>
+              <p>{contacts[0].email}</p>
+            </div>
+
+            <div>
+              <p>Phone</p>
+              <p>{contacts[0].phoneNumber}</p>
+            </div>
+            <div>
+              <p>Adress</p>
+              <p>{contacts[0].address}</p>
+            </div>
+          </section>
+          <div className="separator"></div>
+          <section className="contactsSectionLinks">
+            <NavLink target="_blank" to={contacts[0].facebook[0]}>
+              <img src={icon1} alt="" className="iconContacts" />
+            </NavLink>
+            <NavLink target="_blank" to={contacts[0].instagram[0]}>
+              <img src={icon1} alt="" className="iconContacts" />
+            </NavLink>
+          </section>
         </>
       )}
     </>

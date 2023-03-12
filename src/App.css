@@ -38,7 +38,8 @@ body {
 }
 
 /* About Section */
-.aboutSection {
+.aboutSection,
+.contactsSection {
   display: flex;
   justify-content: space-between;
   margin-left: 10vw;
@@ -88,6 +89,55 @@ body {
 }
 
 /* ---------- END HOME ---------- */
+
+/* ------------ ABOUT ------------ */
+
+/* ------------ END ABOUT ------------ */
+
+/* ------------ BOOKS ------------ */
+
+/* ------------ END BOOKS ------------ */
+
+/* ------------ MONTHLY SUBJECT ------------ */
+
+/* ------------ END MONTHLY SUBJECT ------------ */
+
+/* ------------ APPOINTMENTS ------------ */
+
+/* ------------ END APPOINTMENTS ------------ */
+
+/* ------------ CONTACTS ------------ */
+.contactsSectionContacts,
+.contactsSectionLinks {
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  margin: auto;
+  gap: 60px;
+}
+
+.contactsSectionContacts {
+  margin-top: 25vh;
+  padding-bottom: 5vh;
+  text-align: center;
+}
+
+.separator {
+  width: 15vh;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.contactsSectionLinks {
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+}
+
+.iconContacts {
+  width: 3vw;
+}
+
+/* ------------ END CONTACTS ------------ */
 
 /* ------------ FOOTER ------------ */
 footer {

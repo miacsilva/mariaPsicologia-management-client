@@ -67,6 +67,7 @@ function App() {
     getBooks();
     getContacts();
   }, []);
+
   return (
     <div className="App">
       <Navbar />
@@ -143,8 +144,8 @@ function App() {
         </div>
       )}
 
-      <Routes>
-        <Route path="/about" element={<About />} onclick="scrollElement()" />
+      <Routes className={"sections"}>
+        <Route path="/about" element={<About />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
         <Route path="/contacts" element={<Contacts />} />

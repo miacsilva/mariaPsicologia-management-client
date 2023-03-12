@@ -25,7 +25,8 @@ function About() {
       {about.length && (
         <>
           <section className="aboutSection">
-            <h1>About {about[0].name}</h1>
+            <h1>About</h1>
+            {/* {about[0].name} */}
           </section>
         </>
       )}
