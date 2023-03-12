@@ -23,16 +23,21 @@ class ProjectService {
 
   //Here we can create the metods to connect to the API
 
+  //Get About
+  getAbout = () => {
+    return this.api.get("/api/about");
+  };
+
+  //Get Appointments
+  getAppointments = () => {
+    return this.api.get("/api/appointments");
+  };
+
   //Get All Books
   getAllBooks = () => {
     return this.api.get("/api/books");
     //the line above is equivalent to:
     //axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
-  };
-
-  //Get About
-  getAbout = () => {
-    return this.api.get("/api/about");
   };
 
   //Get Contacts

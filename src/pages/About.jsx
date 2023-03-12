@@ -5,29 +5,28 @@ import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
 function About() {
-  const [contacts, setContacts] = useState([]);
+  const [about, setAbout] = useState([]);
 
-  const getContacts = async () => {
+  const getAbout = async () => {
     try {
-      const response = await projectService.getContacts();
+      const response = await projectService.getAbout();
       /* console.log(response.data); */
-      setContacts(response.data);
+      setAbout(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getContacts();
+    getAbout();
   }, []);
   return (
     <>
-      {contacts.length && (
+      {about.length && (
         <>
           <section className="aboutSection">
-            <h1>About</h1>
+            <h1>About {about[0].name}</h1>
           </section>
-          <h1>teste</h1>
         </>
       )}
     </>

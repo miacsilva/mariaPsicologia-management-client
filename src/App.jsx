@@ -35,7 +35,7 @@ function App() {
   const getAbout = async () => {
     try {
       const response = await projectService.getAbout();
-      console.log(response.data);
+      /* console.log(response.data); */
       setAbout(response.data);
     } catch (error) {
       console.log(error);
@@ -55,7 +55,7 @@ function App() {
   const getContacts = async () => {
     try {
       const response = await projectService.getContacts();
-      console.log(response.data);
+      /* console.log(response.data); */
       setContacts(response.data);
     } catch (error) {
       console.log(error);
@@ -144,7 +144,7 @@ function App() {
       )}
 
       <Routes>
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} onclick="scrollElement()" />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
         <Route path="/contacts" element={<Contacts />} />

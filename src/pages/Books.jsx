@@ -26,9 +26,8 @@ function Books() {
       {books.length && (
         <>
           <section className="aboutSection">
-            <h1>Books</h1>
+            <h1>Books {books[0].title}</h1>
           </section>
-          <h1>teste</h1>
         </>
       )}
     </>
