@@ -87,25 +87,35 @@ body {
   width: 97vw;
   margin: auto;
 }
-
 /* ---------- END HOME ---------- */
-
 /* ------------ ABOUT ------------ */
+.aboutSectionAbout {
+  box-shadow: 0 5px 20px -5px black;
+}
 
+.aboutPhoto {
+  float: left;
+  margin: 5vw;
+  border-radius: 10px;
+  box-shadow: -4px -4px 30px 1px black;
+}
+
+.aboutSectionEducation,
+.aboutSectionAbout {
+  width: 95vw;
+  margin: auto;
+  background-color: white;
+}
 /* ------------ END ABOUT ------------ */
-
 /* ------------ BOOKS ------------ */
 
 /* ------------ END BOOKS ------------ */
-
 /* ------------ MONTHLY SUBJECT ------------ */
 
 /* ------------ END MONTHLY SUBJECT ------------ */
-
 /* ------------ APPOINTMENTS ------------ */
 
 /* ------------ END APPOINTMENTS ------------ */
-
 /* ------------ CONTACTS ------------ */
 .contactsSectionContacts,
 .contactsSectionLinks {
