@@ -49,6 +49,8 @@ body {
   padding: 40px;
   position: relative;
   bottom: 50px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .aboutSectionTwo {
@@ -89,8 +91,11 @@ body {
 }
 /* ---------- END HOME ---------- */
 /* ------------ ABOUT ------------ */
-.aboutSectionAbout {
+.aboutSectionAbout,
+.aboutSectionEducation {
   box-shadow: 0 5px 20px -5px black;
+  border-radius: 10px;
+  padding: 5vw;
 }
 
 .aboutPhoto {
@@ -105,6 +110,10 @@ body {
   width: 95vw;
   margin: auto;
   background-color: white;
+}
+
+.aboutSectionEducation {
+  margin-top: 2vh;
 }
 /* ------------ END ABOUT ------------ */
 /* ------------ BOOKS ------------ */
