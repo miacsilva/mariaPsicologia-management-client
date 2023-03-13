@@ -6,6 +6,7 @@ import axios from "axios";
 import projectService from "../services/project.service";
 import photo from "../assets/images/sobre.jpg";
 function About() {
+  /* const { loggedIn, user, logout } = useContext(AuthContext); */
   const [about, setAbout] = useState([]);
 
   const getAbout = async () => {

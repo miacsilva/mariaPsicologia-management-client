@@ -38,34 +38,38 @@ function Login() {
   const navigate = useNavigate();
 
   return (
-    <section>
+    <section className="loginSection">
       <h3>*Acesso restrito à administração</h3>
       <h1>Login</h1>
+      <br />
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email"> Email</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={handleEmail}
-        />
+      <form onSubmit={handleSubmit} className="formLogin">
+        <div className="emailLogin">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={handleEmail}
+          />
+        </div>
 
-        <label htmlFor="password"> Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={password}
-          onChange={handlePassword}
-        />
+        <div className="passwordLogin">
+          <label htmlFor="password"> Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </div>
 
-        <button type="submit">Login</button>
+        <button type="submit" className="buttonLogin">
+          Login
+        </button>
       </form>
-
-      <p>Don't have an account?</p>
-      <Link to="/signup">Signup</Link>
     </section>
   );
 }

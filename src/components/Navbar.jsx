@@ -4,8 +4,6 @@ import { AuthContext } from "../context/auth.context";
 import { scroller } from "react-scroll";
 
 function Navbar() {
-  const { loggedIn, user, logout } = useContext(AuthContext);
-
   return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
@@ -40,8 +38,9 @@ function Navbar() {
           className={"navbar__navlinks"}
           to="/books"
           onClick={() =>
-            scroller.scrollTo("booksSection", {
-              offset: -70,
+            scroller.scrollTo("aboutSection", {
+              duration: 500,
+              offset: -20,
               spy: true,
             })
           }
@@ -52,8 +51,9 @@ function Navbar() {
           className={"navbar__navlinks"}
           to="/monthly-subject"
           onClick={() =>
-            scroller.scrollTo("monthlySubjectSection", {
-              offset: -70,
+            scroller.scrollTo("aboutSection", {
+              duration: 500,
+              offset: -20,
               spy: true,
             })
           }
@@ -64,8 +64,9 @@ function Navbar() {
           className={"navbar__navlinks"}
           to="/appointments"
           onClick={() =>
-            scroller.scrollTo("appointmentSection", {
-              offset: -70,
+            scroller.scrollTo("aboutSection", {
+              duration: 500,
+              offset: -20,
               spy: true,
             })
           }
@@ -76,10 +77,9 @@ function Navbar() {
           className={"navbar__navlinks"}
           to="/contacts"
           onClick={() =>
-            scroller.scrollTo("contactsSection", {
+            scroller.scrollTo("aboutSection", {
               duration: 500,
-              delay: 100,
-              offset: -70,
+              offset: -20,
               spy: true,
             })
           }

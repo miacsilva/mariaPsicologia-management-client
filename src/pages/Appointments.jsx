@@ -9,7 +9,19 @@ function Appointments() {
   return (
     <>
       <section className="appointmentSection">
-        <h1>Appointments</h1>
+        <h1> Consultas</h1>
+
+        <div>
+          <div>
+            <h3>Terapias</h3>
+            *listar terapias * * * * *
+          </div>
+
+          <div>
+            <h4>Agendar consulta</h4>
+            <h5>link</h5>
+          </div>
+        </div>
       </section>
     </>
   );

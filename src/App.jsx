@@ -165,12 +165,15 @@ function App() {
         </div>
       )}
 
-      <Routes className="sections">
+      <Routes>
         <Route path="/about" element={<About />} />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/" element={<Home about={about} />} />
+        <Route
+          path="/"
+          element={<Home about={about} books={books} contacts={contacts} />}
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/monthly-subject" element={<MonthlySubject />} />

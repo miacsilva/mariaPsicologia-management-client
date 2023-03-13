@@ -49,29 +49,6 @@ class ProjectService {
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
   };
-
-  /* //Create a project
-  //requestData refers to the object with title and description
-  createProject = (requestData) => {
-    return this.api.post("/api/projects", requestData);
-  };
-
-  //getbyId
-
-  getSingleProject = (id) => {
-    return this.api.get(`/api/projects/${id}`);
-  };
-
-  //update
-
-  editProject = ({ id, requestData }) => {
-    return this.api.put(`/api/projects/${id}`, requestData);
-  };
-
-  //Delete a project
-  deleteProject = (id) => {
-    return this.api.delete(`/api/projects/${id}`);
-  }; */
 }
 
 const projectService = new ProjectService();
