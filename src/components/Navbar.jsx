@@ -9,23 +9,49 @@ function Navbar() {
   return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
-        <NavLink
-          className={"navbar__navlinks"}
-          to="/"
-          onClick={() =>
-            scroller.scrollTo("App", {
-              offset: -70,
-              spy: true,
-            })
-          }
-        >
-          Home
-        </NavLink>
+        {!user && (
+          <NavLink
+            className={"navbar__navlinks"}
+            to="/"
+            onClick={() =>
+              scroller.scrollTo("App", {
+                offset: -10,
+                spy: true,
+              })
+            }
+          >
+            Home
+          </NavLink>
+        )}
+        {user && (
+          <NavLink
+            className={"navbar__navlinks"}
+            to="/"
+            onClick={() =>
+              scroller.scrollTo("App", {
+                offset: -10,
+                spy: true,
+              })
+            }
+          >
+            <h4>Welcome {user.name}</h4>
+          </NavLink>
+        )}
       </div>
       <div className="navbar__right">
         {user && user.admin && (
-          <NavLink className={"navbar__navlinks"} to="/createColaborator">
-            Add Colaborator
+          <NavLink
+            className={"navbar__navlinks"}
+            to="/colaborators"
+            onClick={() =>
+              scroller.scrollTo("aboutSection", {
+                duration: 500,
+                offset: -10,
+                spy: true,
+              })
+            }
+          >
+            View Colaborators
           </NavLink>
         )}
         <NavLink
@@ -34,7 +60,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -20,
+              offset: -10,
               spy: true,
             })
           }
@@ -47,7 +73,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -20,
+              offset: -10,
               spy: true,
             })
           }
@@ -60,7 +86,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -20,
+              offset: -10,
               spy: true,
             })
           }
@@ -73,7 +99,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -20,
+              offset: -10,
               spy: true,
             })
           }
@@ -86,7 +112,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -20,
+              offset: -10,
               spy: true,
             })
           }

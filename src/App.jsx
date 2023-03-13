@@ -17,7 +17,9 @@ import Login from "./pages/Login";
 import Error from "./pages/Error";
 
 //COMPONENTS EXTRA
-import CreateColaborator from "./pages/createColaborator";
+import Private from "./components/Private";
+import CreateColaborator from "./pages/CreateColaborator";
+import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pages/addTherapies";
 //pics to remove
 import book1 from "./assets/images/book1.jpg";
@@ -178,7 +180,24 @@ function App() {
           element={<Home about={about} books={books} contacts={contacts} />}
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/createColaborator" element={<CreateColaborator />} />
+        {/* <Route path="/colaborators" element={<ViewColaborators />} /> */}
+        <Route
+          path="/colaborators"
+          element={
+            <Private>
+              <ViewColaborators />
+            </Private>
+          }
+        />
+        <Route
+          path="/createColaborator"
+          element={
+            <Private>
+              <CreateColaborator />
+            </Private>
+          }
+        />
+        {/* <Route path="/createColaborator" element={<CreateColaborator />} /> */}
         <Route path="/monthly-subject" element={<MonthlySubject />} />
         <Route path="*" element={<Error />} />
         <Route path="/add-therapies" element={<AddTherapies />} />

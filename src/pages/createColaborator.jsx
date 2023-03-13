@@ -33,7 +33,7 @@ function CreateColaborator() {
   const navigate = useNavigate();
 
   return (
-    <section>
+    <section className="createColaborator">
       <h1>Adicione um novo colaborador!</h1>
 
       <form onSubmit={handleSubmit}>

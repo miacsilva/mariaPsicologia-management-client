@@ -4,11 +4,7 @@ import React from "react";
 import errorImage from "../assets/images/404.jpg";
 
 function Error() {
-  return (
-    <div className="errorPage">
-      <img src={errorImage} alt="" />
-    </div>
-  );
+  return <div className="errorPage"></div>;
 }
 
 export default Error;

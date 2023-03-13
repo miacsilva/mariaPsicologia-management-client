@@ -23,6 +23,16 @@ class ProjectService {
 
   //Here we can create the metods to connect to the API
 
+  //Get User
+  getUser = () => {
+    return this.api.get("/api/user");
+  };
+
+  //Delete a user
+  deleteUser = (id) => {
+    return this.api.delete(`/api/user/${id}`);
+  };
+
   //Get About
   getAbout = () => {
     return this.api.get("/api/about");

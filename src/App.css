@@ -284,8 +284,55 @@ footer p {
 /* ---------- END FOOTER ---------- */
 
 /* ------------ 404 PAGE ------------ */
-
+.errorPage {
+  background-image: url("/src/assets/images/404.jpg");
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  z-index: 5;
+  width: 100vw;
+  height: 150vh;
+}
 /* ---------- END 404 PAGE ---------- */
+
+/* ---------- COLABORATOR ---------- */
+.createColaborator {
+  background-color: rgba(255, 255, 255, 0.53);
+  width: 50vw;
+  box-shadow: 0 0 10px 1px black;
+  padding: 15vh;
+  position: absolute;
+  top: 15vh;
+  left: 25vw;
+}
+
+.colaboratorsTabs {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 90vw;
+  margin: 0.5vh auto;
+  padding: 15px 30px;
+}
+
+.colaboratorsTabs__buttons {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+
+.colaboratorEditButton {
+  text-decoration: none;
+  color: black;
+}
+
+.colaboratorDeleteButton {
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 1vh 2vh;
+}
+/* ---------- END COLABORATOR ---------- */
 
 /* colors 
 yellow: #fad305
