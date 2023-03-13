@@ -94,8 +94,11 @@ body {
 .editButton {
   border: 1px solid black;
   box-shadow: 0 0 10px 0px black;
-  padding: 0 30px;
+  padding: 10px 30px;
   font-weight: 700;
+  text-decoration: none;
+  background-color: white;
+  color: black;
 }
 /* ---------- END EDITS ---------- *
 

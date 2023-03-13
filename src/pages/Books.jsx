@@ -1,13 +1,14 @@
 //PACKAGES
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { scroller } from "react-scroll";
+import { useState, useEffect, useContext } from "react";
+import { NavLink } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
 
 function Books() {
+  const { user, logout } = useContext(AuthContext);
   const [books, setBooks] = useState([]);
 
   const getAllBooks = async () => {
@@ -29,6 +30,11 @@ function Books() {
         <>
           <section className="booksSection">
             <h1>Books {books[0].title}</h1>
+            {user && (
+              <NavLink to="/books/edit">
+                <button className={"editButton"}>Edit Books Section</button>
+              </NavLink>
+            )}
           </section>
         </>
       )}
