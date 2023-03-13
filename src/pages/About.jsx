@@ -1,5 +1,6 @@
 //PACKAGES
 import { useState, useEffect, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 
@@ -7,7 +8,7 @@ import axios from "axios";
 import projectService from "../services/project.service";
 import photo from "../assets/images/sobre.jpg";
 function About() {
-  const { loggedIn, user, logout } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   const [about, setAbout] = useState([]);
 
   const getAbout = async () => {
@@ -29,7 +30,11 @@ function About() {
         <>
           <section className="aboutSection">
             <h1>About {about[0].name}</h1>
-            {user && <button className="editButton">Edit About Section</button>}
+            {user && (
+              <NavLink to="/about/edit">
+                <button className={"editButton"}>Edit About Section</button>
+              </NavLink>
+            )}
           </section>
           <div>
             <img src={photo} alt="" className="aboutPhoto" />

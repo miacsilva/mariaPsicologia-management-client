@@ -1,6 +1,8 @@
 //PACKAGES
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
+
 import axios from "axios";
 
 //COMPONENTS
@@ -8,6 +10,7 @@ import projectService from "../services/project.service";
 import icon1 from "../assets/images/facebookyellow.svg";
 
 function Contacts() {
+  const { user, logout } = useContext(AuthContext);
   const [contacts, setContacts] = useState([]);
 
   const getContacts = async () => {
@@ -29,6 +32,11 @@ function Contacts() {
         <>
           <section className="contactsSection">
             <h1>Contacts</h1>
+            {user && (
+              <NavLink to="/contacts/edit">
+                <button className={"editButton"}>Edit Contacts Section</button>
+              </NavLink>
+            )}
           </section>
           <section className="contactsSectionBox">
             <section className="contactsSectionContacts">
