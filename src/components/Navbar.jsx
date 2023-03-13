@@ -1,9 +1,11 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import { scroller } from "react-scroll";
 
 function Navbar() {
+  const { user, logout } = useContext(AuthContext);
+
   return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
@@ -21,6 +23,11 @@ function Navbar() {
         </NavLink>
       </div>
       <div className="navbar__right">
+        {user && user.admin && (
+          <NavLink className={"navbar__navlinks"} to="/createColaborator">
+            Add Colaborator
+          </NavLink>
+        )}
         <NavLink
           className={"navbar__navlinks"}
           to="/about"
@@ -86,6 +93,11 @@ function Navbar() {
         >
           Contacts
         </NavLink>
+        {user && (
+          <NavLink className={"navbar__navlinks"} onClick={logout}>
+            Logout
+          </NavLink>
+        )}
       </div>
     </nav>
   );

@@ -45,9 +45,22 @@ class ProjectService {
     return this.api.get("/api/contacts");
   };
 
+  //Get Therapies
+  getTherapies = () => {
+    return this.api.get("/api/therapies");
+  };
+
   //Get Montly Subject
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
+  };
+
+  //cloudinary
+  uploadImage = (file) => {
+    return this.api
+      .post("/upload", file)
+      .then((res) => res.data)
+      .catch(errorHandler);
   };
 }
 

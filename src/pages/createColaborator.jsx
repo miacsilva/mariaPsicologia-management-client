@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function Signup() {
+function CreateColaborator() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +16,7 @@ function Signup() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_API_URL}/auth/signup`,
+        `${import.meta.env.VITE_API_URL}/auth/createColaborator`,
         {
           name,
           email,
@@ -70,4 +70,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default CreateColaborator;

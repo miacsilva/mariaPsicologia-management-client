@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 
-//COMPONENTS
+//COMPONENTS BASE
 import projectService from "./services/project.service";
 import About from "./pages/About";
 import Appointments from "./pages/Appointments";
@@ -14,8 +14,11 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Error from "./pages/Error";
 
+//COMPONENTS EXTRA
+import CreateColaborator from "./pages/createColaborator";
+import AddTherapies from "./pages/addTherapies";
 //pics to remove
 import book1 from "./assets/images/book1.jpg";
 import book2 from "./assets/images/book2.jpg";
@@ -175,8 +178,10 @@ function App() {
           element={<Home about={about} books={books} contacts={contacts} />}
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/createColaborator" element={<CreateColaborator />} />
         <Route path="/monthly-subject" element={<MonthlySubject />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/add-therapies" element={<AddTherapies />} />
       </Routes>
 
       <Footer books={books} contacts={contacts} />

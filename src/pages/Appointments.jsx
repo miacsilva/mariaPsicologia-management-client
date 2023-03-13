@@ -3,12 +3,23 @@ import { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
-
 //COMPONENTS
 import projectService from "../services/project.service";
-
 function Appointments() {
   const { loggedIn, user, logout } = useContext(AuthContext);
+  const [therapies, setTherapies] = useState([]);
+  const getTherapies = async () => {
+    try {
+      const response = await projectService.getTherapies();
+      /* console.log(response.data); */
+      setTherapies(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getTherapies();
+  }, []);
   return (
     <>
       <section className="appointmentSection">
@@ -19,19 +30,25 @@ function Appointments() {
           </NavLink>
         )}
       </section>
-      <div>
-        <div>
-          <h3>Terapias</h3>
-          *listar terapias * * * * *
+      {therapies.length && (
+        <div className="appointmentsBody">
+          <div className="therapiesAppoint">
+            <h3 className="therapiesAppointTitle">Terapias</h3>
+            {therapies &&
+              therapies.map((therapy) => (
+                <div key={therapy._id}>
+                  <p>{therapy.title}</p>
+                </div>
+              ))}
+          </div>
+          <NavLink to="/add-therapies"></NavLink>
+          <div>
+            <h4>Agendar consulta</h4>
+            <h5>link</h5>
+          </div>
         </div>
-
-        <div>
-          <h4>Agendar consulta</h4>
-          <h5>link</h5>
-        </div>
-      </div>
+      )}
     </>
   );
 }
-
 export default Appointments;
