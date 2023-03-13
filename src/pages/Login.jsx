@@ -29,7 +29,7 @@ function Login() {
       authenticateUser();
 
       console.log(response.data.authToken);
-      navigate("/projects");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }

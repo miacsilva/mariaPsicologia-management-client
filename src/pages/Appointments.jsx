@@ -10,19 +10,18 @@ function Appointments() {
     <>
       <section className="appointmentSection">
         <h1> Consultas</h1>
+      </section>
+      <div>
+        <div>
+          <h3>Terapias</h3>
+          *listar terapias * * * * *
+        </div>
 
         <div>
-          <div>
-            <h3>Terapias</h3>
-            *listar terapias * * * * *
-          </div>
-
-          <div>
-            <h4>Agendar consulta</h4>
-            <h5>link</h5>
-          </div>
+          <h4>Agendar consulta</h4>
+          <h5>link</h5>
         </div>
-      </section>
+      </div>
     </>
   );
 }

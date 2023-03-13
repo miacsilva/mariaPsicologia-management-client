@@ -1,12 +1,13 @@
 //PACKAGES
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
 import photo from "../assets/images/sobre.jpg";
 function About() {
-  /* const { loggedIn, user, logout } = useContext(AuthContext); */
+  const { loggedIn, user, logout } = useContext(AuthContext);
   const [about, setAbout] = useState([]);
 
   const getAbout = async () => {
@@ -28,6 +29,7 @@ function About() {
         <>
           <section className="aboutSection">
             <h1>About {about[0].name}</h1>
+            {user && <button className="editButton">Edit About Section</button>}
           </section>
           <div>
             <img src={photo} alt="" className="aboutPhoto" />
