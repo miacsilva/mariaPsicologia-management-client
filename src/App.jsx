@@ -19,6 +19,7 @@ import Error from "./pages/Error";
 //COMPONENTS EXTRA
 import Private from "./components/Private";
 import CreateColaborator from "./pages/CreateColaborator";
+import EditColaborator from "./pagesToEdit/EditColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pages/addTherapies";
 //pics to remove
@@ -180,12 +181,20 @@ function App() {
           element={<Home about={about} books={books} contacts={contacts} />}
         />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/colaborators" element={<ViewColaborators />} /> */}
+
         <Route
           path="/colaborators"
           element={
             <Private>
               <ViewColaborators />
+            </Private>
+          }
+        />
+        <Route
+          path="/colaborators/edit/:id"
+          element={
+            <Private>
+              <EditColaborator />
             </Private>
           }
         />
@@ -197,7 +206,7 @@ function App() {
             </Private>
           }
         />
-        {/* <Route path="/createColaborator" element={<CreateColaborator />} /> */}
+
         <Route path="/monthly-subject" element={<MonthlySubject />} />
         <Route path="*" element={<Error />} />
         <Route path="/add-therapies" element={<AddTherapies />} />

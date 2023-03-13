@@ -28,6 +28,18 @@ class ProjectService {
     return this.api.get("/api/user");
   };
 
+  //get Single User
+
+  getSingleUser = (id) => {
+    return this.api.get(`/api/user/${id}`);
+  };
+
+  //Update User
+
+  editUser = ({ id, requestData }) => {
+    return this.api.put(`/api/user/${id}`, requestData);
+  };
+
   //Delete a user
   deleteUser = (id) => {
     return this.api.delete(`/api/user/${id}`);
