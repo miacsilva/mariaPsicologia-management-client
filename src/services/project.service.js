@@ -23,6 +23,16 @@ class ProjectService {
 
   //Here we can create the metods to connect to the API
 
+  //Get About
+  getAbout = () => {
+    return this.api.get("/api/about");
+  };
+
+  //Get Appointments
+  getAppointments = () => {
+    return this.api.get("/api/appointments");
+  };
+
   //Get All Books
   getAllBooks = () => {
     return this.api.get("/api/books");
@@ -30,38 +40,15 @@ class ProjectService {
     //axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
   };
 
-  //Get About
-  getAbout = () => {
-    return this.api.get("/api/about");
-  };
-
   //Get Contacts
   getContacts = () => {
     return this.api.get("/api/contacts");
   };
 
-  /* //Create a project
-  //requestData refers to the object with title and description
-  createProject = (requestData) => {
-    return this.api.post("/api/projects", requestData);
+  //Get Montly Subject
+  getMonthlySubject = () => {
+    return this.api.get("/api/monthly-subject");
   };
-
-  //getbyId
-
-  getSingleProject = (id) => {
-    return this.api.get(`/api/projects/${id}`);
-  };
-
-  //update
-
-  editProject = ({ id, requestData }) => {
-    return this.api.put(`/api/projects/${id}`, requestData);
-  };
-
-  //Delete a project
-  deleteProject = (id) => {
-    return this.api.delete(`/api/projects/${id}`);
-  }; */
 }
 
 const projectService = new ProjectService();

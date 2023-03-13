@@ -8,7 +8,7 @@ import projectService from "../services/project.service";
 
 function MonthlySubject() {
   return (
-    <section className="monthlySubjectSection">
+    <section className="monthlySubjectComponentSection">
       <div>
         <h1>Montly Subject</h1>
         <p>
