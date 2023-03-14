@@ -15,6 +15,7 @@ function EditAbout() {
   const [smallAbout, setSmallAbout] = useState("");
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const handleName = (e) => setName(e.target.value);
   const handleEducation = (e) => setEducation(e.target.value);
@@ -43,7 +44,7 @@ function EditAbout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const requestData = { name, education, image, bigAbout, smallAbout };
+    const requestData = { name, education, bigAbout, smallAbout };
 
     try {
       await projectService.editAbout({ id, requestData });
@@ -81,11 +82,12 @@ function EditAbout() {
                 </NavLink>
               )}
             </section>
-            <section>
+            <section className="editAboutSection">
               <form onSubmit={handleSubmit}>
-                <div>
+                <div className="inputAbout">
                   <label htmlFor="name">Name</label>
                   <input
+                    className="inputAboutName"
                     type="text"
                     name="name"
                     id="name"
@@ -94,19 +96,18 @@ function EditAbout() {
                   />
                 </div>
 
-                <div>
+                <div className="inputAbout">
                   <label htmlFor="education">Education</label>
                   <textarea
                     name="education"
                     id="education"
-                    cols="40"
-                    rows="10"
+                    className="textareaAbout"
                     value={education}
                     onChange={handleEducation}
                   ></textarea>
                 </div>
 
-                <div>
+                <div className="inputAbout">
                   <label htmlFor="image">Image</label>
                   {/* <input
                   type="file"
@@ -117,29 +118,29 @@ function EditAbout() {
                 /> */}
                 </div>
 
-                <div>
+                <div className="inputAbout">
                   <label htmlFor="bigAbout">Big About</label>
                   <textarea
                     name="bigAbout"
                     id="bigAbout"
-                    cols="30"
-                    rows="10"
+                    className="textareaAbout"
                     value={bigAbout}
                     onChange={handleBigAbout}
                   ></textarea>
                 </div>
 
-                <div>
+                <div className="inputAbout">
                   <label htmlFor="smallAbout">Small About</label>
                   <textarea
                     name="smallAbout"
                     id="smallAbout"
-                    cols="30"
-                    rows="10"
+                    className="textareaAbout"
                     value={smallAbout}
                     onChange={handleSmallAbout}
                   ></textarea>
                 </div>
+
+                <button type="submit">Edit Section</button>
               </form>
             </section>
           </>

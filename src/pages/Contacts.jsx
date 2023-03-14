@@ -33,7 +33,7 @@ function Contacts() {
           <section className="contactsSection">
             <h1>Contacts</h1>
             {user && (
-              <NavLink to="/contacts/edit">
+              <NavLink to={`/contacts/edit/${contacts[0]._id}`}>
                 <button className={"editButton"}>Edit Contacts Section</button>
               </NavLink>
             )}

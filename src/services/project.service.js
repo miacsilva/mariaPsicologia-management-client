@@ -75,6 +75,11 @@ class ProjectService {
     return this.api.get("/api/contacts");
   };
 
+  //Edit Contacts
+  editContacts = ({ id, requestData }) => {
+    return this.api.put(`/api/contacts/edit/${id}`, requestData);
+  };
+
   //Get Therapies
   getTherapies = () => {
     return this.api.get("/api/therapies");
