@@ -18,10 +18,9 @@ import Error from "./pages/Error";
 
 //COMPONENTS EXTRA
 import Private from "./components/Private";
-import CreateColaborator from "./pages/CreateColaborator";
-import EditColaborator from "./pagesToEdit/EditColaborator";
+import CreateColaborator from "./pagesToEdit/CreateColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
-import AddTherapies from "./pages/addTherapies";
+import AddTherapies from "./pagesToEdit/addTherapies";
 //pics to remove
 import carrossel1 from "./assets/images/book2.jpg";
 import carrossel2 from "./assets/images/FotoCarrossel.jpg";
@@ -190,14 +189,7 @@ function App() {
             </Private>
           }
         />
-        <Route
-          path="/colaborators/edit/:id"
-          element={
-            <Private>
-              <EditColaborator />
-            </Private>
-          }
-        />
+
         <Route
           path="/createColaborator"
           element={

@@ -27,7 +27,8 @@ function ViewColaborators() {
   const deleteUser = async (id) => {
     try {
       await projectService.deleteUser(id);
-      navigate("/user");
+      /* navigate("/colaborators"); */
+      getUser();
     } catch (error) {
       console.log(error);
     }
@@ -51,9 +52,9 @@ function ViewColaborators() {
             </section>
             {users.map((colaborators, i) => {
               return (
-                <>
+                <div key={colaborators._id}>
                   {i !== 0 && (
-                    <div key={colaborators._id} className={"colaboratorsTabs"}>
+                    <div className={"colaboratorsTabs"}>
                       <div>
                         <h1>{colaborators.name}</h1>
                         <h4>{colaborators.email}</h4>
@@ -69,7 +70,7 @@ function ViewColaborators() {
                       </div>
                     </div>
                   )}
-                </>
+                </div>
               );
             })}
           </>
