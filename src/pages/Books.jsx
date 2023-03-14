@@ -29,13 +29,25 @@ function Books() {
       {books.length && (
         <>
           <section className="booksSection">
-            <h1>Books {books[0].title}</h1>
+            <h1>Livros</h1>
             {user && (
               <NavLink to="/books/edit">
                 <button className={"editButton"}>Edit Books Section</button>
               </NavLink>
             )}
           </section>
+          <div>
+          {books.length && (
+
+            {books && 
+              books.map((book) => (
+                <div key={book._id}>
+                  <p>{book.title}</p>
+                </div>
+           ) )} 
+      )}
+
+          </div>
         </>
       )}
     </>
