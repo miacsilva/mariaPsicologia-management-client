@@ -56,7 +56,7 @@ function AddTherapies() {
           onChange={(e) => setDescription(e.target.value)}
         />
         <input type="file" onChange={(e) => handleFileUpload(e)} />
-        <button type="submit">Save new movie</button>
+        <button type="submit">Save new therapy</button>
       </form>
     </div>
   );

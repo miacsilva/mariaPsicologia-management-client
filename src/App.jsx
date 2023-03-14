@@ -23,10 +23,10 @@ import EditColaborator from "./pagesToEdit/EditColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pages/addTherapies";
 //pics to remove
-import book1 from "./assets/images/book1.jpg";
-import book2 from "./assets/images/book2.jpg";
-import fnac1 from "./assets/images/fnac1.jpg";
-import fnac2 from "./assets/images/fnac2.jpg";
+import carrossel1 from "./assets/images/book2.jpg";
+import carrossel2 from "./assets/images/FotoCarrossel.jpg";
+import carrossel3 from "./assets/images/book2.jpg";
+import carrossel4 from "./assets/images/book2.jpg";
 
 //CSS
 
@@ -108,7 +108,7 @@ function App() {
             <NavLink to="/about">
               <div className="carousel-item active" data-bs-interval="4000">
                 <img
-                  src={book1}
+                  src={carrossel1}
                   className="d-block w-100 carouselImage"
                   alt="book1"
                 />
@@ -117,7 +117,7 @@ function App() {
             <NavLink to="/books">
               <div className="carousel-item" data-bs-interval="4000">
                 <img
-                  src={book2}
+                  src={carrossel2}
                   className="d-block w-100 carouselImage"
                   alt="book2"
                 />
@@ -128,7 +128,7 @@ function App() {
             <NavLink to="/appointments">
               <div className="carousel-item" data-bs-interval="4000">
                 <img
-                  src={fnac1}
+                  src={carrossel3}
                   className="d-block w-100 carouselImage"
                   alt="fnac2"
                 />
@@ -137,7 +137,7 @@ function App() {
             <NavLink to="/contacts">
               <div className="carousel-item" data-bs-interval="4000">
                 <img
-                  src={fnac2}
+                  src={carrossel4}
                   className="d-block w-100 carouselImage"
                   alt="fnac2"
                 />

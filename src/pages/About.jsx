@@ -6,7 +6,7 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import photo from "../assets/images/sobre.jpg";
+import bigAbout from "../assets/images/fotoGrandeSobre.jpg";
 function About() {
   const { user, logout } = useContext(AuthContext);
   const [about, setAbout] = useState([]);
@@ -37,7 +37,7 @@ function About() {
             )}
           </section>
           <div>
-            <img src={photo} alt="" className="aboutPhoto" />
+            <img src={bigAbout} alt="" className="aboutPhoto" />
           </div>
           <section className="aboutSectionAbout">
             <h1>About</h1>
