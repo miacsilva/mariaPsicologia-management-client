@@ -6,13 +6,13 @@ import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
 import AboutHome from "../components/AboutHome";
-import MonthlySubjectComponent from "../components/MonthlySubjectComponent";
+import MonthlySubject from "../components/MonthlySubjectComponent";
 
 function Home({ about }) {
   return (
     <>
       <AboutHome about={about} />
-      <MonthlySubjectComponent />
+      <MonthlySubject />
     </>
   );
 }

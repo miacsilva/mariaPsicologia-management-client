@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
+import Therapies from "./pages/Therapies";
 
 //COMPONENTS EXTRA
 import Private from "./components/Private";
@@ -31,7 +32,6 @@ import carrossel4 from "./assets/images/book2.jpg";
 //CSS
 
 import "./App.css";
-import MonthlySubject from "./pages/MonthlySubject";
 
 function App() {
   const [about, setAbout] = useState([]);
@@ -124,7 +124,6 @@ function App() {
               </div>
             </NavLink>
 
-            {/* add monthly subject with onclick to monthly subject */}
             <NavLink to="/appointments">
               <div className="carousel-item" data-bs-interval="4000">
                 <img
@@ -208,9 +207,10 @@ function App() {
           }
         />
 
-        <Route path="/monthly-subject" element={<MonthlySubject />} />
         <Route path="*" element={<Error />} />
         <Route path="/add-therapies" element={<AddTherapies />} />
+        <Route path="/therapies" element={<Therapies />} />
+    
       </Routes>
 
       <Footer books={books} contacts={contacts} />

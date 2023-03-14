@@ -159,9 +159,35 @@ body {
   background-image: url("/src/assets/images/liberdadeCopia.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: inherit;
+  max-height: unset;
   margin: auto;
+  padding: 10vh;
+  text-align: center;
 }
+
+.monthlySubjectComponentSection h2{
+  color: rgba(0, 0, 0, 0.296);
+  font-size: 3vh;
+
+}
+.monthlySubjectComponentSection h1{
+  color: rgb(47, 41, 41);
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+}
+.monthlySubjectComponentSection p{
+  color: white;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+  font-size: 2.7vh;
+  padding-top: 2vh;
+  padding-left: 3.5vh;
+  padding-right: 3.5vh;
+  line-height: 200%;
+}
+
+
+
 /* ---------- END HOME ---------- */
 /* ------------ ABOUT ------------ */
 .aboutSectionAbout,

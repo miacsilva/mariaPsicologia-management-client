@@ -82,11 +82,11 @@ function Navbar() {
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
-          to="/monthly-subject"
+          to="/"
           onClick={() =>
-            scroller.scrollTo("aboutSection", {
+            scroller.scrollTo("monthlySubjectComponentSection", {
               duration: 500,
-              offset: -10,
+              offset: 0,
               spy: true,
             })
           }

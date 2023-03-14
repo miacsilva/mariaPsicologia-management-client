@@ -5,8 +5,10 @@ import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
+
+
 function Appointments() {
-  const { loggedIn, user, logout } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [therapies, setTherapies] = useState([]);
   const getTherapies = async () => {
     try {
