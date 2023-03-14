@@ -5,7 +5,7 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import fotoSobre from "../assets/images/sobre.jpg";
+import fotoSobre from "../assets/images/luisaRosto.jpg";
 
 function AboutHome({ about }) {
   return (

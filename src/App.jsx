@@ -23,10 +23,10 @@ import EditColaborator from "./pagesToEdit/EditColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pages/addTherapies";
 //pics to remove
-import book1 from "./assets/images/book1.jpg";
+import book1 from "./assets/images/book2.jpg";
 import book2 from "./assets/images/book2.jpg";
-import fnac1 from "./assets/images/fnac1.jpg";
-import fnac2 from "./assets/images/fnac2.jpg";
+import fnac1 from "./assets/images/book2.jpg";
+import fnac2 from "./assets/images/book2.jpg";
 
 //CSS
 

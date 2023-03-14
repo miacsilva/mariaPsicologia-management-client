@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("./assets/images/linhasPrancheta.png");
+  background-image: url("./assets/images/fundoColoridoLinhas.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -132,7 +132,7 @@ body {
 }
 
 .photoAbout {
-  width: 30vh;
+  width: 40vh;
 }
 
 .buttonAbout {
@@ -174,10 +174,11 @@ body {
 }
 
 .aboutPhoto {
+  width: 40vh;
   float: left;
   margin: 5vw;
   border-radius: 10px;
-  box-shadow: -4px -4px 30px 1px black;
+  box-shadow: -4px -4px 15px 1px rgba(0, 0, 0, 0.555);
 }
 
 .aboutSectionEducation,
@@ -198,6 +199,12 @@ body {
 
 /* ------------ END MONTHLY SUBJECT ------------ */
 /* ------------ APPOINTMENTS ------------ */
+.appointmentsBody{
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 /* ------------ END APPOINTMENTS ------------ */
 /* ------------ CONTACTS ------------ */
@@ -246,7 +253,7 @@ footer {
   display: flex;
   justify-content: space-around;
   gap: 30px;
-  background-color: rgba(4, 4, 4, 0.83);
+  background-color: rgba(4, 4, 4, 0.5);
   color: white;
   padding: 70px 0;
   width: 90vw;

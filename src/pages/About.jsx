@@ -6,7 +6,7 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import photo from "../assets/images/sobre.jpg";
+import photo from "../assets/images/luisaRosto.jpg";
 function About() {
   const { user, logout } = useContext(AuthContext);
   const [about, setAbout] = useState([]);
