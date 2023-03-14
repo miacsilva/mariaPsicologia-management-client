@@ -4,6 +4,7 @@ class ProjectService {
   constructor() {
     this.api = axios.create({
       baseURL: import.meta.env.VITE_API_URL || "http://localhost:5005",
+      /* withCredentials: true  */
     });
 
     //here we intercept every request thtat uses this api and call a middleware function
@@ -20,7 +21,11 @@ class ProjectService {
       return config;
     });
   }
-
+  
+  errorHandler = (err) => {
+    throw err;
+  };
+  
   //Here we can create the metods to connect to the API
 
   //Get User
@@ -71,18 +76,26 @@ class ProjectService {
   getTherapies = () => {
     return this.api.get("/api/therapies");
   };
+  
+  //Create Therapies
+  createTherapy = (newTherapy) => {
+    return this.api.post("/api/therapies", newTherapy)
+      .then(res => res.data)
+      .catch(this.errorHandler);
+  };
 
   //Get Montly Subject
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
   };
+  
 
   //cloudinary
   uploadImage = (file) => {
     return this.api
-      .post("/upload", file)
+      .post("/api/upload", file)
       .then((res) => res.data)
-      .catch(errorHandler);
+      .catch(this.errorHandler);
   };
 }
 

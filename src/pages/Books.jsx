@@ -37,15 +37,19 @@ function Books() {
             )}
           </section>
           <div>
-          {books.length && (
+          
+         {/*  {books.length && (
 
-            {books && 
+            {books && (
               books.map((book) => (
+                <>
                 <div key={book._id}>
                   <p>{book.title}</p>
                 </div>
-           ) )} 
-      )}
+                </>
+           ) )) } 
+      )} */}
+      
 
           </div>
         </>

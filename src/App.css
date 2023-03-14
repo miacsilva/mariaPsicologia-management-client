@@ -156,11 +156,10 @@ body {
 
 /* Monthly Subject */
 .monthlySubjectComponentSection {
-  background-image: url("/src/assets/images/temadomes.jpg");
+  background-image: url("/src/assets/images/liberdadeCopia.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  width: 97vw;
+  width: inherit;
   margin: auto;
 }
 /* ---------- END HOME ---------- */

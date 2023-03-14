@@ -3,14 +3,19 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import the service file since we need it to send/get the data to/from the server
 import projectService from "../services/project.service";
+
+
+
 function AddTherapies() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const navigate = useNavigate();
+
+
   // ******** this method handles the file upload ********
   const handleFileUpload = (e) => {
-    // console.log("The file to be uploaded is: ", e.target.files[0]);
+   
     const uploadData = new FormData();
     // req.body to .create() method when creating a new movie in '/api/movies' POST route
     uploadData.append("image", e.target.files[0]);
@@ -22,11 +27,13 @@ function AddTherapies() {
       })
       .catch((err) => console.log("Error while uploading the file: ", err));
   };
+
+
   // ********  this method submits the form ********
   const handleSubmit = (e) => {
     e.preventDefault();
-    service
-      .createMovie({ title, description, image })
+    projectService
+      .createTherapy({ title, description, image })
       .then((res) => {
         // Reset the form
         setTitle("");
@@ -55,7 +62,7 @@ function AddTherapies() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <input type="file" onChange={(e) => handleFileUpload(e)} />
+        <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
         <button type="submit">Save new therapy</button>
       </form>
     </div>

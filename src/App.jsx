@@ -21,7 +21,7 @@ import Private from "./components/Private";
 import CreateColaborator from "./pages/CreateColaborator";
 import EditColaborator from "./pagesToEdit/EditColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
-import AddTherapies from "./pages/addTherapies";
+import AddTherapies from "./pagesToEdit/addTherapies";
 //pics to remove
 import carrossel1 from "./assets/images/book2.jpg";
 import carrossel2 from "./assets/images/FotoCarrossel.jpg";
