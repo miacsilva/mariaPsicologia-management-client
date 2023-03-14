@@ -44,26 +44,30 @@ function ViewColaborators() {
             <section className="booksSection">
               <h1>Colaborators </h1>
             </section>
-            {users.map((colaborators) => {
+            {users.map((colaborators, i) => {
               return (
-                <div key={colaborators._id} className={"colaboratorsTabs"}>
-                  <h1>{colaborators.name}</h1>
-                  <div className={"colaboratorsTabs__buttons"}>
-                    <NavLink
-                      className={"colaboratorEditButton"}
-                      to={`/colaborators/edit/${colaborators._id}`}
-                    >
-                      Edit this colaborator
-                    </NavLink>
-                    <button
-                      className={"colaboratorDeleteButton"}
-                      type="submit"
-                      onClick={() => deleteUser(user._id)}
-                    >
-                      Delete this colaborator
-                    </button>
-                  </div>
-                </div>
+                <>
+                  {i !== 0 && (
+                    <div key={colaborators._id} className={"colaboratorsTabs"}>
+                      <h1>{colaborators.name}</h1>
+                      <div className={"colaboratorsTabs__buttons"}>
+                        <NavLink
+                          className={"colaboratorEditButton"}
+                          to={`/colaborators/edit/${colaborators._id}`}
+                        >
+                          Edit this colaborator
+                        </NavLink>
+                        <button
+                          className={"colaboratorDeleteButton"}
+                          type="submit"
+                          onClick={() => deleteUser(user._id)}
+                        >
+                          Delete this colaborator
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
               );
             })}
           </>
