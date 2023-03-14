@@ -10,7 +10,8 @@ function EditAbout() {
   const { user, logout } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [education, setEducation] = useState("");
-  const [image, setImage] = useState("");
+  const [imageHome, setImageHome] = useState("");
+  const [imageAbout, setImageAbout] = useState("");
   const [bigAbout, setBigAbout] = useState("");
   const [smallAbout, setSmallAbout] = useState("");
 
@@ -28,13 +29,22 @@ function EditAbout() {
 
       setName(response.data[0].name);
       setEducation(response.data[0].education);
-      setImage(response.data[0].image);
+      setImageHome(response.data[0].imageHome);
+      setImageAbout(response.data[0].imageAbout);
       setBigAbout(response.data[0].bigAbout);
       setSmallAbout(response.data[0].smallAbout);
     } catch (error) {
       console.log(error);
     }
   };
+
+  /* 
+
+  Maria Luisa Lopes Gomes da Silva nasceu em Fafe em 8 de Novembro de 1970. Cresceu em Vila Verde, distrito de Braga. Adora meditação e sonha conhecer o mundo inteiro. Tem um fascínio enorme pela mente e pelo comportamento humano. Como ela mesma diz: «Respiro o melhor do mundo: As pessoas».
+«As conversas que tenho contigo» é o seu primeiro romance.
+Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Universidade de Lisboa; Certificada pelo London College Clinical Hypnosis; Dupla pós-graduação de neuropsicologia clínica pelo Instituto Português de Psicologia; Dupla pós-graduação de sexualidade clínica e terapia de casal pelo Instituto Português de Psicologia; Curso de desenvolvimento espiritual - The Arthur Findlay College – London; Finalista do mestrado integrado de psicologia da Universidade do Minho; Especializada em várias técnicas como: Deep Memory Process, Hipnose Ericksoniana e EMDR.
+  
+  */
 
   useEffect(() => {
     getAbout();
@@ -43,7 +53,14 @@ function EditAbout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const requestData = { name, education, image, bigAbout, smallAbout };
+    const requestData = {
+      name,
+      education,
+      imageHome,
+      imageAbout,
+      bigAbout,
+      smallAbout,
+    };
 
     try {
       await projectService.editAbout({ id, requestData });
@@ -107,9 +124,30 @@ function EditAbout() {
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="image">Image</label>
-                  {image && (
-                    <img src={image} alt={name} className="photoAboutEdit" />
+                  <label htmlFor="imageHome">Image Home Page</label>
+                  {imageHome && (
+                    <img
+                      src={imageHome}
+                      alt={name}
+                      className="photoAboutEdit"
+                    />
+                  )}
+                  <input
+                    type="file"
+                    image="image"
+                    id="image"
+                    onChange={(e) => handleFileUpload(e)}
+                  />
+                </div>
+
+                <div className="inputAbout">
+                  <label htmlFor="imageAbout">Image About Page</label>
+                  {imageAbout && (
+                    <img
+                      src={imageHome}
+                      alt={name}
+                      className="photoAboutEdit"
+                    />
                   )}
                   <input
                     type="file"

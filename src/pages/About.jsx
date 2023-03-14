@@ -38,7 +38,7 @@ function About() {
           </section>
           <section className="aboutSectionAbout">
             <img
-              src={about[0].image}
+              src={about[0].imageAbout}
               alt={about[0].name}
               className="aboutPhoto"
             />

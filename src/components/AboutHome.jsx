@@ -5,7 +5,6 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import fotoSobre from "../assets/images/luisaRosto.jpg";
 
 function AboutHome({ about }) {
   return (
@@ -13,7 +12,7 @@ function AboutHome({ about }) {
       {about.length && (
         <section className="aboutSection">
           <div className="aboutSectionOne">
-            <img src={fotoSobre} alt="" className={"photoAbout"} />
+            <img src={about[0].imageHome} alt="" className={"photoAbout"} />
           </div>
           <div className="aboutSectionTwo">
             <h1>Sobre {about[0].name}</h1>
