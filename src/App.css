@@ -175,7 +175,7 @@ body {
 .aboutPhoto {
   width: 60vh;
   float: left;
-  margin: 5vw;
+  margin: 0 5vw 5vw 0;
   border-radius: 10px;
   box-shadow: -4px -4px 15px 1px rgba(0, 0, 0, 0.555);
 }
@@ -198,12 +198,10 @@ body {
 
 /* ------------ END MONTHLY SUBJECT ------------ */
 /* ------------ APPOINTMENTS ------------ */
-.appointmentsBody{
+.appointmentsBody {
   display: flex;
   justify-content: space-around;
 }
-
-
 
 /* ------------ END APPOINTMENTS ------------ */
 /* ------------ CONTACTS ------------ */
@@ -303,16 +301,6 @@ footer p {
 /* ---------- END 404 PAGE ---------- */
 
 /* ---------- COLABORATOR ---------- */
-.createColaborator {
-  background-color: rgba(255, 255, 255, 0.53);
-  width: 50vw;
-  box-shadow: 0 0 10px 1px black;
-  padding: 15vh;
-  position: absolute;
-  top: 15vh;
-  left: 25vw;
-}
-
 .colaboratorsTabs {
   display: flex;
   justify-content: space-between;
@@ -328,16 +316,56 @@ footer p {
   gap: 5vw;
 }
 
-.colaboratorEditButton {
-  text-decoration: none;
-  color: black;
-}
-
 .colaboratorDeleteButton {
   border: 1px solid transparent;
   background-color: transparent;
   padding: 1vh 2vh;
 }
+
+.createColaborator {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.53);
+  width: 50vw;
+  margin: auto;
+  padding: 5vh 0 15vh 0;
+  box-shadow: 0 0 10px 1px black;
+}
+
+.createColaboratorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 50%;
+  margin: 5vh auto 0;
+}
+
+.createColaborator__name,
+.createColaborator__email,
+.createColaborator__password {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createColaborator__name input,
+.createColaborator__email input,
+.createColaborator__password input {
+  border: none;
+  padding: 5px 10px;
+  background-color: rgba(111, 165, 167, 0.7);
+  color: white;
+}
+
+.buttonCreate {
+  border: 1px solid transparent;
+  background-color: transparent;
+  position: relative;
+  top: 8vh;
+  left: 10vw;
+}
+
 /* ---------- END COLABORATOR ---------- */
 
 /* colors 

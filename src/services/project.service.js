@@ -28,6 +28,11 @@ class ProjectService {
   
   //Here we can create the metods to connect to the API
 
+  //Create User
+  newUser = () => {
+    return this.api.post("/auth/signup");
+  };
+
   //Get User
   getUser = () => {
     return this.api.get("/api/user");

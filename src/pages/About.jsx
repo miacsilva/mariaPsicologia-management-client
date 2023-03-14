@@ -36,10 +36,9 @@ function About() {
               </NavLink>
             )}
           </section>
-          <div>
-            <img src={bigAbout} alt="" className="aboutPhoto" />
-          </div>
           <section className="aboutSectionAbout">
+            <img src={bigAbout} alt="" className="aboutPhoto" />
+
             <h1>About</h1>
             <p>
               {about[0].bigAbout} Lorem ipsum dolor sit amet consectetur
