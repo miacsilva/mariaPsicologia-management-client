@@ -17,7 +17,7 @@ function Therapies() {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     getTherapies();
   }, []);
@@ -27,14 +27,14 @@ function Therapies() {
     <>
     {user && (
           <NavLink to="/add-therapies">
-            <button className={"editButton"}>Add Therapy</button>
+            <button className="addTherapies-btn">Add Therapy</button>
           </NavLink>
         )}
 
         
       <div class="col">
         <div class="card h-100">
-          <img src="..." class="card-img-top" alt="..." />
+          <img src="..." className="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">

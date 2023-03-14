@@ -6,13 +6,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "roboto";
 }
 
 /* ---------- END BODY ---------- */
 
 /* ------------ LOGIN ------------ */
 .loginSection {
-  background-color: rgba(255, 255, 255, 0.53);
+  background: linear-gradient(#6fa5a7, rgb(45, 101, 87));
   width: 50vw;
   box-shadow: 0 0 10px 1px black;
   padding: 15vh;
@@ -25,18 +26,20 @@ body {
   position: absolute;
   bottom: 5vh;
   right: 4vw;
-  padding: 2vh 4vw;
+  padding: 2vh 2vw;
   font-size: 20px;
   font-weight: 600;
   border: 1px solid transparent;
   background-color: transparent;
   transition-duration: 1s;
+  border-radius: 10%;
+
 }
 
 .buttonLogin:hover {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background-color: #6fa5a7;
-  transition-duration: 1s;
+  transition-duration: 0.7s;
 }
 
 .buttonLogin:active {
@@ -419,6 +422,15 @@ footer p {
   top: 8vh;
   left: 10vw;
 }
+
+.addTherapies-btn{
+  border-radius: 1.5vh;
+  font-size: 2vh;
+  border-color: #141e30;
+  border: 3px solid #141e30;
+  width: 7vw;
+  margin-bottom: 2vh;
+  }
 
 /* ---------- END COLABORATOR ---------- */
 

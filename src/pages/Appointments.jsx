@@ -33,7 +33,9 @@ function Appointments() {
         )}
       </section>
       {therapies.length && (
+        
         <div className="appointmentsBody">
+        
           <div className="therapiesAppoint">
             <h3 className="therapiesAppointTitle">Terapias</h3>
             {therapies &&
@@ -42,8 +44,11 @@ function Appointments() {
                   <p>{therapy.title}</p>
                 </div>
               ))}
+              <NavLink to="/therapies">
+            <button className={"editButton"}>Saber mais sobre as diferentes terapias</button>
+          </NavLink>
           </div>
-          <NavLink to="/add-therapies"></NavLink>
+          
           <div>
             <h4>Agendar consulta</h4>
             <h5>link</h5>
