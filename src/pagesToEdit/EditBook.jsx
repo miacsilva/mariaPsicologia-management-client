@@ -181,7 +181,7 @@ function EditAbout() {
                   />
                 </div>
 
-                <button type="submit">Edit Section</button>
+                <button type="submit">Update Book</button>
               </form>
             </section>
           </>

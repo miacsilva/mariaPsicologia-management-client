@@ -5,6 +5,7 @@ import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 
 //COMPONENTS
+import photo from "../assets/images/book2.jpg";
 import projectService from "../services/project.service";
 
 function Books() {
