@@ -23,6 +23,8 @@ import CreateColaborator from "./pagesToEdit/CreateColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pagesToEdit/addTherapies";
 import EditAbout from "./pagesToEdit/EditAbout";
+import ViewBook from "./pages/ViewBook";
+import EditBook from "./pagesToEdit/EditBook";
 import EditContacts from "./pagesToEdit/EditContacts";
 import EditTherapy from "./pagesToEdit/EditTherapy";
 //pics to remove
@@ -184,6 +186,8 @@ function App() {
         />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
+        <Route path="/books/:id" element={<ViewBook />} />
+        <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/contacts/edit/:id" element={<EditContacts />} />
         <Route

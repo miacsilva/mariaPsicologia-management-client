@@ -30,24 +30,28 @@ function Books() {
         <>
           <section className="booksSection">
             <h1>Books</h1>
-            {user && (
-              <NavLink to="/books/edit">
-                <button className={"editButton"}>Edit Books Section</button>
-              </NavLink>
-            )}
           </section>
           <section className="booksSectionBooksCards">
             {books &&
               books.map((book) => {
                 return (
-                  <div key={book._id} className={"booksCards"}>
+                  <NavLink
+                    to={`/books/${book._id}`}
+                    key={book._id}
+                    className={"booksCards"}
+                  >
                     <img
                       src={book.image}
                       alt={book.title}
                       className={"booksCardsImage"}
                     />
-                    <h1>{book.title}</h1>
-                  </div>
+                    <h1 className={"booksCardsTitle"}>"{book.title}"</h1>
+                    {user && (
+                      <NavLink to={`/books/edit/${book._id}`}>
+                        <button className={"editButton"}>Edit this book</button>
+                      </NavLink>
+                    )}
+                  </NavLink>
                 );
               })}
           </section>

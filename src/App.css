@@ -268,12 +268,43 @@ body {
   align-items: center;
   background-color: grey;
   width: 40%;
-  padding: 10vh;
+  padding: 5vh;
   margin: auto;
+  text-decoration: none;
 }
 
 .booksCardsImage {
+  width: 65vh;
+}
+
+.booksCardsTitle {
+  color: white;
   width: 80%;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.booksIdSection {
+  background-color: white;
+  width: 60vw;
+  margin: auto;
+  padding: 3vw;
+  text-align: center;
+}
+
+.bookIdImage {
+  position: relative;
+  top: 0;
+  float: right;
+  width: 50%;
+  margin: 10px 0 0 3vw;
+}
+
+.bookIdDescription {
+  margin: 0 2vw 0 10px;
+  text-align: justify;
+  font-weight: 550;
+  font-size: 20px;
 }
 
 /* ------------ END BOOKS ------------ */
@@ -458,7 +489,7 @@ footer p {
   margin-bottom: 2vh;
 }
 
-.therapiesContainer{
+.therapiesContainer {
   display: flex;
   justify-content: space-around;
   flex-direction: row;

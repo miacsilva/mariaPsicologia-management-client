@@ -28,6 +28,7 @@ class ProjectService {
 
   //Here we can create the metods to connect to the API
 
+  /* ------- USER ------- */
   //Create User
   newUser = () => {
     return this.api.post("/auth/signup");
@@ -47,7 +48,9 @@ class ProjectService {
   deleteUser = (id) => {
     return this.api.delete(`/api/user/${id}`);
   };
+  /* ----- END USER ----- */
 
+  /* ------- ABOUT ------- */
   //Get About
   getAbout = () => {
     return this.api.get("/api/about");
@@ -57,12 +60,16 @@ class ProjectService {
   editAbout = ({ id, requestData }) => {
     return this.api.put(`/api/about/edit/${id}`, requestData);
   };
+  /* ----- END ABOUT ----- */
 
+  /* ----- APPOINTMENTS ----- */
   //Get Appointments
   getAppointments = () => {
     return this.api.get("/api/appointments");
   };
+  /* --- END APPOINTMENTS --- */
 
+  /* ------- BOOKS ------- */
   //Get All Books
   getAllBooks = () => {
     return this.api.get("/api/books");
@@ -70,6 +77,18 @@ class ProjectService {
     //axios.get(`${import.meta.env.VITE_API_URL}/api/projects`)
   };
 
+  //get Single Book
+  getSingleBook = (id) => {
+    return this.api.get(`/api/books/${id}`);
+  };
+
+  //Edit Book
+  editBook = ({ id, requestData }) => {
+    return this.api.put(`/api/books/edit/${id}`, requestData);
+  };
+  /* ------ END BOOKS ------ */
+
+  /* ------- CONTACTS ------- */
   //Get Contacts
   getContacts = () => {
     return this.api.get("/api/contacts");
@@ -79,7 +98,9 @@ class ProjectService {
   editContacts = ({ id, requestData }) => {
     return this.api.put(`/api/contacts/edit/${id}`, requestData);
   };
+  /* ----- END CONTACTS ----- */
 
+  /* ------- THERAPIES ------- */
   //Get Therapies
   getTherapies = () => {
     return this.api.get("/api/therapies");
@@ -93,10 +114,23 @@ class ProjectService {
       .catch(this.errorHandler);
   };
 
+  //Edit Therapy
+  editTherapy = ({ id, requestData }) => {
+    return this.api.put(`/api/therapies/edit/${id}`, requestData);
+  };
+
+  //Delete a therapy
+  deleteTherapy = (id) => {
+    return this.api.delete(`/api/therapies/${id}`);
+  };
+  /* ------- END THERAPIES ------- */
+
+  /* ------- MONTHLY SUBJECT ------- */
   //Get Montly Subject
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
   };
+  /* ----- END MONTHLY SUBJECT ----- */
 
   //cloudinary
   uploadImage = (file) => {
@@ -104,16 +138,6 @@ class ProjectService {
       .post("/api/upload", file)
       .then((res) => res.data)
       .catch(this.errorHandler);
-  };
-
-   //Edit Therapy
-   editTherapy = ({ id, requestData }) => {
-    return this.api.put(`/api/therapies/edit/${id}`, requestData);
-  };
-
-   //Delete a therapy
-   deleteTherapy = (id) => {
-    return this.api.delete(`/api/therapies/${id}`);
   };
 }
 
