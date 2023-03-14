@@ -5,8 +5,8 @@ import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 
 //COMPONENTS
-import projectService from "../services/project.service";
-import bigAbout from "../assets/images/fotoGrandeSobre.jpg";
+import projectService from "../services/project.service"; /* 
+import bigAbout from "../assets/images/fotoGrandeSobre.jpg"; */
 function About() {
   const { user, logout } = useContext(AuthContext);
   const [about, setAbout] = useState([]);
@@ -37,7 +37,11 @@ function About() {
             )}
           </section>
           <section className="aboutSectionAbout">
-            <img src={bigAbout} alt="" className="aboutPhoto" />
+            <img
+              src={about[0].image}
+              alt={about[0].name}
+              className="aboutPhoto"
+            />
 
             <h1>About</h1>
             <p>

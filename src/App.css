@@ -165,17 +165,16 @@ body {
   text-align: center;
 }
 
-.monthlySubjectComponentSection h2{
+.monthlySubjectComponentSection h2 {
   color: rgba(0, 0, 0, 0.296);
   font-size: 3vh;
-
 }
-.monthlySubjectComponentSection h1{
+.monthlySubjectComponentSection h1 {
   color: rgb(47, 41, 41);
   margin-top: 3vh;
   margin-bottom: 5vh;
 }
-.monthlySubjectComponentSection p{
+.monthlySubjectComponentSection p {
   color: white;
   margin-top: 3vh;
   margin-bottom: 5vh;
@@ -185,8 +184,6 @@ body {
   padding-right: 3.5vh;
   line-height: 200%;
 }
-
-
 
 /* ---------- END HOME ---------- */
 /* ------------ ABOUT ------------ */
@@ -199,7 +196,7 @@ body {
 }
 
 .aboutPhoto {
-  width: 60vh;
+  width: 50vh;
   float: left;
   margin: 0 5vw 5vw 0;
   border-radius: 10px;
@@ -229,6 +226,7 @@ body {
 .inputAbout {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 5vh 0;
 }
 
@@ -236,6 +234,11 @@ body {
   width: 50%;
   margin: auto;
   padding: 1vh;
+}
+
+.photoAboutEdit {
+  width: 20vw;
+  margin: 3vh auto;
 }
 
 .textareaAbout {
@@ -308,7 +311,7 @@ footer {
   color: white;
   padding: 70px 0;
   width: 90vw;
-  margin: 400px auto 50px;
+  margin: 40px auto 50px;
   border-top: 2px solid yellow;
   border-bottom: 2px solid yellow;
 }

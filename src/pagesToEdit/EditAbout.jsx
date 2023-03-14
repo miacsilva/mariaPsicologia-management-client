@@ -10,7 +10,7 @@ function EditAbout() {
   const { user, logout } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [education, setEducation] = useState("");
-  const [image, setImage] = useState();
+  const [image, setImage] = useState("");
   const [bigAbout, setBigAbout] = useState("");
   const [smallAbout, setSmallAbout] = useState("");
 
@@ -19,7 +19,6 @@ function EditAbout() {
 
   const handleName = (e) => setName(e.target.value);
   const handleEducation = (e) => setEducation(e.target.value);
-  /* const handleImage = (e) => setImage(e.target.value); */
   const handleBigAbout = (e) => setBigAbout(e.target.value);
   const handleSmallAbout = (e) => setSmallAbout(e.target.value);
 
@@ -29,7 +28,7 @@ function EditAbout() {
 
       setName(response.data[0].name);
       setEducation(response.data[0].education);
-      /* setImage(response.data[0].image); */
+      setImage(response.data[0].image);
       setBigAbout(response.data[0].bigAbout);
       setSmallAbout(response.data[0].smallAbout);
     } catch (error) {
@@ -44,7 +43,7 @@ function EditAbout() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const requestData = { name, education, bigAbout, smallAbout };
+    const requestData = { name, education, image, bigAbout, smallAbout };
 
     try {
       await projectService.editAbout({ id, requestData });
@@ -109,13 +108,15 @@ function EditAbout() {
 
                 <div className="inputAbout">
                   <label htmlFor="image">Image</label>
-                  {/* <input
-                  type="file"
-                  image="image"
-                  id="image"
-                  value={image}
-                  onChange={(e) => handleFileUpload(e)}
-                /> */}
+                  {image && (
+                    <img src={image} alt={name} className="photoAboutEdit" />
+                  )}
+                  <input
+                    type="file"
+                    image="image"
+                    id="image"
+                    onChange={(e) => handleFileUpload(e)}
+                  />
                 </div>
 
                 <div className="inputAbout">
