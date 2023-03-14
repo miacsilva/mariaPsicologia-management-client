@@ -33,7 +33,6 @@ body {
   background-color: transparent;
   transition-duration: 1s;
   border-radius: 10%;
-
 }
 
 .buttonLogin:hover {
@@ -258,6 +257,24 @@ body {
 
 /* ------------ END ABOUT ------------ */
 /* ------------ BOOKS ------------ */
+.booksSectionBooksCards {
+  display: flex;
+  justify-content: center;
+}
+
+.booksCards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+  width: 40%;
+  padding: 10vh;
+  margin: auto;
+}
+
+.booksCardsImage {
+  width: 80%;
+}
 
 /* ------------ END BOOKS ------------ */
 /* ------------ MONTHLY SUBJECT ------------ */
@@ -432,14 +449,14 @@ footer p {
   left: 10vw;
 }
 
-.addTherapies-btn{
+.addTherapies-btn {
   border-radius: 1.5vh;
   font-size: 2vh;
   border-color: #141e30;
   border: 3px solid #141e30;
   width: 7vw;
   margin-bottom: 2vh;
-  }
+}
 
 .therapiesContainer{
   display: flex;

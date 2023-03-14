@@ -29,29 +29,28 @@ function Books() {
       {books.length && (
         <>
           <section className="booksSection">
-            <h1>Livros</h1>
+            <h1>Books</h1>
             {user && (
               <NavLink to="/books/edit">
                 <button className={"editButton"}>Edit Books Section</button>
               </NavLink>
             )}
           </section>
-          <div>
-          {/* 
-          {books.length && (
-
-            {books && (
-              books.map((book) => (
-                <>
-                <div key={book._id}>
-                  <p>{book.title}</p>
-                </div>
-                </>
-           ) )) } 
-      )}
-       */}
-
-          </div>
+          <section className="booksSectionBooksCards">
+            {books &&
+              books.map((book) => {
+                return (
+                  <div key={book._id} className={"booksCards"}>
+                    <img
+                      src={book.image}
+                      alt={book.title}
+                      className={"booksCardsImage"}
+                    />
+                    <h1>{book.title}</h1>
+                  </div>
+                );
+              })}
+          </section>
         </>
       )}
     </>
