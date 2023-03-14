@@ -110,6 +110,12 @@ body {
   height: 90vh;
   margin: auto;
 }
+.carouselImage:hover {
+  height: 90vh;
+  margin: auto;
+  filter: grayscale(150%) blur(2px);
+  transition-duration: 1s;
+}
 
 /* About Section */
 .aboutSection,
@@ -434,6 +440,12 @@ footer p {
   width: 7vw;
   margin-bottom: 2vh;
   }
+
+.therapiesContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
 
 /* ---------- END COLABORATOR ---------- */
 

@@ -24,6 +24,7 @@ import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pagesToEdit/addTherapies";
 import EditAbout from "./pagesToEdit/EditAbout";
 import EditContacts from "./pagesToEdit/EditContacts";
+import EditTherapy from "./pagesToEdit/EditTherapy";
 //pics to remove
 import carrossel1 from "./assets/images/book2.jpg";
 import carrossel2 from "./assets/images/FotoCarrossel.jpg";
@@ -212,7 +213,14 @@ function App() {
         <Route path="*" element={<Error />} />
         <Route path="/add-therapies" element={<AddTherapies />} />
         <Route path="/therapies" element={<Therapies />} />
-    
+        <Route
+          path="/therapies/edit/:id"
+          element={
+            <Private>
+              <EditTherapy />
+            </Private>
+          }
+        />
       </Routes>
 
       <Footer books={books} contacts={contacts} />

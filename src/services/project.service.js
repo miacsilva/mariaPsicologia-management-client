@@ -105,6 +105,16 @@ class ProjectService {
       .then((res) => res.data)
       .catch(this.errorHandler);
   };
+
+   //Edit Therapy
+   editTherapy = ({ id, requestData }) => {
+    return this.api.put(`/api/therapies/edit/${id}`, requestData);
+  };
+
+   //Delete a therapy
+   deleteTherapy = (id) => {
+    return this.api.delete(`/api/therapies/${id}`);
+  };
 }
 
 const projectService = new ProjectService();
