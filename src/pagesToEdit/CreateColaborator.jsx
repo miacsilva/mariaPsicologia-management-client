@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 
 import { AuthContext } from "../context/auth.context";
 
@@ -39,6 +39,11 @@ function CreateColaborator() {
     <>
       <section className="contactsSection">
         <h1>Colaborator</h1>
+        {user && (
+          <NavLink to="/colaborators">
+            <button className={"editButton"}>Go back</button>
+          </NavLink>
+        )}
       </section>
       <section className="createColaborator">
         <h1>Criar novo colaborador!</h1>

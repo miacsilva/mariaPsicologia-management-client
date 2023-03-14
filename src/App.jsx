@@ -174,7 +174,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route
-          path="/about/edit"
+          path="/about/edit/:id"
           element={
             <Private>
               <EditAbout />

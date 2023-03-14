@@ -43,7 +43,7 @@ function ViewColaborators() {
         {user && user.admin && (
           <>
             <section className="booksSection">
-              <h1>Colaborators </h1>
+              <h1>Viewing Colaborators</h1>
               {user && (
                 <NavLink to="/createColaborator">
                   <button className={"editButton"}>Add new colaborator</button>
