@@ -4,20 +4,16 @@ import { useNavigate } from "react-router-dom";
 // import the service file since we need it to send/get the data to/from the server
 import projectService from "../services/project.service";
 
-
-
 function AddTherapies() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
   const navigate = useNavigate();
 
-
   // ******** this method handles the file upload ********
+
   const handleFileUpload = (e) => {
-   
     const uploadData = new FormData();
-    // req.body to .create() method when creating a new movie in '/api/movies' POST route
     uploadData.append("image", e.target.files[0]);
     projectService
       .uploadImage(uploadData)
@@ -27,7 +23,6 @@ function AddTherapies() {
       })
       .catch((err) => console.log("Error while uploading the file: ", err));
   };
-
 
   // ********  this method submits the form ********
   const handleSubmit = (e) => {

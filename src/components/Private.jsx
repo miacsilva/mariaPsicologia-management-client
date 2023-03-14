@@ -9,8 +9,6 @@ function Private({ children }) {
 
   if (!user) {
     return <Navigate to="/login" />;
-  } else if (!user.admin) {
-    <Navigate to="/about" />;
   } else {
     return children;
   }

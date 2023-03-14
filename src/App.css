@@ -216,6 +216,34 @@ body {
 .aboutSectionEducation {
   margin-top: 2vh;
 }
+
+/* edit about*/
+.editAboutSection {
+  background-color: grey;
+  width: 70vw;
+  padding: 5vh;
+  text-align: center;
+  margin: auto;
+}
+
+.inputAbout {
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 0;
+}
+
+.inputAboutName {
+  width: 50%;
+  margin: auto;
+  padding: 1vh;
+}
+
+.textareaAbout {
+  width: 90%;
+  margin: auto;
+  padding: 1vh;
+}
+
 /* ------------ END ABOUT ------------ */
 /* ------------ BOOKS ------------ */
 

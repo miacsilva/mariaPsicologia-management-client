@@ -23,6 +23,7 @@ import CreateColaborator from "./pagesToEdit/CreateColaborator";
 import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pagesToEdit/addTherapies";
 import EditAbout from "./pagesToEdit/EditAbout";
+import EditContacts from "./pagesToEdit/EditContacts";
 //pics to remove
 import carrossel1 from "./assets/images/book2.jpg";
 import carrossel2 from "./assets/images/FotoCarrossel.jpg";
@@ -173,7 +174,7 @@ function App() {
       <Routes>
         <Route path="/about" element={<About />} />
         <Route
-          path="/about/edit"
+          path="/about/edit/:id"
           element={
             <Private>
               <EditAbout />
@@ -183,6 +184,7 @@ function App() {
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/contacts/edit/:id" element={<EditContacts />} />
         <Route
           path="/"
           element={<Home about={about} books={books} contacts={contacts} />}

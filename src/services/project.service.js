@@ -21,11 +21,11 @@ class ProjectService {
       return config;
     });
   }
-  
+
   errorHandler = (err) => {
     throw err;
   };
-  
+
   //Here we can create the metods to connect to the API
 
   //Create User
@@ -39,15 +39,8 @@ class ProjectService {
   };
 
   //get Single User
-
   getSingleUser = (id) => {
     return this.api.get(`/api/user/${id}`);
-  };
-
-  //Update User
-
-  editUser = ({ id, requestData }) => {
-    return this.api.put(`/api/user/${id}`, requestData);
   };
 
   //Delete a user
@@ -58,6 +51,11 @@ class ProjectService {
   //Get About
   getAbout = () => {
     return this.api.get("/api/about");
+  };
+
+  //Edit About
+  editAbout = ({ id, requestData }) => {
+    return this.api.put(`/api/about/edit/${id}`, requestData);
   };
 
   //Get Appointments
@@ -77,15 +75,21 @@ class ProjectService {
     return this.api.get("/api/contacts");
   };
 
+  //Edit Contacts
+  editContacts = ({ id, requestData }) => {
+    return this.api.put(`/api/contacts/edit/${id}`, requestData);
+  };
+
   //Get Therapies
   getTherapies = () => {
     return this.api.get("/api/therapies");
   };
-  
+
   //Create Therapies
   createTherapy = (newTherapy) => {
-    return this.api.post("/api/therapies", newTherapy)
-      .then(res => res.data)
+    return this.api
+      .post("/api/therapies", newTherapy)
+      .then((res) => res.data)
       .catch(this.errorHandler);
   };
 
@@ -93,7 +97,6 @@ class ProjectService {
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
   };
-  
 
   //cloudinary
   uploadImage = (file) => {

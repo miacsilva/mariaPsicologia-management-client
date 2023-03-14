@@ -31,7 +31,7 @@ function About() {
           <section className="aboutSection">
             <h1>About {about[0].name}</h1>
             {user && (
-              <NavLink to="/about/edit">
+              <NavLink to={`/about/edit/${about[0]._id}`}>
                 <button className={"editButton"}>Edit About Section</button>
               </NavLink>
             )}
