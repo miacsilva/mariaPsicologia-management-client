@@ -176,7 +176,7 @@ body {
 .aboutPhoto {
   width: 60vh;
   float: left;
-  margin: 5vw;
+  margin: 0 5vw 5vw 0;
   border-radius: 10px;
   box-shadow: -4px -4px 15px 1px rgba(0, 0, 0, 0.555);
 }
@@ -199,12 +199,10 @@ body {
 
 /* ------------ END MONTHLY SUBJECT ------------ */
 /* ------------ APPOINTMENTS ------------ */
-.appointmentsBody{
+.appointmentsBody {
   display: flex;
   justify-content: space-around;
 }
-
-
 
 /* ------------ END APPOINTMENTS ------------ */
 /* ------------ CONTACTS ------------ */

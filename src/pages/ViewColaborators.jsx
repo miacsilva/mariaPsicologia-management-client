@@ -43,24 +43,26 @@ function ViewColaborators() {
           <>
             <section className="booksSection">
               <h1>Colaborators </h1>
+              {user && (
+                <NavLink to="/createColaborator">
+                  <button className={"editButton"}>Add new colaborator</button>
+                </NavLink>
+              )}
             </section>
             {users.map((colaborators, i) => {
               return (
                 <>
                   {i !== 0 && (
                     <div key={colaborators._id} className={"colaboratorsTabs"}>
-                      <h1>{colaborators.name}</h1>
+                      <div>
+                        <h1>{colaborators.name}</h1>
+                        <h4>{colaborators.email}</h4>
+                      </div>
                       <div className={"colaboratorsTabs__buttons"}>
-                        <NavLink
-                          className={"colaboratorEditButton"}
-                          to={`/colaborators/edit/${colaborators._id}`}
-                        >
-                          Edit this colaborator
-                        </NavLink>
                         <button
                           className={"colaboratorDeleteButton"}
                           type="submit"
-                          onClick={() => deleteUser(user._id)}
+                          onClick={() => deleteUser(colaborators._id)}
                         >
                           Delete this colaborator
                         </button>
