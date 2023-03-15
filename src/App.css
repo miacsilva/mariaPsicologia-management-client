@@ -211,6 +211,10 @@ body {
   text-align: center;
 }
 
+.monthlysubButton {
+  text-align: left;
+}
+
 .monthlySeeMoreBtn {
   border: transparent;
   padding: 10px 30px;
