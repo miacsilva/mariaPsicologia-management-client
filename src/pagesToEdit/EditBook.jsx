@@ -62,7 +62,7 @@ function EditAbout() {
     try {
       await projectService.editBook({ id, requestData });
 
-      navigate(`/contacts`);
+      navigate(`/books`);
     } catch (error) {
       console.log(error);
     }

@@ -8,10 +8,10 @@ import projectService from "../services/project.service";
 import AboutHome from "../components/AboutHome";
 import MonthlySubject from "../components/MonthlySubjectComponent";
 
-function Home({ about }) {
+function Home() {
   return (
     <>
-      <AboutHome about={about} />
+      <AboutHome />
       <MonthlySubject />
     </>
   );

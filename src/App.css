@@ -75,13 +75,13 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: rgb(0, 212, 255);
+  background: rgba(111, 165, 167, 0.7);
   background: linear-gradient(
     0deg,
     rgba(0, 212, 255, 0.02853641456582634) 0%,
-    rgba(3, 113, 113, 1) 48%
+    rgba(111, 165, 167, 1) 48%
   );
-  padding: 0 25px 50px;
+  padding: 2vh 25px 50px;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -98,6 +98,7 @@ body {
 
 .navbar__navlinks__user {
   font-size: 26px;
+  margin: 0;
 }
 /* ---------- END NAVBAR ---------- */
 
@@ -280,7 +281,7 @@ body {
   background-color: grey;
   width: 40%;
   padding: 5vh;
-  margin: auto;
+  margin: 5vw;
   text-decoration: none;
 }
 

@@ -6,7 +6,23 @@ import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
 
-function AboutHome({ about }) {
+function AboutHome() {
+  const [about, setAbout] = useState([]);
+
+  const getAbout = async () => {
+    try {
+      const response = await projectService.getAbout();
+      /* console.log(response.data); */
+      setAbout(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAbout();
+  }, []);
+
   return (
     <>
       {about.length && (
