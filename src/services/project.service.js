@@ -127,9 +127,27 @@ class ProjectService {
   /* ------- END THERAPIES ------- */
 
   /* ------- MONTHLY SUBJECT ------- */
-  //Get Montly Subject
+
+  //Get all Montly Subjects
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
+  };
+//Create Monthly Subject
+  createMonthlySubject = (MS) => {
+    return this.api
+      .post("/api/monthly-subject", MS)
+      .then((res) => res.data)
+      .catch(this.errorHandler);
+  };
+
+    //Edit Therapy
+    editMonthlySubject = ({ id, requestData }) => {
+      return this.api.put(`/api/monthly-subject/edit/${id}`, requestData);
+    };
+
+   //Delete MonthlySubject
+   deleteMonthlySubject = (id) => {
+    return this.api.delete(`/api/monthly-subject/${id}`);
   };
   /* ----- END MONTHLY SUBJECT ----- */
 

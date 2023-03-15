@@ -6,56 +6,39 @@ import DeleteConfirmation from "../components/DeleteConfirmation";
 import { Row, Col, Container, Card, Table, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-function EditTherapy() {
+function EditMonthlySubject() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
+  const [month, setMonth] = useState("");
 
   //
-  const [displayConfirmationModal, setDisplayConfirmationModal] =
-    useState(false);
-  const [deleteMessage, setDeleteMessage] = useState(null);
 
   const handleTitle = (e) => setTitle(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
+  const handleMonth = (e) => setMonth(e.target.value);
 
   const navigate = useNavigate();
 
   const { id } = useParams();
 
-  //
-  const showDeleteModal = (type, id) => {
-    setDeleteMessage("Are you sure you want to delete this therapy?");
-
-    setDisplayConfirmationModal(true);
-  };
-
-  // Hide the modal
-  const hideConfirmationModal = () => {
-    setDisplayConfirmationModal(false);
-  };
-
-  // Handle the actual deletion of the item
-  const submitDelete = () => {
-    setDisplayConfirmationModal(false);
-  };
-
-  const getTherapy = async () => {
+  const getMonthlySubject = async () => {
     try {
-      const response = await projectService.getTherapies();
+      const response = await projectService.getMonthlySubject();
 
       setTitle(response.data.title);
       setDescription(response.data.description);
       setImage(response.data.image);
+      setMonth(response.data.month);
     } catch (errorHandler) {
       console.log(error);
     }
   };
 
-  const deleteTherapy = async () => {
+  const deleteMonth = async () => {
     try {
-      await projectService.deleteTherapy(id);
-      navigate("/therapies");
+      await projectService.deleteMonthlySubject(id);
+      navigate("/monthly-subjects");
     } catch (errorHandler) {
       console.log(error);
     }
@@ -67,10 +50,10 @@ function EditTherapy() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const requestData = { title, description, image };
+    const requestData = { title, description, image, month };
     try {
-      await projectService.editTherapy({ id, requestData });
-      navigate(`/therapies`);
+      await projectService.editMonthlySubject({ id, requestData });
+      navigate(`/monthly-subject`);
     } catch (errorHandler) {
       console.log(error);
     }
@@ -93,9 +76,9 @@ function EditTherapy() {
 
   return (
     <section>
-      <h1>Edit Therapy:</h1>
+      <h1>Edit Monthly Subject:</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Therapie's Name:</label>
+        <label htmlFor="title">Subject of the Month:</label>
         <input
           type="text"
           name="title"
@@ -104,16 +87,15 @@ function EditTherapy() {
           onChange={handleTitle}
         />
 
-        
-          <label htmlFor="description">Description</label>
-          <textarea
-            name="description"
-            id="description"
-            className="textareaAbout"
-            value={description}
-            onChange={handleDescription}
-          ></textarea>
-    
+        <label htmlFor="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          className="textareaAbout"
+          value={description}
+          onChange={handleDescription}
+        ></textarea>
+
 
         {image && <img src={image} alt={title} />}
         <input
@@ -122,19 +104,34 @@ function EditTherapy() {
           id="image"
           onChange={(e) => handleFileUpload(e)}
         />
+        
+<FormControl fullWidth> 
+  <InputLabel id="demo-simple-select-label">Date</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={month}
+    label="month"
+    onChange={(e) => setMonth(e.target.value)}
+  >
+    <MenuItem value={10}>Abril/2023</MenuItem>
+    <MenuItem value={20}>Maio/2023</MenuItem>
+    <MenuItem value={30}>Junho/2023</MenuItem>
+    <MenuItem value={10}>Julho/2023</MenuItem>
+    <MenuItem value={20}>Agosto/2023</MenuItem>
+    <MenuItem value={30}>Setembro/2023</MenuItem>
+    <MenuItem value={10}>Outubro/2023</MenuItem>
+    <MenuItem value={20}>Novembro/2023</MenuItem>
+    <MenuItem value={30}>Dezembro/2023</MenuItem>
+  </Select>
+</FormControl>
 
         <button type="submit">Save Changes</button>
       </form>
 
-      <button onClick={() => showDeleteModal()}>Delete</button>
-      <DeleteConfirmation
-        showModal={displayConfirmationModal}
-        confirmModal={deleteTherapy}
-        hideModal={hideConfirmationModal}
-        message={deleteMessage}
-      />
+    
     </section>
   );
 }
 
-export default EditTherapy;
+export default EditMonthlySubject;

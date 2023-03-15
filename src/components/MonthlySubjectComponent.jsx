@@ -32,6 +32,7 @@ function MonthlySubject() {
       {monthlySubject.length && (
         <>
         <h2>Monthly Subject</h2>
+        <h7>{monthlySubject[0].month}</h7>
         <h1>{monthlySubject[0].title}</h1>
         <p> {monthlySubject[0].description} </p>
         </>

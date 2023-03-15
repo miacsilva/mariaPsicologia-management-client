@@ -184,9 +184,21 @@ body {
   text-align: center;
 }
 
+.monthlySeeMoreBtn {
+  border: transparent;
+  padding: 10px 30px;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.537);
+}
+
 .monthlySubjectComponentSection h2 {
   color: rgba(0, 0, 0, 0.296);
   font-size: 3vh;
+}
+.monthlySubjectComponentSection h7 {
+  color: rgba(0, 0, 0, 0.296);
 }
 
 .monthlySubjectComponentSection h1 {

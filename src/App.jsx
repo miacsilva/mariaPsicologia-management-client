@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
 import Therapies from "./pages/Therapies";
+import MonthlySubjects from "./pages/MonthySubjects";
 
 //COMPONENTS EXTRA
 import Private from "./components/Private";
@@ -27,6 +28,8 @@ import ViewBook from "./pages/ViewBook";
 import EditBook from "./pagesToEdit/EditBook";
 import EditContacts from "./pagesToEdit/EditContacts";
 import EditTherapy from "./pagesToEdit/EditTherapy";
+import CreateMonthlySubject from "./pagesToEdit/CreateMonthlySubject";
+import EditMonthlySubject from "./pagesToEdit/EditMonthlySubject";
 //pics to remove
 import carrossel1 from "./assets/images/book2.jpg";
 import carrossel2 from "./assets/images/FotoCarrossel.jpg";
@@ -210,6 +213,24 @@ function App() {
             </Private>
           }
         />
+
+        <Route
+          path="/create/monthly-subject"
+          element={
+            <Private>
+              <CreateMonthlySubject />
+            </Private>
+          }
+        />
+        <Route
+          path="/monthly-subject/edit/:id"
+          element={
+            <Private>
+              <EditMonthlySubject />
+            </Private>
+          }
+        />
+         <Route path="/monthlySubjects" element={<MonthlySubjects />} />
 
         <Route path="*" element={<Error />} />
         <Route path="/add-therapies" element={<AddTherapies />} />

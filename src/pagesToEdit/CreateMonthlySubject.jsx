@@ -3,11 +3,18 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import the service file since we need it to send/get the data to/from the server
 import projectService from "../services/project.service";
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
-function AddTherapies() {
+function CreateMonthlySubject() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [month, setMonth] = useState("");
+
   const navigate = useNavigate();
 
   // ******** this method handles the file upload ********
@@ -28,22 +35,23 @@ function AddTherapies() {
   const handleSubmit = (e) => {
     e.preventDefault();
     projectService
-      .createTherapy({ title, description, image })
+      .createMonthlySubject({ title, description, image, month })
       .then((res) => {
         // Reset the form
         setTitle("");
         setDescription("");
         setImage("");
+        setMonth("")
         // navigate to another page
-        navigate("/therapies");
+        navigate("/monthlySubjects");
       })
-      .catch((err) => console.log("Error while adding the new therapy: ", err));
+      .catch((err) => console.log("Error while adding the new monthly subject: ", err));
   };
   return (
     <div>
-      <h2>Add Therapies</h2>
+      <h2>Create new Monthly Subject</h2>
       <form onSubmit={handleSubmit}>
-        <label>Name</label>
+        <label>Subject of the Month</label>
         <input
           type="text"
           name="title"
@@ -58,9 +66,31 @@ function AddTherapies() {
           onChange={(e) => setDescription(e.target.value)}
         />
         <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
-        <button type="submit">Save new therapy</button>
+        <button type="submit">Add new Monthly Subject</button>
+       
+
+        <FormControl fullWidth> 
+  <InputLabel id="demo-simple-select-label">Date</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+    value={month}
+    label="month"
+    onChange={(e) => setMonth(e.target.value)}
+  >
+    <MenuItem value={10}>Abril/2023</MenuItem>
+    <MenuItem value={20}>Maio/2023</MenuItem>
+    <MenuItem value={30}>Junho/2023</MenuItem>
+    <MenuItem value={10}>Julho/2023</MenuItem>
+    <MenuItem value={20}>Agosto/2023</MenuItem>
+    <MenuItem value={30}>Setembro/2023</MenuItem>
+    <MenuItem value={10}>Outubro/2023</MenuItem>
+    <MenuItem value={20}>Novembro/2023</MenuItem>
+    <MenuItem value={30}>Dezembro/2023</MenuItem>
+  </Select>
+</FormControl>
       </form>
     </div>
   );
 }
-export default AddTherapies;
+export default CreateMonthlySubject;

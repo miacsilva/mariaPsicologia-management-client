@@ -4,55 +4,56 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import projectService from "../services/project.service";
 
-function Therapies() {
+function MonthlySubjects() {
   const { user } = useContext(AuthContext);
-  const [therapies, setTherapies] = useState([]);
+  const [monthlySubjects, setMonthlySubjects] = useState([]);
 
 
 
   
-  const getTherapies = async () => {
+  const getMonthlySubject = async () => {
     try {
-      const response = await projectService.getTherapies();
+      const response = await projectService.getMonthlySubject();
 
-      setTherapies(response.data);
+      setMonthlySubjects(response.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getTherapies();
+    getMonthlySubject();
   }, []);
 
   return (
     <>
       {user && (
         <>
-        <NavLink to="/add-therapies">
-          <button className="addTherapies-btn">Add Therapy</button>
+        <NavLink to="/create/monthly-subject">
+          <button className="addTherapies-btn">Create new Monthly Subject</button>
         </NavLink>
         </>
       )}
-      {therapies.length && (
+      {monthlySubjects.length && (
         <>
-          {therapies &&
-            therapies.map((therapy) => (
+          {monthlySubjects &&
+            monthlySubjects.map((MS) => (
               <div className="therapiesContainer">
                 <div className="col-3">
                   <div className="card h-100">
-                    <div key={therapy._id}>
+                    <div key={MS._id}>
                       <img
-                        src={therapy.image}
+                        src={MS.image}
                         className="card-img-top"
                         alt="imagem de terapia"
                       />
                       <div className="card-body">
-                        <h5 className="card-title">{therapy.title}</h5>
-                        <p className="card-text">{therapy.description}</p>
+                        <h5 className="card-title">{MS.title}</h5>
+                        <h5 className="card-title">{MS.month}</h5>
+                        <p className="card-text">{MS.description}</p>
                         {user && (
-        <NavLink to={`/therapies/edit/${therapy._id}`}>
-          <button className="addTherapies-btn">Edit Therapy</button>
+        <NavLink to={`/monthly-subject/edit/${MS._id}`}>
+          <button className="addTherapies-btn">Edit Monthly Subject</button>
         </NavLink>)}
                       </div>
                     </div>
@@ -66,4 +67,4 @@ function Therapies() {
   );
 }
 
-export default Therapies;
+export default MonthlySubjects;
