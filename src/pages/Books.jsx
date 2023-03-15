@@ -31,6 +31,11 @@ function Books() {
         <>
           <section className="booksSection">
             <h1>Books</h1>
+            {user && (
+              <NavLink to="/books/create">
+                <button className={"editButton"}>Add new book</button>
+              </NavLink>
+            )}
           </section>
           <section className="booksSectionBooksCards container">
             {books &&
@@ -46,10 +51,13 @@ function Books() {
                       alt={book.title}
                       className={"booksCardsImage"}
                     />
-                    <h1 className={"booksCardsTitle"}>"{book.title}"</h1>
+                    <h3 className={"booksCardsTitle"}>{book.title}</h3>
                     {user && (
-                      <NavLink to={`/books/edit/${book._id}`}>
-                        <button className={"editButton"}>Edit this book</button>
+                      <NavLink
+                        to={`/books/edit/${book._id}`}
+                        className={"editBooksButton"}
+                      >
+                        <button>Edit this book</button>
                       </NavLink>
                     )}
                   </NavLink>

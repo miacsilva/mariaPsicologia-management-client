@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from '../context/auth.context';
+import { AuthContext } from "../context/auth.context";
 
 //COMPONENTS
 import projectService from "../services/project.service";
@@ -24,7 +24,6 @@ function MonthlySubject() {
   useEffect(() => {
     getMonthlySubject();
   }, []);
-
 
   return (
     <section className="monthlySubjectComponentSection">

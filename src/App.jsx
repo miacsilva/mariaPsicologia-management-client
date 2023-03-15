@@ -25,6 +25,7 @@ import ViewColaborators from "./pages/ViewColaborators";
 import AddTherapies from "./pagesToEdit/addTherapies";
 import EditAbout from "./pagesToEdit/EditAbout";
 import ViewBook from "./pages/ViewBook";
+import CreateBook from "./pagesToEdit/CreateBook";
 import EditBook from "./pagesToEdit/EditBook";
 import EditContacts from "./pagesToEdit/EditContacts";
 import EditTherapy from "./pagesToEdit/EditTherapy";
@@ -189,13 +190,34 @@ function App() {
         />
         <Route path="/appointments" element={<Appointments />} />
         <Route path="/books" element={<Books />} />
+        <Route
+          path="/books/create"
+          element={
+            <Private>
+              <CreateBook />
+            </Private>
+          }
+        />
         <Route path="/books/:id" element={<ViewBook />} />
-        <Route path="/books/edit/:id" element={<EditBook />} />
+        <Route
+          path="/books/edit/:id"
+          element={
+            <Private>
+              <EditBook />
+            </Private>
+          }
+        />
         <Route path="/contacts" element={<Contacts />} />
-        <Route path="/contacts/edit/:id" element={<EditContacts />} />
+        <Route
+          path="/contacts/edit/:id"
+          element={
+            <Private>
+              <EditContacts />
+            </Private>
+          }
+        />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-
         <Route
           path="/colaborators"
           element={
@@ -204,7 +226,6 @@ function App() {
             </Private>
           }
         />
-
         <Route
           path="/createColaborator"
           element={
@@ -213,7 +234,6 @@ function App() {
             </Private>
           }
         />
-
         <Route
           path="/create/monthly-subject"
           element={
@@ -233,7 +253,14 @@ function App() {
          <Route path="/monthlySubjects" element={<MonthlySubjects />} />
 
         <Route path="*" element={<Error />} />
-        <Route path="/add-therapies" element={<AddTherapies />} />
+        <Route
+          path="/add-therapies"
+          element={
+            <Private>
+              <AddTherapies />
+            </Private>
+          }
+        />
         <Route path="/therapies" element={<Therapies />} />
         <Route
           path="/therapies/edit/:id"
