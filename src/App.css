@@ -637,7 +637,7 @@ footer p {
 
 /* HOMEPAGE Styling */
 
-.homeContainer{
+.homeContainer {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -646,26 +646,26 @@ footer p {
   align-items: center;
 }
 
-.homeContainer h1{
-  font-family: 'Dancing Script', cursive;
+.homeContainer h1 {
+  font-family: "Dancing Script", cursive;
   font-size: 600%;
- /*  text-align: center; */
+  /*  text-align: center; */
 }
-.homeContainer h2{
+.homeContainer h2 {
   font-size: 130%;
   color: #cabaa9;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.48);
- /*  text-align: center; */
+  /*  text-align: center; */
 }
 
-.nameContainer{
+.nameContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.iconContainer{
+.iconContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -675,11 +675,6 @@ footer p {
 .scroll {
   width: 15%;
 }
-
-
-
-
-
 
 /* colors 
 yellow: #fad305
