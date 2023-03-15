@@ -71,12 +71,14 @@ function Home() {
       </div>
 
       {books.length && (
+
+        <div className="carousselContainer">
         <div
           id="carouselExampleInterval"
-          className="carousel slide"
+          className="carousel slide carrossel"
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner">
+          <div className="carousel-inner carrossel2">
             <NavLink to="/about">
               <div className="carousel-item active" data-bs-interval="4000">
                 <img
@@ -140,12 +142,12 @@ function Home() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
+
+        </div>
       )}
       <AboutHome />
       <MonthlySubject />
-      <NavLink to="/monthlySubjects">
-        <button className="monthlySeeMoreBtn">See past months «</button>
-      </NavLink>
+      
     </>
   );
 }
