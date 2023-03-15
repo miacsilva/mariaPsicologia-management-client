@@ -31,6 +31,11 @@ function Books() {
         <>
           <section className="booksSection">
             <h1>Books</h1>
+            {user && (
+              <NavLink to="/books/create">
+                <button className={"editButton"}>Add new book</button>
+              </NavLink>
+            )}
           </section>
           <section className="booksSectionBooksCards container">
             {books &&

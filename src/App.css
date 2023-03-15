@@ -20,6 +20,7 @@ body {
   position: absolute;
   top: 15vh;
   left: 25vw;
+  color: white;
 }
 
 .buttonLogin {
@@ -33,11 +34,12 @@ body {
   background-color: transparent;
   transition-duration: 1s;
   border-radius: 10%;
+  color: white;
 }
 
 .buttonLogin:hover {
-  /* border: 1px solid white; */
-  background-color: white;
+  border: 1px solid white;
+  background-color: rgb(213, 168, 136);
   transition-duration: 0.7s;
 }
 
@@ -65,6 +67,7 @@ body {
   border: none;
   padding: 5px 10px;
   color: white;
+  background-color: rgb(213, 168, 136);
 }
 
 /* ---------- END LOGIN ---------- */
@@ -115,6 +118,22 @@ body {
   text-decoration: none;
   background-color: rgb(213, 168, 136);
   color: white;
+}
+
+.editAboutbutton {
+  border: 1px solid transparent;
+  background-color: rgb(95, 140, 122);
+  padding: 1vh 1vw;
+  border-radius: 5px;
+  color: white;
+  transition-duration: 1s;
+}
+
+.editAboutbutton:hover {
+  border: 1px solid rgb(95, 140, 122);
+  background-color: white;
+  color: rgb(95, 140, 122);
+  transition-duration: 1s;
 }
 /* ---------- END EDITS ---------- *
 
@@ -187,7 +206,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   max-height: unset;
-  margin: auto;
+  margin: 0 auto 10vh;
   padding: 10vh;
   text-align: center;
 }
@@ -231,24 +250,30 @@ body {
   box-shadow: -4px -4px 15px 1px rgba(0, 0, 0, 0.555);
 }
 
+.aboutSectionAbout {
+  background-color: rgb(95, 140, 122, 0.7);
+}
+
 .aboutSectionEducation,
 .aboutSectionAbout {
   width: 95vw;
   margin: auto;
-  background-color: white;
+  color: white;
 }
 
 .aboutSectionEducation {
-  margin-top: 2vh;
+  margin: 2vh auto 20vh;
+  background-color: rgb(213, 168, 136, 0.7);
 }
 
 /* edit about*/
 .editAboutSection {
-  background-color: grey;
+  background-color: rgb(213, 168, 136, 0.7);
+  color: white;
   width: 70vw;
   padding: 5vh;
   text-align: center;
-  margin: auto;
+  margin: 0 auto 20vh;
 }
 
 .inputAbout {
@@ -292,7 +317,7 @@ body {
   box-shadow: 2px 2px 10px 1px #141e30;
   width: 25%;
   padding: 5vh;
-  margin: 2vw;
+  margin: 2vw 2vw 20vh;
   text-decoration: none;
   transition-duration: 0.5s;
 }
@@ -335,7 +360,7 @@ body {
   background-color: transparent;
   border-radius: 7px;
   font-size: 20px;
-  padding: 1vh 2vh;
+  padding: 1vh 2vh 0;
   margin-top: 3vh;
   color: white;
   transition-duration: 0.5s;
@@ -349,9 +374,10 @@ body {
 }
 
 .booksIdSection {
-  background-color: white;
+  background-color: rgb(213, 168, 136);
+  color: white;
   width: 60vw;
-  margin: auto;
+  margin: 0 auto 20vh;
   padding: 3vw;
   text-align: center;
 }
@@ -389,7 +415,7 @@ body {
   border-bottom-right-radius: 10px;
   box-shadow: 0 5px 20px -5px black;
   width: 60vw;
-  margin: auto;
+  margin: 0 auto 20vh;
   color: white;
   padding: 20vh 0;
 }
@@ -526,9 +552,10 @@ footer p {
   flex-direction: column;
   text-align: center;
   gap: 10px;
-  background-color: rgba(255, 255, 255, 0.53);
+  background-color: rgb(213, 168, 136, 0.7);
+  color: white;
   width: 50vw;
-  margin: auto;
+  margin: 0 auto 20vh;
   padding: 5vh 0 15vh 0;
   box-shadow: 0 0 10px 1px black;
 }
@@ -559,10 +586,21 @@ footer p {
 
 .buttonCreate {
   border: 1px solid transparent;
-  background-color: transparent;
+  background-color: rgb(95, 140, 122);
   position: relative;
   top: 8vh;
   left: 10vw;
+  padding: 1vh 0;
+  border-radius: 5px;
+  color: white;
+  transition-duration: 1s;
+}
+
+.buttonCreate:hover {
+  border: 1px solid rgb(95, 140, 122);
+  background-color: white;
+  color: rgb(95, 140, 122);
+  transition-duration: 1s;
 }
 
 .addTherapies-btn {

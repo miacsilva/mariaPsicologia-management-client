@@ -95,7 +95,9 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
       .then((response) => {
         setImageAbout(response.fileUrl);
       })
-      .catch((errorHandler) => console.log("Error while uploading the file: ", err));
+      .catch((errorHandler) =>
+        console.log("Error while uploading the file: ", err)
+      );
   };
 
   return (
@@ -188,7 +190,9 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                   ></textarea>
                 </div>
 
-                <button type="submit">Edit Section</button>
+                <button type="submit" className="editAboutbutton">
+                  Edit Section
+                </button>
               </form>
             </section>
           </>
