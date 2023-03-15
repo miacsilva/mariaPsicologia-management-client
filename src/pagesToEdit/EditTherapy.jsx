@@ -23,7 +23,7 @@ function EditTherapy() {
 
   const { id } = useParams();
 
-  //
+  //------------Modal Confirmation Delete-----------------------------//
   const showDeleteModal = (type, id) => {
 
       setDeleteMessage("Are you sure you want to delete this therapy?");
@@ -35,13 +35,8 @@ function EditTherapy() {
   const hideConfirmationModal = () => {
     setDisplayConfirmationModal(false);
   };
- 
-  // Handle the actual deletion of the item
-  const submitDelete = () => {
-    setDisplayConfirmationModal(false);
-  };
 
-
+    //------------Modal Confirmation Delete END-----------------------------//
 
   const getTherapy = async () => {
     try {
@@ -127,8 +122,8 @@ function EditTherapy() {
         <button type="submit">Save Changes</button>
       </form>
 
-      <button onClick={deleteTherapy} className="text-danger cursor">Delete</button>
-      <DeleteConfirmation showModal={displayConfirmationModal} confirmModal={submitDelete} hideModal={hideConfirmationModal}  message={deleteMessage}  />
+      <button onClick={() => showDeleteModal()} >Delete</button>
+      <DeleteConfirmation showModal={displayConfirmationModal} confirmModal={deleteTherapy} hideModal={hideConfirmationModal}  message={deleteMessage}  />
       
              
               
