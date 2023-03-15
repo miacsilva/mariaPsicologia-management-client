@@ -72,7 +72,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
   };
 
   //cloudinary
-  const handleFileUpload = (e) => {
+  const handleFileUploadHome = (e) => {
     const uploadData = new FormData();
     // req.body to .create() method when creating a new movie in '/api/movies' POST route
     uploadData.append("image", e.target.files[0]);
@@ -80,7 +80,20 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
       .uploadImage(uploadData)
       .then((response) => {
         // response carries "fileUrl" which we can use to update the state
-        setImage(response.fileUrl);
+        console.log(response.fileUrl);
+        setImageHome(response.fileUrl);
+      })
+      .catch((err) => console.log("Error while uploading the file: ", err));
+  };
+
+  const handleFileUploadAbout = (e) => {
+    const uploadData = new FormData();
+
+    uploadData.append("image", e.target.files[0]);
+    projectService
+      .uploadImage(uploadData)
+      .then((response) => {
+        setImageAbout(response.fileUrl);
       })
       .catch((errorHandler) => console.log("Error while uploading the file: ", err));
   };
@@ -134,9 +147,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                   )}
                   <input
                     type="file"
-                    image="image"
-                    id="image"
-                    onChange={(e) => handleFileUpload(e)}
+                    onChange={(e) => handleFileUploadHome(e)}
                   />
                 </div>
 
@@ -144,16 +155,14 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                   <label htmlFor="imageAbout">Image About Page</label>
                   {imageAbout && (
                     <img
-                      src={imageHome}
+                      src={imageAbout}
                       alt={name}
                       className="photoAboutEdit"
                     />
                   )}
                   <input
                     type="file"
-                    image="image"
-                    id="image"
-                    onChange={(e) => handleFileUpload(e)}
+                    onChange={(e) => handleFileUploadAbout(e)}
                   />
                 </div>
 

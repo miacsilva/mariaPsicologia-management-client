@@ -90,7 +90,7 @@ function App() {
 
     if (scrollUp > lastScrollUp) {
       //if it will be greater than the previous
-      navbar.style.top = "-20vh";
+      navbar.style.top = "-40vh";
       //set the value to the negetive of height of navbar
     } else {
       navbar.style.top = "0";
@@ -190,10 +190,7 @@ function App() {
         <Route path="/books/edit/:id" element={<EditBook />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/contacts/edit/:id" element={<EditContacts />} />
-        <Route
-          path="/"
-          element={<Home about={about} books={books} contacts={contacts} />}
-        />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
 
         <Route
