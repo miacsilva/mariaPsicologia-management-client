@@ -75,8 +75,13 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(#6fa5a7, transparent);
-  padding: 25px 25px 60px;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 212, 255, 0.02853641456582634) 0%,
+    rgba(3, 113, 113, 1) 48%
+  );
+  padding: 0 25px 50px;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -88,10 +93,14 @@ body {
   text-decoration: none;
   color: white;
   padding: 0 10px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
+.navbar__navlinks__user {
+  font-size: 26px;
+}
 /* ---------- END NAVBAR ---------- */
+
 /* ------------ EDITS ------------ */
 .editButton {
   border: 1px solid black;
@@ -108,6 +117,7 @@ body {
 .carouselImage {
   height: 90vh;
   margin: auto;
+  transition-duration: 1s;
 }
 .carouselImage:hover {
   height: 90vh;
@@ -177,6 +187,7 @@ body {
   color: rgba(0, 0, 0, 0.296);
   font-size: 3vh;
 }
+
 .monthlySubjectComponentSection h1 {
   color: rgb(47, 41, 41);
   margin-top: 3vh;
@@ -192,8 +203,8 @@ body {
   padding-right: 3.5vh;
   line-height: 200%;
 }
-
 /* ---------- END HOME ---------- */
+
 /* ------------ ABOUT ------------ */
 .aboutSectionAbout,
 .aboutSectionEducation {
@@ -254,8 +265,8 @@ body {
   margin: auto;
   padding: 1vh;
 }
-
 /* ------------ END ABOUT ------------ */
+
 /* ------------ BOOKS ------------ */
 .booksSectionBooksCards {
   display: flex;
@@ -306,18 +317,18 @@ body {
   font-weight: 550;
   font-size: 20px;
 }
-
 /* ------------ END BOOKS ------------ */
-/* ------------ MONTHLY SUBJECT ------------ */
 
+/* ------------ MONTHLY SUBJECT ------------ */
 /* ------------ END MONTHLY SUBJECT ------------ */
+
 /* ------------ APPOINTMENTS ------------ */
 .appointmentsBody {
   display: flex;
   justify-content: space-around;
 }
-
 /* ------------ END APPOINTMENTS ------------ */
+
 /* ------------ CONTACTS ------------ */
 .contactsSectionBox {
   background-color: white;
@@ -328,6 +339,7 @@ body {
   margin: auto;
   padding: 20vh 0;
 }
+
 .contactsSectionContacts,
 .contactsSectionLinks {
   display: flex;
@@ -356,7 +368,6 @@ body {
 .iconContacts {
   width: 3vw;
 }
-
 /* ------------ END CONTACTS ------------ */
 
 /* ------------ FOOTER ------------ */
@@ -398,7 +409,6 @@ footer p {
 .iconSocialMedia {
   width: 3vw;
 }
-
 /* ---------- END FOOTER ---------- */
 
 /* ------------ 404 PAGE ------------ */
@@ -494,7 +504,6 @@ footer p {
   justify-content: space-around;
   flex-direction: row;
 }
-
 /* ---------- END COLABORATOR ---------- */
 
 /* colors 

@@ -90,7 +90,7 @@ function App() {
 
     if (scrollUp > lastScrollUp) {
       //if it will be greater than the previous
-      navbar.style.top = "-80px";
+      navbar.style.top = "-20vh";
       //set the value to the negetive of height of navbar
     } else {
       navbar.style.top = "0";

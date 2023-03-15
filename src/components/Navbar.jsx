@@ -34,7 +34,7 @@ function Navbar() {
               })
             }
           >
-            <h4>Welcome {user.name}</h4>
+            <h4 className={"navbar__navlinks__user"}>Welcome {user.name}</h4>
           </NavLink>
         )}
       </div>
