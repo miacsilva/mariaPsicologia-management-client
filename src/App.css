@@ -13,7 +13,7 @@ body {
 
 /* ------------ LOGIN ------------ */
 .loginSection {
-  background: linear-gradient(#6fa5a7, rgb(45, 101, 87));
+  background-color: rgba(95, 140, 122, 0.95);
   width: 50vw;
   box-shadow: 0 0 10px 1px black;
   padding: 15vh;
@@ -37,14 +37,13 @@ body {
 
 .buttonLogin:hover {
   /* border: 1px solid white; */
-  background-color: #6fa5a7;
+  background-color: white;
   transition-duration: 0.7s;
 }
 
 .buttonLogin:active {
-  border: 1px solid #6fa5a7;
-  background-color: white;
-  transition-duration: 0s;
+  box-shadow: inset 0 0 5px 1px black;
+  transition-duration: 0.1s;
 }
 
 .formLogin {
@@ -65,7 +64,6 @@ body {
 .passwordLogin input {
   border: none;
   padding: 5px 10px;
-  background-color: rgba(111, 165, 167, 0.7);
   color: white;
 }
 
@@ -75,11 +73,11 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: rgba(111, 165, 167, 0.7);
+  background: rgb(0, 212, 255);
   background: linear-gradient(
     0deg,
     rgba(0, 212, 255, 0.02853641456582634) 0%,
-    rgba(111, 165, 167, 1) 48%
+    rgba(95, 140, 122, 1) 48%
   );
   padding: 2vh 25px 50px;
   position: fixed;
@@ -103,18 +101,20 @@ body {
 .navbar__navlinks__user {
   font-size: 26px;
   margin: 0;
+  color: rgb(213, 168, 136);
+  font-weight: bold;
 }
 /* ---------- END NAVBAR ---------- */
 
 /* ------------ EDITS ------------ */
 .editButton {
-  border: 1px solid black;
-  box-shadow: 0 0 10px 0px black;
+  border: 1px solid white;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 10px 30px;
   font-weight: 700;
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: rgb(213, 168, 136);
+  color: white;
 }
 /* ---------- END EDITS ---------- *
 
@@ -140,13 +140,13 @@ body {
   display: flex;
   justify-content: space-between;
   margin-left: 10vw;
-  background-color: #6fa5a7;
-  box-shadow: 0 0 10px 1px black;
+  background-color: rgb(95, 140, 122);
+  box-shadow: 0 0 10px 1px white;
   gap: 50px;
+  color: white;
   padding: 40px;
   position: relative;
   bottom: 50px;
-  /* border-bottom-left-radius: 10px; */
   border-top-left-radius: 10px;
 }
 
@@ -168,6 +168,10 @@ body {
   border-radius: 3px;
   padding: 10px 20px;
   font-weight: 600;
+  border: 1px solid white;
+  text-decoration: none;
+  background-color: rgb(213, 168, 136);
+  color: white;
   transition-duration: 0.5s;
 }
 
@@ -282,7 +286,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6fa5a786;
+  background-color: rgb(213, 168, 136);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 2px 2px 10px 1px #141e30;
@@ -294,7 +298,7 @@ body {
 }
 
 .booksCards:hover {
-  background-color: #6fa5a7;
+  background-color: rgb(95, 140, 122);
   transition-duration: 1.5s;
 }
 
@@ -316,7 +320,7 @@ body {
 }
 
 .booksCardsTitle {
-  color: #141e30;
+  color: white;
   text-align: center;
   font-weight: bold;
   margin-top: 5vh;
@@ -340,7 +344,8 @@ body {
 .editBooksButton button:hover {
   border: 3px solid #6fa5a7;
   background-color: white;
-  transition-duration: 1.5s;
+  color: rgb(95, 140, 122);
+  transition-duration: 0.5s;
 }
 
 .booksIdSection {
@@ -379,12 +384,13 @@ body {
 
 /* ------------ CONTACTS ------------ */
 .contactsSectionBox {
-  background-color: white;
+  background-color: rgb(213, 168, 136, 0.7);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   box-shadow: 0 5px 20px -5px black;
   width: 60vw;
   margin: auto;
+  color: white;
   padding: 20vh 0;
 }
 
@@ -405,7 +411,7 @@ body {
 .separator {
   width: 15vh;
   margin: auto;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .contactsSectionLinks {
@@ -423,13 +429,11 @@ footer {
   display: flex;
   justify-content: space-around;
   gap: 30px;
-  background-color: rgba(4, 4, 4, 0.5);
+  background-color: #5f8c7a;
   color: white;
-  padding: 70px 0;
-  width: 90vw;
-  margin: 40px auto 50px;
-  border-top: 2px solid yellow;
-  border-bottom: 2px solid yellow;
+  padding: 40px 0 40px;
+  margin: 0px auto 0;
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
 }
 
 .footerLinks {
@@ -441,7 +445,7 @@ footer {
 }
 
 footer h5 {
-  color: #6fa5a7;
+  color: rgb(213, 168, 136);
 }
 
 footer p {
@@ -477,9 +481,18 @@ footer p {
   display: flex;
   justify-content: space-between;
   background-color: white;
-  width: 90vw;
+  width: 50vw;
   margin: 0.5vh auto;
   padding: 15px 30px;
+  color: white;
+}
+
+.colaboratorsTabsColor:nth-child(even) section {
+  background-color: #5f8c7ab3;
+}
+
+.colaboratorsTabsColor:nth-child(odd) section {
+  background-color: #d5a888b3;
 }
 
 .colaboratorsTabs__buttons {
@@ -491,7 +504,21 @@ footer p {
 .colaboratorDeleteButton {
   border: 1px solid transparent;
   background-color: transparent;
-  padding: 1vh 2vh;
+  border-radius: 2px;
+  padding: 2vh 3vh;
+  font-size: 18px;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.colaboratorDeleteButton:hover {
+  background-color: rgba(95, 140, 122);
+  transition-duration: 1s;
+}
+
+.colaboratorSeparator {
+  width: 30vw;
+  margin: 3vh auto;
 }
 
 .createColaborator {

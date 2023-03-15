@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import { AuthContext } from '../context/auth.context';
+import { AuthContext } from "../context/auth.context";
 
 //COMPONENTS
 import projectService from "../services/project.service";
@@ -25,16 +25,15 @@ function MonthlySubject() {
     getMonthlySubject();
   }, []);
 
-
   return (
     <section className="monthlySubjectComponentSection">
       <div>
-      {monthlySubject.length && (
-        <>
-        <h2>Monthly Subject</h2>
-        <h1>{monthlySubject[0].title}</h1>
-        <p> {monthlySubject[0].description} </p>
-        </>
+        {monthlySubject.length && (
+          <>
+            <h2>Monthly Subject</h2>
+            <h1>{monthlySubject[0].title}</h1>
+            <p> {monthlySubject[0].description} </p>
+          </>
         )}
       </div>
     </section>

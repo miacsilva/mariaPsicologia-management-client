@@ -52,23 +52,26 @@ function ViewColaborators() {
             </section>
             {users.map((colaborators, i) => {
               return (
-                <div key={colaborators._id}>
+                <div className={"colaboratorsTabsColor"} key={colaborators._id}>
                   {i !== 0 && (
-                    <div className={"colaboratorsTabs"}>
-                      <div>
-                        <h1>{colaborators.name}</h1>
-                        <h4>{colaborators.email}</h4>
-                      </div>
-                      <div className={"colaboratorsTabs__buttons"}>
-                        <button
-                          className={"colaboratorDeleteButton"}
-                          type="submit"
-                          onClick={() => deleteUser(colaborators._id)}
-                        >
-                          Delete this colaborator
-                        </button>
-                      </div>
-                    </div>
+                    <>
+                      <section className={"colaboratorsTabs"}>
+                        <div>
+                          <h1>{colaborators.name}</h1>
+                          <h4>{colaborators.email}</h4>
+                        </div>
+                        <div className={"colaboratorsTabs__buttons"}>
+                          <button
+                            className={"colaboratorDeleteButton"}
+                            type="submit"
+                            onClick={() => deleteUser(colaborators._id)}
+                          >
+                            Delete this colaborator
+                          </button>
+                        </div>
+                      </section>
+                      <hr className="colaboratorSeparator" />
+                    </>
                   )}
                 </div>
               );
