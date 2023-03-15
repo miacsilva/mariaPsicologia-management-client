@@ -60,7 +60,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("aboutSection", {
               duration: 500,
-              offset: -10,
+              offset: 0,
               spy: true,
             })
           }

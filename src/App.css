@@ -13,21 +13,20 @@ body {
 
 /* ------------ LOGIN ------------ */
 .loginSection {
-  background-color: rgba(95, 140, 122, 0.95);
+  background-color: rgba(95, 140, 122, 0.7);
   width: 50vw;
   box-shadow: 0 0 10px 1px black;
-  padding: 15vh;
-  position: absolute;
-  top: 15vh;
-  left: 25vw;
+  padding: 10vh;
+  margin: 30vh auto;
   color: white;
 }
 
 .buttonLogin {
-  position: absolute;
-  bottom: 5vh;
-  right: 4vw;
-  padding: 2vh 2vw;
+  position: relative;
+  top: 7vh;
+  left: 35vw;
+  width: 20%;
+  padding: 2vh 0vw !important;
   font-size: 20px;
   font-weight: 600;
   border: 1px solid transparent;
@@ -150,19 +149,17 @@ body {
   transition-duration: 1s;
 }
 
-.carousselContainer{
-display: flex;
-justify-content: center;
+.carousselContainer {
+  display: flex;
+  justify-content: center;
 }
 
-.carrossel{
-width: 80%;
-
+.carrossel {
+  width: 80%;
 }
 
-.carrossel2{
+.carrossel2 {
   border-radius: 3%;
-  
 }
 
 /* About Section */
