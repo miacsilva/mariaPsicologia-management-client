@@ -2,11 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import projectService from "../services/project.service";
+import DeleteConfirmation from "../components/DeleteConfirmation";
+import { Row, Col, Container, Card, Table, Alert } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function EditTherapy() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
+
+  //
+  const [displayConfirmationModal, setDisplayConfirmationModal] = useState(false);
+  const [deleteMessage, setDeleteMessage] = useState(null);
 
   const handleTitle = (e) => setTitle(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
@@ -14,6 +22,26 @@ function EditTherapy() {
   const navigate = useNavigate();
 
   const { id } = useParams();
+
+  //
+  const showDeleteModal = (type, id) => {
+
+      setDeleteMessage("Are you sure you want to delete this therapy?");
+ 
+    setDisplayConfirmationModal(true);
+  };
+ 
+  // Hide the modal
+  const hideConfirmationModal = () => {
+    setDisplayConfirmationModal(false);
+  };
+ 
+  // Handle the actual deletion of the item
+  const submitDelete = () => {
+    setDisplayConfirmationModal(false);
+  };
+
+
 
   const getTherapy = async () => {
     try {
@@ -99,7 +127,13 @@ function EditTherapy() {
         <button type="submit">Save Changes</button>
       </form>
 
-      <button onClick={deleteTherapy}>Delete</button>
+      <button onClick={deleteTherapy} className="text-danger cursor">Delete</button>
+      <DeleteConfirmation showModal={displayConfirmationModal} confirmModal={submitDelete} hideModal={hideConfirmationModal}  message={deleteMessage}  />
+      
+             
+              
+    
+
     </section>
   );
 }
