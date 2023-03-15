@@ -32,14 +32,14 @@ function Books() {
           <section className="booksSection">
             <h1>Books</h1>
           </section>
-          <section className="booksSectionBooksCards">
+          <section className="booksSectionBooksCards container">
             {books &&
               books.map((book) => {
                 return (
                   <NavLink
                     to={`/books/${book._id}`}
                     key={book._id}
-                    className={"booksCards"}
+                    className={"booksCards row"}
                   >
                     <img
                       src={book.image}
