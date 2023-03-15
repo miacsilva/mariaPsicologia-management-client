@@ -96,6 +96,10 @@ body {
   font-size: 18px;
 }
 
+.navbar__navlinks:hover {
+  color: white;
+}
+
 .navbar__navlinks__user {
   font-size: 26px;
   margin: 0;
@@ -278,22 +282,65 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: grey;
-  width: 40%;
+  background-color: #6fa5a786;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 10px 1px #141e30;
+  width: 25%;
   padding: 5vh;
-  margin: 5vw;
+  margin: 2vw;
   text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.booksCards:hover {
+  background-color: #6fa5a7;
+  transition-duration: 1.5s;
 }
 
 .booksCardsImage {
-  width: 65vh;
+  height: 40vh;
+  width: 90%;
+  box-shadow: 0 0 10px 3px grey;
+  transition-duration: 0.5s;
+}
+
+.booksCards:hover .booksCardsImage {
+  box-shadow: 0 0 10px 1px black;
+  transition-duration: 1.5s;
+}
+
+.row > * {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .booksCardsTitle {
-  color: white;
-  width: 80%;
+  color: #141e30;
   text-align: center;
+  font-weight: bold;
   margin-top: 5vh;
+}
+
+.editBooksButton {
+  text-align: right;
+}
+
+.editBooksButton button {
+  border: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 7px;
+  font-size: 20px;
+  padding: 1vh 2vh;
+  margin-top: 3vh;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.editBooksButton button:hover {
+  border: 3px solid #6fa5a7;
+  background-color: white;
+  transition-duration: 1.5s;
 }
 
 .booksIdSection {
