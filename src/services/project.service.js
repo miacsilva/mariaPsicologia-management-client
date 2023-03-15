@@ -119,10 +119,11 @@ class ProjectService {
     return this.api.put(`/api/therapies/edit/${id}`, requestData);
   };
 
-  //Delete a therapy
+  //Delete therapy
   deleteTherapy = (id) => {
     return this.api.delete(`/api/therapies/${id}`);
   };
+
   /* ------- END THERAPIES ------- */
 
   /* ------- MONTHLY SUBJECT ------- */

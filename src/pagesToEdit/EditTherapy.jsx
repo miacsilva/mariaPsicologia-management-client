@@ -22,17 +22,16 @@ function EditTherapy() {
       setTitle(response.data.title);
       setDescription(response.data.description);
       setImage(response.data.image);
-    } catch (error) {
+    } catch (errorHandler) {
       console.log(error);
     }
   };
 
-  const deleteTherapy = async (id) => {
+  const deleteTherapy = async () => {
     try {
-      const response = await projectService.deleteTherapy(id);
-      console.log(response);
+      await projectService.deleteTherapy(id)
       navigate("/therapies");
-    } catch (error) {
+    } catch (errorHandler) {
       console.log(error);
     }
   };
@@ -47,7 +46,7 @@ function EditTherapy() {
     try {
       await projectService.editTherapy({ id, requestData });
       navigate(`/therapies`);
-    } catch (error) {
+    } catch (errorHandler) {
       console.log(error);
     }
   };
@@ -62,7 +61,7 @@ function EditTherapy() {
       .then((response) => {
         setImage(response.fileUrl);
       })
-      .catch((err) => console.log("Error while uploading the file: ", err));
+      .catch((errorHandler) => console.log("Error while uploading the file: ", err));
   };
 
   return (

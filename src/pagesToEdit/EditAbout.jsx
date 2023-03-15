@@ -66,7 +66,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
       await projectService.editAbout({ id, requestData });
 
       navigate(`/about`);
-    } catch (error) {
+    } catch (errorHandler) {
       console.log(error);
     }
   };
@@ -82,7 +82,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
         // response carries "fileUrl" which we can use to update the state
         setImage(response.fileUrl);
       })
-      .catch((err) => console.log("Error while uploading the file: ", err));
+      .catch((errorHandler) => console.log("Error while uploading the file: ", err));
   };
 
   return (
