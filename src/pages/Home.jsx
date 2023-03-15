@@ -13,11 +13,8 @@ function Home() {
     <>
       <AboutHome />
       <MonthlySubject />
-      <NavLink to="/monthlySubjects">
-            <button className="monthlySeeMoreBtn">See past months «</button>
-          </NavLink>
     </>
   );
 }
 
-export default Home; 
+export default Home;
