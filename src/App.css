@@ -80,7 +80,7 @@ body {
   background: linear-gradient(
     0deg,
     rgba(0, 212, 255, 0.02853641456582634) 0%,
-    rgba(95, 140, 122, 1) 48%
+    rgba(76, 112, 98, 0.693) 48%
   );
   padding: 2vh 25px 50px;
   position: fixed;
@@ -104,7 +104,7 @@ body {
 .navbar__navlinks__user {
   font-size: 26px;
   margin: 0;
-  color: rgb(213, 168, 136);
+  color: #cabaa9;
   font-weight: bold;
 }
 /* ---------- END NAVBAR ---------- */
@@ -148,6 +148,21 @@ body {
   margin: auto;
   filter: grayscale(150%) blur(2px);
   transition-duration: 1s;
+}
+
+.carousselContainer{
+display: flex;
+justify-content: center;
+}
+
+.carrossel{
+width: 80%;
+
+}
+
+.carrossel2{
+  border-radius: 3%;
+  
 }
 
 /* About Section */
@@ -209,10 +224,6 @@ body {
   margin: 0 auto 10vh;
   padding: 10vh;
   text-align: center;
-}
-
-.monthlysubButton {
-  text-align: left;
 }
 
 .monthlySeeMoreBtn {
