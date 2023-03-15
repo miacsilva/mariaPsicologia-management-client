@@ -53,41 +53,12 @@ function CreateBook() {
     };
 
     try {
-      projectService.createBook({ requestData });
+      projectService.createBook(requestData);
       navigate(`/books`);
     } catch (error) {
       console.log(error);
     }
   };
-
-  /* const handleSubmit = (e) => {
-    e.preventDefault();
-    projectService
-      .createBook({
-        title,
-        description,
-        image,
-        publisher,
-        publishedDate,
-        author,
-        languages,
-        pages,
-      })
-      .then((res) => {
-        setTitle("");
-        setDescription("");
-        setImage("");
-        setPublisher("");
-        setPublishedDate("");
-        setAuthor("");
-        setLanguages("");
-        setPages("");
-
-        // navigate to another page
-        navigate("/books");
-      })
-      .catch((err) => console.log("Error while adding the new therapy: ", err));
-  }; */
 
   return (
     <>
@@ -118,7 +89,6 @@ function CreateBook() {
               name="title"
               value={title}
               onChange={handleTitle}
-              /*onChange={(e) => setTitle(e.target.value)}*/
             />
           </div>
 
@@ -129,7 +99,6 @@ function CreateBook() {
               name="description"
               value={description}
               onChange={handleDescription}
-              /*onChange={(e) => setDescription(e.target.value)}*/
             />
           </div>
 
@@ -140,7 +109,6 @@ function CreateBook() {
               name="publisher"
               value={publisher}
               onChange={handlePublisher}
-              /*onChange={(e) => setPublisher(e.target.value)}*/
             />
           </div>
 
@@ -151,7 +119,6 @@ function CreateBook() {
               name="publishedDate"
               value={publishedDate}
               onChange={handlePublishedDate}
-              /*onChange={(e) => setPublishedDate(e.target.value)}*/
             />
           </div>
 
@@ -162,7 +129,6 @@ function CreateBook() {
               name="author"
               value={author}
               onChange={handleAuthor}
-              /*onChange={(e) => setAuthor(e.target.value)}*/
             />
           </div>
 
@@ -173,7 +139,6 @@ function CreateBook() {
               name="languages"
               value={languages}
               onChange={handleLanguages}
-              /*onChange={(e) => setLanguages(e.target.value)}*/
             />
           </div>
 
@@ -184,7 +149,6 @@ function CreateBook() {
               name="pages"
               value={pages}
               onChange={handlePages}
-              /*onChange={(e) => setPages(e.target.value)}*/
             />
           </div>
 
