@@ -631,6 +631,52 @@ footer p {
 }
 /* ---------- END COLABORATOR ---------- */
 
+/* HOMEPAGE Styling */
+
+.homeContainer{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeContainer h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 600%;
+ /*  text-align: center; */
+}
+.homeContainer h2{
+  font-size: 130%;
+  color: #cabaa9;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.48);
+ /*  text-align: center; */
+}
+
+.nameContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll {
+  width: 15%;
+}
+
+
+
+
+
+
 /* colors 
 yellow: #fad305
 bluish grey: #6FA5A7
