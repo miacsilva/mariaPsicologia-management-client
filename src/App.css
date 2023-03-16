@@ -155,10 +155,6 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20vh 0 0 30vh;
-  /*  border-bottom: 3px solid #141e30; */
-  /* background: rgb(76,112,98);
-background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(255,249,219,0.2862394957983193) 91%); */
-  /* box-shadow: 0 0 10px 1px white; */
   gap: 50px;
   color: #cabaa9;
   padding: 35px 35px 0;
@@ -301,11 +297,12 @@ background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(2
   margin: 0 auto 20vh;
 }
 
-.inputAbout {
+.inputAbout,
+.inputTherapy {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vh 0;
+  margin: 3vh 0;
 }
 
 .inputAboutName {
@@ -464,6 +461,53 @@ background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(2
 .whatsapp {
   width: 1.5vw;
 }
+
+.therapySection {
+  position: absolute;
+  top: 15vh;
+  right: 5vw;
+  z-index: 10;
+}
+
+.editTherapySection {
+  background-color: rgb(213, 168, 136);
+  color: white;
+  width: 70vw;
+  padding: 5vh;
+  margin: 5vh auto 20vh;
+  text-align: center;
+  border: 1px solid rgb(95, 140, 122);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.editTherapyForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: auto;
+}
+
+.editTherapyButton {
+  border: 1px solid rgb(95, 140, 122);
+  margin: 5vh 0 0 40vw;
+  padding: 1vh 2vw;
+  background-color: transparent;
+  color: rgb(95, 140, 122);
+  font-weight: 600;
+  border-radius: 7px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+  transition-duration: 1s;
+}
+
+.editTherapyButton:hover {
+  border: 1px solid rgb(95, 140, 122);
+  background-color: rgb(95, 140, 122);
+  color: white;
+  box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.7);
+
+  transition-duration: 0.5s;
+}
+
 /* ------------ END APPOINTMENTS ------------ */
 
 /* ------------ CONTACTS ------------ */
@@ -688,10 +732,11 @@ footer p {
 .addTherapies-btn {
   border-radius: 1.5vh;
   font-size: 2vh;
-  border-color: #141e30;
   border: 3px solid #141e30;
-  width: 7vw;
-  margin-bottom: 2vh;
+  background-color: rgb(213, 168, 136);
+  font-weight: 600;
+  color: white;
+  padding: 1vh 1vw;
 }
 
 .therapiesContainer {

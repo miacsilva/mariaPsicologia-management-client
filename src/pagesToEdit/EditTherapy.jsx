@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
+
+import { AuthContext } from "../context/auth.context";
 import projectService from "../services/project.service";
 import DeleteConfirmation from "../components/DeleteConfirmation";
 import { Row, Col, Container, Card, Table, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function EditTherapy() {
+  const { user } = useContext(AuthContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
@@ -92,46 +95,71 @@ function EditTherapy() {
   };
 
   return (
-    <section>
-      <h1>Edit Therapy:</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Therapie's Name:</label>
-        <input
-          type="text"
-          name="title"
-          id="title"
-          value={title}
-          onChange={handleTitle}
+    <>
+      <section className="appointmentSection">
+        <h1>Edit therapy...</h1>
+        {user && (
+          <NavLink to="/appointments">
+            <button className={"editApButton"}>Go back</button>
+          </NavLink>
+        )}
+      </section>
+      <hr className="separatorAppointments" />
+      <section className="editTherapySection">
+        <form onSubmit={handleSubmit} className="editTherapyForm">
+          <div className="inputTherapy">
+            <label htmlFor="title">Therapie's Name</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              value={title}
+              onChange={handleTitle}
+            />
+          </div>
+
+          <div className="inputTherapy">
+            <label htmlFor="description">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              className="textareaAbout"
+              value={description}
+              onChange={handleDescription}
+            ></textarea>
+          </div>
+
+          <div className="inputTherapy">
+            {image && (
+              <img src={image} alt={title} className="photoAboutEdit" />
+            )}
+            <input
+              type="file"
+              image="image"
+              id="image"
+              onChange={(e) => handleFileUpload(e)}
+            />
+          </div>
+
+          <button type="submit" className={"editTherapyButton"}>
+            Save Changes
+          </button>
+        </form>
+
+        <button
+          onClick={() => showDeleteModal()}
+          className={"editTherapyButton"}
+        >
+          Delete
+        </button>
+        <DeleteConfirmation
+          showModal={displayConfirmationModal}
+          confirmModal={deleteTherapy}
+          hideModal={hideConfirmationModal}
+          message={deleteMessage}
         />
-
-        <label htmlFor="description">Description</label>
-        <textarea
-          name="description"
-          id="description"
-          className="textareaAbout"
-          value={description}
-          onChange={handleDescription}
-        ></textarea>
-
-        {image && <img src={image} alt={title} />}
-        <input
-          type="file"
-          image="image"
-          id="image"
-          onChange={(e) => handleFileUpload(e)}
-        />
-
-        <button type="submit">Save Changes</button>
-      </form>
-
-      <button onClick={() => showDeleteModal()}>Delete</button>
-      <DeleteConfirmation
-        showModal={displayConfirmationModal}
-        confirmModal={deleteTherapy}
-        hideModal={hideConfirmationModal}
-        message={deleteMessage}
-      />
-    </section>
+      </section>
+    </>
   );
 }
 

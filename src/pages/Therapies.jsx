@@ -8,9 +8,6 @@ function Therapies() {
   const { user } = useContext(AuthContext);
   const [therapies, setTherapies] = useState([]);
 
-
-
-  
   const getTherapies = async () => {
     try {
       const response = await projectService.getTherapies();
@@ -29,9 +26,9 @@ function Therapies() {
     <>
       {user && (
         <>
-        <NavLink to="/add-therapies">
-          <button className="addTherapies-btn">Add Therapy</button>
-        </NavLink>
+          <NavLink to="/add-therapies" className="therapySection">
+            <button className="addTherapies-btn">Add Therapy</button>
+          </NavLink>
         </>
       )}
       {therapies.length && (
@@ -39,7 +36,7 @@ function Therapies() {
           {therapies &&
             therapies.map((therapy) => (
               <div className="therapiesContainer">
-                <div className="col-3">
+                <div className="col">
                   <div className="card h-100">
                     <div key={therapy._id}>
                       <img
@@ -51,9 +48,12 @@ function Therapies() {
                         <h5 className="card-title">{therapy.title}</h5>
                         <p className="card-text">{therapy.description}</p>
                         {user && (
-        <NavLink to={`/therapies/edit/${therapy._id}`}>
-          <button className="addTherapies-btn">Edit Therapy</button>
-        </NavLink>)}
+                          <NavLink to={`/therapies/edit/${therapy._id}`}>
+                            <button className="addTherapies-btn">
+                              Edit Therapy
+                            </button>
+                          </NavLink>
+                        )}
                       </div>
                     </div>
                   </div>
