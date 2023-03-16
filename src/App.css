@@ -764,6 +764,8 @@ footer p {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  width: 35vw;
+  padding: 10%;
 }
 /* ---------- END COLABORATOR ---------- */
 
@@ -816,4 +818,23 @@ footer p {
   background: #080808;
   background-image: linear-gradient(to right, #ccc, #080808, #050505);
   margin-left: 12%;
+}
+
+.whatsapp{
+  width: 3vw;
+  margin-bottom: 2vh ;
+}
+
+.contactWhatsapp{
+  margin-top: 5vh;
+  border: 3px solid #5f8c7a;
+  border-radius: 7px;
+  padding-top: 2.5vh ;
+  padding-bottom: 2.5vh ;
+  padding-left: 3.5vh;
+  padding-right: 3.5vh;
+}
+
+.contactWhatsapp h5{
+    font-size: 100%;
 }

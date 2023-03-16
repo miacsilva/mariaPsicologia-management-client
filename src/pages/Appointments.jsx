@@ -20,7 +20,21 @@ function Appointments() {
       console.log(error);
     }
   };
+
+  const [contacts, setContacts] = useState([]);
+
+  const getContacts = async () => {
+    try {
+      const response = await projectService.getContacts();
+      /* console.log(response.data); */
+      setContacts(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
+    getContacts();
     getTherapies();
   }, []);
   return (
@@ -66,8 +80,12 @@ function Appointments() {
                   Go to Appointments-Book
                 </button>
               </Link>
-              <h5>Any questions? Feel free to contact via whatsaap!</h5>
+              <div className="contactWhatsapp">
               <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
+              <h5>Any questions? <br></br>  Feel free to contact via whatsaap! </h5>
+              <p>{contacts[0].phoneNumber}</p>
+
+              </div>
             </div>
           </div>
         </div>
