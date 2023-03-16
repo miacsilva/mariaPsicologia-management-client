@@ -1,15 +1,16 @@
 import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { useNavigate, NavLink } from "react-router-dom";
 // import the service file since we need it to send/get the data to/from the server
 import projectService from "../services/project.service";
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { AuthContext } from "../context/auth.context";
 
 function CreateMonthlySubject() {
+  const { user, logout } = useContext(AuthContext);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
@@ -49,8 +50,24 @@ function CreateMonthlySubject() {
   };
   return (
     <div>
-      <h2>Create new Monthly Subject</h2>
+      <section className="createMsSection">
+        <h1>Create new Monthly Subject</h1>
+        {user && (
+          <NavLink to="/appointments/edit">
+            <button className={"editApButton"}>Edit Monthly Subjects Section</button>
+          </NavLink>
+        )}
+      </section>
+      <hr className="separatorAppointments" />
+
+      <NavLink to="/monthlySubjects"> « Go Back </NavLink>
+
+
+     <section  className="createMS">
       <form onSubmit={handleSubmit}>
+
+          <div>
+
         <label>Subject of the Month</label>
         <input
           type="text"
@@ -58,6 +75,10 @@ function CreateMonthlySubject() {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+          </div>
+                      <hr />
+          <div className="descriptionMS">
+
         <label>Description</label>
         <textarea
           type="text"
@@ -65,31 +86,39 @@ function CreateMonthlySubject() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
-        <button type="submit">Add new Monthly Subject</button>
-       
 
-        <FormControl fullWidth> 
-  <InputLabel id="demo-simple-select-label">Date</InputLabel>
-  <Select
-    labelId="demo-simple-select-label"
-    id="demo-simple-select"
-    value={month}
-    label="month"
-    onChange={(e) => setMonth(e.target.value)}
-  >
-    <MenuItem value={10}>Abril/2023</MenuItem>
-    <MenuItem value={20}>Maio/2023</MenuItem>
-    <MenuItem value={30}>Junho/2023</MenuItem>
-    <MenuItem value={10}>Julho/2023</MenuItem>
-    <MenuItem value={20}>Agosto/2023</MenuItem>
-    <MenuItem value={30}>Setembro/2023</MenuItem>
-    <MenuItem value={10}>Outubro/2023</MenuItem>
-    <MenuItem value={20}>Novembro/2023</MenuItem>
-    <MenuItem value={30}>Dezembro/2023</MenuItem>
-  </Select>
-</FormControl>
+          </div>
+          <hr />
+          <div>
+
+        <label>Date</label>
+        <input
+          type="text"
+          name="month"
+          value={month}
+          onChange={(e) => setMonth(e.target.value)}
+        />
+
+          </div>
+
+          <hr />
+          <div>
+
+        <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
+
+          </div>
+          <hr />
+          <div>
+
+        <button type="submit">Add new Monthly Subject</button>
+
+          </div>
+
+
+        
       </form>
+
+      </section>
     </div>
   );
 }

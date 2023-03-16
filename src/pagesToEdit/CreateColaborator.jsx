@@ -49,6 +49,7 @@ function CreateColaborator() {
       <section className="createColaborator">
         <h1>Criar novo colaborador!</h1>
 
+          
         <form onSubmit={handleSubmit} className={"createColaboratorForm"}>
           <div className="createColaborator__name">
             <label htmlFor="name"> Nome</label>

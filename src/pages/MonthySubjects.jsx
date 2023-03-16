@@ -24,10 +24,19 @@ function MonthlySubjects() {
 
   return (
     <>
+    <section className="appointmentSection">
+        <h1>Monthly Subjects</h1>
+        {user && (
+          <NavLink to="/appointments/edit">
+            <button className={"editApButton"}>Edit Monthly Subjects Section</button>
+          </NavLink>
+        )}
+      </section>
+      <hr className="separatorAppointments" />
       {user && (
         <>
           <NavLink to="/create/monthly-subject">
-            <button className="addTherapies-btn">
+            <button className="addMSButton">
               Create new Monthly Subject
             </button>
           </NavLink>
@@ -35,9 +44,11 @@ function MonthlySubjects() {
       )}
       {monthlySubjects.length && (
         <>
+
+        <div className="MSSContainer">
           {monthlySubjects &&
             monthlySubjects.map((MS) => (
-              <div className="therapiesContainer">
+              <div>
                 <div className="col-3">
                   <div className="card h-100">
                     <div key={MS._id}>
@@ -63,6 +74,7 @@ function MonthlySubjects() {
                 </div>
               </div>
             ))}
+            </div>
         </>
       )}
     </>
