@@ -34,6 +34,7 @@ function Appointments() {
           </NavLink>
         )}
       </section>
+        <hr />
       {therapies.length && (
         
         <div className="appointmentsBody">
