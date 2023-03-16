@@ -7,7 +7,8 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import icon1 from "../assets/images/facebookyellow.svg";
+import facebook from "../assets/images/facebookverde.svg";
+import instagram from "../assets/images/instagramverde.svg";
 
 function Contacts() {
   const { user, logout } = useContext(AuthContext);
@@ -57,10 +58,10 @@ function Contacts() {
             <div className="separator"></div>
             <section className="contactsSectionLinks">
               <NavLink target="_blank" to={contacts[0].facebook[0]}>
-                <img src={icon1} alt="" className="iconContacts" />
+                <img src={facebook} alt="" className="iconContacts" />
               </NavLink>
               <NavLink target="_blank" to={contacts[0].instagram[0]}>
-                <img src={icon1} alt="" className="iconContacts" />
+                <img src={instagram} alt="" className="iconContacts" />
               </NavLink>
             </section>
           </section>

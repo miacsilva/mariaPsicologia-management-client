@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
+import DeleteConfirmation from "../components/DeleteConfirmation";
 import axios from "axios";
 
 //COMPONENTS
@@ -10,9 +11,32 @@ import projectService from "../services/project.service";
 function ViewColaborators() {
   const { user, logout } = useContext(AuthContext);
   const [users, setUsers] = useState([]);
+  const [userToDelete, setuserToDelete] = useState(null);
 
   const { id } = useParams();
   const navigate = useNavigate();
+
+  //
+  const [displayConfirmationModal, setDisplayConfirmationModal] =
+    useState(false);
+  const [deleteMessage, setDeleteMessage] = useState(null);
+
+  //
+  const showDeleteModal = (id) => {
+    setDeleteMessage(`Are you sure you want to delete this Colaborator?`);
+    setuserToDelete(id);
+    setDisplayConfirmationModal(true);
+  };
+
+  // Hide the modal
+  const hideConfirmationModal = () => {
+    setDisplayConfirmationModal(false);
+  };
+
+  // Handle the actual deletion of the item
+  const submitDelete = () => {
+    setDisplayConfirmationModal(false);
+  };
 
   const getUser = async () => {
     try {
@@ -24,11 +48,12 @@ function ViewColaborators() {
     }
   };
 
-  const deleteUser = async (id) => {
+  const deleteUser = async () => {
     try {
-      await projectService.deleteUser(id);
+      await projectService.deleteUser(userToDelete);
       /* navigate("/colaborators"); */
       getUser();
+      hideConfirmationModal();
     } catch (error) {
       console.log(error);
     }
@@ -64,10 +89,16 @@ function ViewColaborators() {
                           <button
                             className={"colaboratorDeleteButton"}
                             type="submit"
-                            onClick={() => deleteUser(colaborators._id)}
+                            onClick={() => showDeleteModal(colaborators._id)}
                           >
                             Delete this colaborator
                           </button>
+                          <DeleteConfirmation
+                            showModal={displayConfirmationModal}
+                            confirmModal={deleteUser}
+                            hideModal={hideConfirmationModal}
+                            message={deleteMessage}
+                          />
                         </div>
                       </section>
                       <hr className="colaboratorSeparator" />

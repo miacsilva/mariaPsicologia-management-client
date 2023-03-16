@@ -160,9 +160,7 @@ background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(2
 box-shadow: 0 0 10px 1px white;
   gap: 50px;
   color: white;
-  padding: 40px; /* 
-  position: relative;
-  bottom: 50px; */
+  padding: 40px;
   border-top-left-radius: 10px;
   font-family: "Dancing Script", cursive;
 }
@@ -425,7 +423,7 @@ box-shadow: 0 0 10px 1px white;
   position: relative;
   top: 0;
   float: right;
-  width: 50%;
+  width: 45%;
   margin: 10px 0 0 3vw;
 }
 
@@ -434,6 +432,11 @@ box-shadow: 0 0 10px 1px white;
   text-align: justify;
   font-weight: 550;
   font-size: 20px;
+}
+
+.booksIdSection__info {
+  margin-top: 8vh;
+  text-align: left;
 }
 /* ------------ END BOOKS ------------ */
 
@@ -643,9 +646,9 @@ footer p {
 }
 
 .buttonCreate:hover {
-  border: 1px solid rgb(95, 140, 122);
+  border: 1px solid #5f8c7a;
   background-color: white;
-  color: rgb(95, 140, 122);
+  color: #5f8c7a;
   transition-duration: 1s;
 }
 .therapiesAppoint{
@@ -732,8 +735,3 @@ footer p {
 .scroll {
   width: 15%;
 }
-
-/* colors 
-yellow: #fad305
-bluish grey: #6FA5A7
-*/

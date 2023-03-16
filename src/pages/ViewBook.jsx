@@ -41,6 +41,14 @@ function ViewBook() {
         {/* <h4>{book.title}</h4> */}
         <img src={book.image} alt={book.title} className="bookIdImage" />
         <p className="bookIdDescription">{book.description}</p>
+        <br />
+        <div className="booksIdSection__info">
+          <p>Author: {book.author}</p>
+          <p>Publisher: {book.publisher}</p>
+          <p>Published date: {book.publishedDate}</p>
+          <p>Languages available in: {book.languages}</p>
+          <p>Pages: {book.pages}</p>
+        </div>
       </section>
     </>
   );

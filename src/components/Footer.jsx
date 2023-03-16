@@ -5,7 +5,8 @@ import axios from "axios";
 
 //COMPONENTS
 import projectService from "../services/project.service";
-import icon1 from "../assets/images/facebooklight.svg";
+import facebook from "../assets/images/facebookbege.svg";
+import instagram from "../assets/images/instagrambege.svg";
 
 function Footer({ books, contacts }) {
   return (
@@ -52,10 +53,14 @@ function Footer({ books, contacts }) {
           </div>
           <div className="footerIcons">
             <NavLink target="_blank" to={contacts[0].facebook[0]}>
-              <img src={icon1} alt="facebook" className="iconSocialMedia" />
+              <img src={facebook} alt="facebook" className="iconSocialMedia" />
             </NavLink>
             <NavLink target="_blank" to={contacts[0].instagram[0]}>
-              <img src={icon1} alt="instagram" className="iconSocialMedia" />
+              <img
+                src={instagram}
+                alt="instagram"
+                className="iconSocialMedia"
+              />
             </NavLink>
           </div>
         </footer>

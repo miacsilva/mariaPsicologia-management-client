@@ -87,7 +87,7 @@ function App() {
   }); */
   /*--- NAVBAR HIDE/SHOW END--- */
   return (
-    <div className="App">
+    <div className={"App"}>
       <Navbar />
 
       <Routes>

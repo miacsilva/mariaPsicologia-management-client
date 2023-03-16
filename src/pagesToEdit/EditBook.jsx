@@ -5,6 +5,7 @@ import axios from "axios";
 //COMPONENTS
 import { AuthContext } from "../context/auth.context";
 import projectService from "../services/project.service";
+import DeleteConfirmation from "../components/DeleteConfirmation";
 
 function EditAbout() {
   const { user, logout } = useContext(AuthContext);
@@ -18,6 +19,28 @@ function EditAbout() {
 
   const { id } = useParams();
   const navigate = useNavigate();
+
+  //
+  const [displayConfirmationModal, setDisplayConfirmationModal] =
+    useState(false);
+  const [deleteMessage, setDeleteMessage] = useState(null);
+
+  //
+  const showDeleteModal = (type, id) => {
+    setDeleteMessage("Are you sure you want to delete this book?");
+
+    setDisplayConfirmationModal(true);
+  };
+
+  // Hide the modal
+  const hideConfirmationModal = () => {
+    setDisplayConfirmationModal(false);
+  };
+
+  // Handle the actual deletion of the item
+  const submitDelete = () => {
+    setDisplayConfirmationModal(false);
+  };
 
   const handleTitle = (e) => setTitle(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
@@ -38,6 +61,15 @@ function EditAbout() {
       setLanguages(response.data.languages);
       setPages(response.data.pages);
     } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteBook = async () => {
+    try {
+      await projectService.deleteBook(id);
+      navigate("/books");
+    } catch (errorHandler) {
       console.log(error);
     }
   };
@@ -183,6 +215,13 @@ function EditAbout() {
 
                 <button type="submit">Update Book</button>
               </form>
+              <button onClick={() => showDeleteModal()}>Delete book</button>
+              <DeleteConfirmation
+                showModal={displayConfirmationModal}
+                confirmModal={deleteBook}
+                hideModal={hideConfirmationModal}
+                message={deleteMessage}
+              />
             </section>
           </>
         )}

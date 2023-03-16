@@ -91,6 +91,11 @@ class ProjectService {
   editBook = ({ id, requestData }) => {
     return this.api.put(`/api/books/edit/${id}`, requestData);
   };
+
+  //Delete book
+  deleteBook = (id) => {
+    return this.api.delete(`/api/books/${id}`);
+  };
   /* ------ END BOOKS ------ */
 
   /* ------- CONTACTS ------- */
