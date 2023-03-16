@@ -37,6 +37,7 @@ function Books() {
               </NavLink>
             )}
           </section>
+          <hr className="separatorAppointments" />
           <section className="booksSectionBooksCards container">
             {books &&
               books.map((book) => {

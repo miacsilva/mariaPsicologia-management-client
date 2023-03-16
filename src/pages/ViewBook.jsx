@@ -37,6 +37,7 @@ function ViewBook() {
           </NavLink>
         )}
       </section>
+      <hr className="separatorAppointments" />
       <section className="booksIdSection">
         {/* <h4>{book.title}</h4> */}
         <img src={book.image} alt={book.title} className="bookIdImage" />

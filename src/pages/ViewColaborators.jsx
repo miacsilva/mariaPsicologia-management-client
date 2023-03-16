@@ -75,6 +75,7 @@ function ViewColaborators() {
                 </NavLink>
               )}
             </section>
+            <hr className="separatorAppointments" />
             {users.map((colaborators, i) => {
               return (
                 <div className={"colaboratorsTabsColor"} key={colaborators._id}>

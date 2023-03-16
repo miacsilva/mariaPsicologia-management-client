@@ -39,6 +39,7 @@ function Contacts() {
               </NavLink>
             )}
           </section>
+          <hr className="separatorAppointments" />
           <section className="contactsSectionBox">
             <section className="contactsSectionContacts">
               <div>

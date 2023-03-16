@@ -36,6 +36,7 @@ function About() {
               </NavLink>
             )}
           </section>
+          <hr className="separatorAppointments" />
           <section className="aboutSectionAbout">
             <img
               src={about[0].imageAbout}

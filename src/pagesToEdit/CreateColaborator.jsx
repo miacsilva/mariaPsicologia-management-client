@@ -45,6 +45,7 @@ function CreateColaborator() {
           </NavLink>
         )}
       </section>
+      <hr className="separatorAppointments" />
       <section className="createColaborator">
         <h1>Criar novo colaborador!</h1>
 

@@ -82,6 +82,7 @@ function EditAbout() {
                 </NavLink>
               )}
             </section>
+            <hr className="separatorAppointments" />
             <section className="editAboutSection">
               <form onSubmit={handleSubmit}>
                 <div className="inputAbout">

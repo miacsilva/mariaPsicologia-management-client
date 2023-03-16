@@ -113,6 +113,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </NavLink>
               )}
             </section>
+            <hr className="separatorAppointments" />
             <section className="editAboutSection">
               <form onSubmit={handleSubmit}>
                 <div className="inputAbout">

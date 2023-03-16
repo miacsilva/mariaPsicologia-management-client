@@ -155,22 +155,22 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 20vh 0 0 30vh;
- /*  border-bottom: 3px solid #141e30; */
+  /*  border-bottom: 3px solid #141e30; */
   /* background: rgb(76,112,98);
 background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(255,249,219,0.2862394957983193) 91%); */
-/* box-shadow: 0 0 10px 1px white; */
+  /* box-shadow: 0 0 10px 1px white; */
   gap: 50px;
-  color:  #cabaa9;
+  color: #cabaa9;
   padding: 35px 35px 0;
   border-top-left-radius: 10px;
   /* font-family: "Dancing Script", cursive; */
 }
 
-.appointmentSection h1{
+.appointmentSection h1 {
   font-size: 400%;
 }
 
-.editApButton{
+.editApButton {
   font-family: "roboto";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
@@ -457,8 +457,12 @@ background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(2
   text-align: center;
 }
 
-.therapiesAppointTitle{
+.therapiesAppointTitle {
   margin-bottom: 5vh;
+}
+
+.whatsapp {
+  width: 1.5vw;
 }
 /* ------------ END APPOINTMENTS ------------ */
 
@@ -656,31 +660,30 @@ footer p {
   color: #5f8c7a;
   transition-duration: 1s;
 }
-.therapiesAppoint{
+.therapiesAppoint {
   margin-bottom: 10%;
   margin-top: 10%;
 }
 
-.AppointContainerText{
+.AppointContainerText {
   margin-bottom: 10%;
   margin-top: 10%;
   display: flex;
   justify-content: space-between;
 }
 
-.doodle{
+.doodle {
   width: 80%;
   margin-left: 50%;
 }
 
-.appoinDoodle{
+.appoinDoodle {
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
   width: 17vw;
 }
-
 
 .addTherapies-btn {
   border-radius: 1.5vh;
@@ -741,10 +744,7 @@ footer p {
   width: 15%;
 }
 
-
-/* Gradient color1 - color2 - color1 */
-
-hr{
+.separatorAppointments {
   border: 0;
   height: 3px;
   background: #080808;

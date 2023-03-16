@@ -70,6 +70,7 @@ function CreateBook() {
           </NavLink>
         )}
       </section>
+      <hr className="separatorAppointments" />
       <section className="createColaborator">
         <h1>New book form</h1>
 
