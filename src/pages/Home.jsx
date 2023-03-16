@@ -71,14 +71,12 @@ function Home() {
             Psicologia | Desenvolvimento Pessoal | muito mais....
           </h2>
         </div>
-
-        <div className="iconContainer">
-          <img src={scroll} className="scroll" alt="scroll icon" />
-        </div>
+      </div>
+      <div className="iconContainer">
+        <img src={scroll} className="scroll" alt="scroll icon" />
       </div>
 
       {books.length && (
-
         <div className="carousselContainer">
 
 
@@ -108,56 +106,54 @@ function Home() {
               </div>
             </NavLink>
 
-            <NavLink to="/appointments">
-              <div className="carousel-item" data-bs-interval="4000">
-                <img
-                  src={carrossel3}
-                  className="d-block w-100 carouselImage"
-                  alt="fnac2"
-                />
-              </div>
-            </NavLink>
-            <NavLink to="/contacts">
-              <div className="carousel-item" data-bs-interval="4000">
-                <img
-                  src={carrossel4}
-                  className="d-block w-100 carouselImage"
-                  alt="fnac2"
-                />
-              </div>
-            </NavLink>
+              <NavLink to="/appointments">
+                <div className="carousel-item" data-bs-interval="4000">
+                  <img
+                    src={carrossel3}
+                    className="d-block w-100 carouselImage"
+                    alt="fnac2"
+                  />
+                </div>
+              </NavLink>
+              <NavLink to="/contacts">
+                <div className="carousel-item" data-bs-interval="4000">
+                  <img
+                    src={carrossel4}
+                    className="d-block w-100 carouselImage"
+                    alt="fnac2"
+                  />
+                </div>
+              </NavLink>
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
-
         </div>
       )}
       <AboutHome />
       <MonthlySubject />
-      
     </>
   );
 }

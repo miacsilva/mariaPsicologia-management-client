@@ -32,13 +32,11 @@ import EditTherapy from "./pagesToEdit/EditTherapy";
 import CreateMonthlySubject from "./pagesToEdit/CreateMonthlySubject";
 import EditMonthlySubject from "./pagesToEdit/EditMonthlySubject";
 
-
 //CSS
 
 import "./App.css";
 
 function App() {
-
   const [books, setBooks] = useState([]);
   const [contacts, setContacts] = useState([]);
 
@@ -66,10 +64,9 @@ function App() {
     getBooks();
     getContacts();
   }, []);
-  
 
   /*--- NAVBAR HIDE/SHOW --- */
-  let lastScrollUp; // This Varibale will store the top position
+  /*  let lastScrollUp; // This Varibale will store the top position
 
   let navbar = document.getElementById("navbar"); // Get The NavBar
 
@@ -87,12 +84,11 @@ function App() {
     }
 
     lastScrollUp = scrollUp; //New Position Stored
-  });
+  }); */
   /*--- NAVBAR HIDE/SHOW END--- */
   return (
     <div className="App">
       <Navbar />
-      
 
       <Routes>
         <Route path="/about" element={<About />} />
@@ -166,7 +162,7 @@ function App() {
             </Private>
           }
         />
-         <Route path="/monthlySubjects" element={<MonthlySubjects />} />
+        <Route path="/monthlySubjects" element={<MonthlySubjects />} />
 
         <Route path="*" element={<Error />} />
         <Route

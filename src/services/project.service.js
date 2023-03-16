@@ -70,6 +70,11 @@ class ProjectService {
   /* --- END APPOINTMENTS --- */
 
   /* ------- BOOKS ------- */
+  //Create Book
+  createBook = (requestData) => {
+    return this.api.post("/api/books", requestData);
+  };
+
   //Get All Books
   getAllBooks = () => {
     return this.api.get("/api/books");
@@ -123,16 +128,14 @@ class ProjectService {
   deleteTherapy = (id) => {
     return this.api.delete(`/api/therapies/${id}`);
   };
-
   /* ------- END THERAPIES ------- */
 
   /* ------- MONTHLY SUBJECT ------- */
-
   //Get all Montly Subjects
   getMonthlySubject = () => {
     return this.api.get("/api/monthly-subject");
   };
-//Create Monthly Subject
+  //Create Monthly Subject
   createMonthlySubject = (MS) => {
     return this.api
       .post("/api/monthly-subject", MS)
@@ -140,13 +143,13 @@ class ProjectService {
       .catch(this.errorHandler);
   };
 
-    //Edit Therapy
-    editMonthlySubject = ({ id, requestData }) => {
-      return this.api.put(`/api/monthly-subject/edit/${id}`, requestData);
-    };
+  //Edit Therapy
+  editMonthlySubject = ({ id, requestData }) => {
+    return this.api.put(`/api/monthly-subject/edit/${id}`, requestData);
+  };
 
-   //Delete MonthlySubject
-   deleteMonthlySubject = (id) => {
+  //Delete MonthlySubject
+  deleteMonthlySubject = (id) => {
     return this.api.delete(`/api/monthly-subject/${id}`);
   };
   /* ----- END MONTHLY SUBJECT ----- */
