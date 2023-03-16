@@ -154,7 +154,7 @@ function CreateBook() {
           </div>
 
           <button type="submit" className="buttonCreate">
-            Criar nova conta de colaborador
+            Add book
           </button>
         </form>
       </section>

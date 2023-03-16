@@ -77,14 +77,15 @@ function Appointments() {
                 target="_blank"
               >
                 <button className={"editApButton"}>
-                  Go to Appointments-Book
+                  Go to Appointments Book
                 </button>
               </Link>
               <div className="contactWhatsapp">
-              <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
-              <h5>Any questions? <br></br>  Feel free to contact via whatsaap! </h5>
-              <p>{contacts[0].phoneNumber}</p>
-
+                <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
+                <h5>
+                  Any questions? <br></br> Feel free to contact via whatsaap!{" "}
+                </h5>
+                <p>{contacts[0].phoneNumber}</p>
               </div>
             </div>
           </div>
