@@ -7,6 +7,37 @@ import { AuthContext } from "../context/auth.context";
 import projectService from "../services/project.service";
 import DeleteConfirmation from "../components/DeleteConfirmation";
 
+///////////////////////
+import { useTheme } from "@mui/material/styles";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
+/////////////////////////
+
+const names = ["PT", "EN", "FR", "ES"];
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+  PaperProps: {
+    style: {
+      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+      width: 250,
+    },
+  },
+};
+
+function getStyles(name, languages, theme) {
+  return {
+    fontWeight:
+      languages.indexOf(name) === -1
+        ? theme.typography.fontWeightRegular
+        : theme.typography.fontWeightMedium,
+  };
+}
+
 function EditAbout() {
   const { user, logout } = useContext(AuthContext);
   const [title, setTitle] = useState("");
@@ -14,7 +45,7 @@ function EditAbout() {
   const [image, setImage] = useState("");
   const [publisher, setPublisher] = useState();
   const [author, setAuthor] = useState("");
-  const [languages, setLanguages] = useState("");
+  /* const [languages, setLanguages] = useState(""); */
   const [pages, setPages] = useState(null);
 
   const { id } = useParams();
@@ -77,6 +108,19 @@ function EditAbout() {
   useEffect(() => {
     getSingleBook();
   }, []);
+
+  const theme = useTheme();
+  const [languages, setLanguages] = React.useState([]);
+
+  const handleChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setLanguages(
+      // On autofill we get a stringified value.
+      typeof value === "string" ? value.split(",") : value
+    );
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -190,17 +234,36 @@ function EditAbout() {
                   />
                 </div>
 
-                <div className="inputAbout">
-                  <label htmlFor="languages">Languages</label>
-                  <input
-                    className="inputAboutName"
-                    type="languages"
-                    name="languages"
-                    id="languages"
+                <div>
+                  <InputLabel id="demo-multiple-name-label">
+                    Languages
+                  </InputLabel>
+                  <Select
+                    labelId="demo-multiple-name-label"
+                    id="demo-multiple-name"
+                    multiple
                     value={languages}
-                    onChange={handleLanguages}
-                  />
+                    onChange={handleChange}
+                    input={<OutlinedInput label="Name" />}
+                    MenuProps={MenuProps}
+                  >
+                    {names.map((name) => (
+                      <MenuItem
+                        key={name}
+                        value={name}
+                        style={getStyles(name, languages, theme)}
+                      >
+                        {name}
+                      </MenuItem>
+                    ))}
+                  </Select>
                 </div>
+                <input
+                  type="text"
+                  disabled
+                  value={languages}
+                  className={"disabledInput"}
+                />
 
                 <div className="inputAbout">
                   <label htmlFor="pages">Pages</label>
@@ -214,9 +277,16 @@ function EditAbout() {
                   />
                 </div>
 
-                <button type="submit">Update Book</button>
+                <button type="submit" className="editBookButton">
+                  Update Book
+                </button>
               </form>
-              <button onClick={() => showDeleteModal()}>Delete book</button>
+              <button
+                onClick={() => showDeleteModal()}
+                className="editBookButton"
+              >
+                Delete book
+              </button>
               <DeleteConfirmation
                 showModal={displayConfirmationModal}
                 confirmModal={deleteBook}

@@ -38,7 +38,11 @@ function Footer({ books, contacts }) {
             <NavLink to="/appointments" className={"footerLinks"}>
               <h5>Appointments</h5>
             </NavLink>
-            <NavLink className={"footerLinks"}>
+            <NavLink
+              to="https://koalendar.com/e/meet-with-maria-luisa"
+              className={"footerLinks"}
+              target="_blank"
+            >
               <p>Book an appointment</p>
             </NavLink>
           </div>

@@ -485,6 +485,27 @@ color: rgb(58, 57, 57);
   margin-top: 8vh;
   text-align: left;
 }
+
+.disabledInput {
+  margin-top: 3vh;
+}
+
+.editBookButton {
+  border: 1px solid transparent;
+  background-color: rgb(95, 140, 122);
+  padding: 1vh 1vw;
+  margin: 2vh 0 0 40vw;
+  border-radius: 5px;
+  color: white;
+  transition-duration: 1s;
+}
+
+.editBookButton:hover {
+  border: 1px solid rgb(95, 140, 122);
+  background-color: white;
+  color: rgb(95, 140, 122);
+  transition-duration: 1s;
+}
 /* ------------ END BOOKS ------------ */
 
 /* ------------ MONTHLY SUBJECT ------------ */
