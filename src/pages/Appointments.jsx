@@ -50,6 +50,9 @@ function Appointments() {
               </button>
             </NavLink>
           </div>
+          <div class="appoinDoodle">
+            <img src={lovingDoodle} alt="loving doodle" className="doodle" />
+          </div>
 
           <div className="AppointContainerText">
             <div class="appoinText">
@@ -65,9 +68,6 @@ function Appointments() {
               </Link>
               <h5>Any questions? Feel free to contact via whatsaap!</h5>
               <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
-            </div>
-            <div class="appoinDoodle">
-              <img src={lovingDoodle} alt="loving doodle" className="doodle" />
             </div>
           </div>
         </div>

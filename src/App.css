@@ -718,7 +718,7 @@ footer p {
 
 .doodle {
   width: 80%;
-  margin-left: 50%;
+  opacity: 0.5;
 }
 
 .appoinDoodle {
