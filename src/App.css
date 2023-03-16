@@ -154,15 +154,28 @@ body {
 .appointmentSection {
   display: flex;
   justify-content: space-between;
-  margin: 40vh 0 2vw 30vh;
-  background-color: rgb(95, 140, 122);
-  box-shadow: 0 0 10px 1px white;
+  margin: 20vh 0 2vw 30vh;
+  background: rgb(76,112,98);
+background: linear-gradient(0deg, rgba(76,112,98,0.8800770308123249) 35%, rgba(255,249,219,0.2862394957983193) 91%);
+box-shadow: 0 0 10px 1px white;
   gap: 50px;
   color: white;
   padding: 40px; /* 
   position: relative;
   bottom: 50px; */
   border-top-left-radius: 10px;
+  font-family: "Dancing Script", cursive;
+}
+
+.editApButton{
+  font-family: "roboto";
+  border: 1px solid white;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #cabaa9;
+  color: white;
+  border-radius: 1.7vh;
 }
 
 .aboutSectionTwo {
@@ -431,6 +444,13 @@ body {
 .appointmentsBody {
   display: flex;
   justify-content: space-around;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.therapiesAppointTitle{
+  margin-bottom: 5vh;
 }
 /* ------------ END APPOINTMENTS ------------ */
 
@@ -628,6 +648,31 @@ footer p {
   color: rgb(95, 140, 122);
   transition-duration: 1s;
 }
+.therapiesAppoint{
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.AppointContainerText{
+  margin-bottom: 10%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.doodle{
+  width: 80%;
+  margin-left: 50%;
+}
+
+.appoinDoodle{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 17vw;
+}
+
 
 .addTherapies-btn {
   border-radius: 1.5vh;

@@ -1,10 +1,12 @@
 //PACKAGES
 import { useState, useEffect, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
 //COMPONENTS
 import projectService from "../services/project.service";
+import lovingDoodle from "../assets/images/DoodlesLoving.png"
+import whatsapp from "../assets/images/whatsapp.gif"
 
 
 function Appointments() {
@@ -28,7 +30,7 @@ function Appointments() {
         <h1> Appointments</h1>
         {user && (
           <NavLink to="/appointments/edit">
-            <button className={"editButton"}>Edit Appointment Section</button>
+            <button className={"editApButton"}>Edit Appointment Section</button>
           </NavLink>
         )}
       </section>
@@ -37,7 +39,7 @@ function Appointments() {
         <div className="appointmentsBody">
         
           <div className="therapiesAppoint">
-            <h3 className="therapiesAppointTitle">Terapias</h3>
+            <h3 className="therapiesAppointTitle">Therapies</h3>
             {therapies &&
               therapies.map((therapy) => (
                 <div key={therapy._id}>
@@ -45,13 +47,25 @@ function Appointments() {
                 </div>
               ))}
               <NavLink to="/therapies">
-            <button className={"editButton"}>Saber mais sobre as diferentes terapias</button>
+            <button className={"editApButton"}>Learn more about therapies</button>
           </NavLink>
           </div>
           
-          <div>
-            <h4>Agendar consulta</h4>
-            <h5>link</h5>
+          <div className="AppointContainerText">
+
+            <div class="appoinText">
+            <h4 className="therapiesAppointTitle">Book an Appointment!</h4>
+
+            <Link to="https://koalendar.com/e/meet-with-maria-luisa" target="_blank"><button className={"editApButton"}>Go to Appointments-Book</button></Link>
+            <h5>Any questions? Feel free to contact via whatsaap!</h5>
+            <img src={whatsapp} alt="whatsapp icon" className="whatsapp"/>
+
+            </div>
+            <div class="appoinDoodle">
+
+            <img src={lovingDoodle} alt="loving doodle" className="doodle"/>
+            </div>
+
           </div>
         </div>
       )}
