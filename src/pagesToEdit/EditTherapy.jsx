@@ -11,17 +11,17 @@ function EditTherapy() {
   const [description, setDescription] = useState("");
   const [image, setImage] = useState([]);
 
-  //
-  const [displayConfirmationModal, setDisplayConfirmationModal] =
-    useState(false);
-  const [deleteMessage, setDeleteMessage] = useState(null);
-
   const handleTitle = (e) => setTitle(e.target.value);
   const handleDescription = (e) => setDescription(e.target.value);
 
   const navigate = useNavigate();
 
   const { id } = useParams();
+
+  //
+  const [displayConfirmationModal, setDisplayConfirmationModal] =
+    useState(false);
+  const [deleteMessage, setDeleteMessage] = useState(null);
 
   //
   const showDeleteModal = (type, id) => {
@@ -104,16 +104,14 @@ function EditTherapy() {
           onChange={handleTitle}
         />
 
-        
-          <label htmlFor="description">Description</label>
-          <textarea
-            name="description"
-            id="description"
-            className="textareaAbout"
-            value={description}
-            onChange={handleDescription}
-          ></textarea>
-    
+        <label htmlFor="description">Description</label>
+        <textarea
+          name="description"
+          id="description"
+          className="textareaAbout"
+          value={description}
+          onChange={handleDescription}
+        ></textarea>
 
         {image && <img src={image} alt={title} />}
         <input
