@@ -10,7 +10,15 @@ function Navbar() {
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
         {!user && (
-          <NavLink className={"navbar__navlinks"} to="/">
+          <NavLink
+            className={"navbar__navlinks"}
+            to="/"
+            onClick={() =>
+              scroller.scrollTo("App", {
+                offset: -10,
+              })
+            }
+          >
             Home
           </NavLink>
         )}

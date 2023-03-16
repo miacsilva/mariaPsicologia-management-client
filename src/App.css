@@ -154,14 +154,12 @@ body {
 .appointmentSection {
   display: flex;
   justify-content: space-between;
-  margin: 40vh 0 2vw 30vh;
+  margin: 140vh 0 2vw 30vh;
   background-color: rgb(95, 140, 122);
   box-shadow: 0 0 10px 1px white;
   gap: 50px;
   color: white;
-  padding: 40px; /* 
-  position: relative;
-  bottom: 50px; */
+  padding: 40px;
   border-top-left-radius: 10px;
 }
 
@@ -412,7 +410,7 @@ body {
   position: relative;
   top: 0;
   float: right;
-  width: 50%;
+  width: 45%;
   margin: 10px 0 0 3vw;
 }
 
@@ -421,6 +419,11 @@ body {
   text-align: justify;
   font-weight: 550;
   font-size: 20px;
+}
+
+.booksIdSection__info {
+  margin-top: 8vh;
+  text-align: left;
 }
 /* ------------ END BOOKS ------------ */
 
@@ -623,9 +626,9 @@ footer p {
 }
 
 .buttonCreate:hover {
-  border: 1px solid rgb(95, 140, 122);
+  border: 1px solid #5f8c7a;
   background-color: white;
-  color: rgb(95, 140, 122);
+  color: #5f8c7a;
   transition-duration: 1s;
 }
 
@@ -687,8 +690,3 @@ footer p {
 .scroll {
   width: 15%;
 }
-
-/* colors 
-yellow: #fad305
-bluish grey: #6FA5A7
-*/
