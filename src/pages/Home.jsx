@@ -15,6 +15,8 @@ import carrossel3 from "../assets/images/book2.jpg";
 import carrossel4 from "../assets/images/book2.jpg";
 import scroll from "../assets/images/scroll.png";
 
+import $ from 'jquery';
+
 function Home() {
   const [about, setAbout] = useState([]);
   const [books, setBooks] = useState([]);
@@ -55,6 +57,11 @@ function Home() {
     getBooks();
     getContacts();
   }, []);
+
+
+
+
+
   return (
     <>
       <div className="homeContainer">
@@ -73,11 +80,14 @@ function Home() {
       {books.length && (
 
         <div className="carousselContainer">
+
+
         <div
           id="carouselExampleInterval"
           className="carousel slide carrossel"
           data-bs-ride="carousel"
         >
+    
           <div className="carousel-inner carrossel2">
             <NavLink to="/about">
               <div className="carousel-item active" data-bs-interval="4000">
