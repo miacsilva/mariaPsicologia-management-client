@@ -28,7 +28,7 @@ function About() {
     <>
       {about.length && (
         <>
-          <section className="aboutSection">
+          <section className={"aboutSection"}>
             <h1>About {about[0].name}</h1>
             {user && (
               <NavLink to={`/about/edit/${about[0]._id}`}>

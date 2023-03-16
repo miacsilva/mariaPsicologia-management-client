@@ -66,7 +66,7 @@ function App() {
   }, []);
 
   /*--- NAVBAR HIDE/SHOW --- */
-  let lastScrollUp; // This Varibale will store the top position
+  /*  let lastScrollUp; // This Varibale will store the top position
 
   let navbar = document.getElementById("navbar"); // Get The NavBar
 
@@ -84,7 +84,7 @@ function App() {
     }
 
     lastScrollUp = scrollUp; //New Position Stored
-  });
+  }); */
   /*--- NAVBAR HIDE/SHOW END--- */
   return (
     <div className="App">
