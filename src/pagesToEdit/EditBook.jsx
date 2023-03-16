@@ -46,7 +46,7 @@ function EditAbout() {
   const [publisher, setPublisher] = useState();
   const [author, setAuthor] = useState("");
   /* const [languages, setLanguages] = useState(""); */
-  const [pages, setPages] = useState(null);
+  const [pages, setPages] = useState(0);
 
   const { id } = useParams();
   const navigate = useNavigate();

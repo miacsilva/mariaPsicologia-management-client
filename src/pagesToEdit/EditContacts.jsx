@@ -145,7 +145,9 @@ function EditAbout() {
                   />
                 </div>
 
-                <button type="submit">Edit Section</button>
+                <button type="submit" className="editBookButton">
+                  Edit Section
+                </button>
               </form>
             </section>
           </>

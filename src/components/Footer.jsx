@@ -56,10 +56,10 @@ function Footer({ books, contacts }) {
             {/* <p>{contacts[0].facebook}</p> */}
           </div>
           <div className="footerIcons">
-            <NavLink target="_blank" to={contacts[0].facebook[0]}>
+            <NavLink target="_blank" to={contacts[0].facebook}>
               <img src={facebook} alt="facebook" className="iconSocialMedia" />
             </NavLink>
-            <NavLink target="_blank" to={contacts[0].instagram[0]}>
+            <NavLink target="_blank" to={contacts[0].instagram}>
               <img
                 src={instagram}
                 alt="instagram"

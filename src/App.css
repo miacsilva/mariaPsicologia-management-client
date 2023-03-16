@@ -118,6 +118,12 @@ body {
   background-color: rgb(213, 168, 136);
   color: white;
 }
+
+.inputAboutName {
+  border: none;
+  background-color: rgb(95, 140, 122, 0.7);
+  color: white;
+}
 /* ---------- END EDITS ---------- *
 
 /* ------------ HOME ------------ */
@@ -228,7 +234,7 @@ body {
   color: rgba(0, 0, 0, 0.537);
 }
 
-.addMSButton{
+.addMSButton {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -267,7 +273,7 @@ body {
   line-height: 200%;
 }
 
-.createMsSection{
+.createMsSection {
   display: flex;
   justify-content: space-between;
   margin: 20vh 0 0 30vh;
@@ -276,16 +282,21 @@ body {
   padding: 35px 35px 0;
   border-top-left-radius: 10px;
   font-size: small;
-  
 }
 
-.createMS{
+.createMS {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: rgb(95,140,122);
-  background: linear-gradient(0deg, rgba(95,140,122,0.4150910364145658) 0%, rgba(95,140,122,0.571953781512605) 29%, rgba(213,168,136,0.644782913165266) 65%, rgba(213,168,136,0.18539915966386555) 98%);
-color: rgb(58, 57, 57);
+  background: rgb(95, 140, 122);
+  background: linear-gradient(
+    0deg,
+    rgba(95, 140, 122, 0.4150910364145658) 0%,
+    rgba(95, 140, 122, 0.571953781512605) 29%,
+    rgba(213, 168, 136, 0.644782913165266) 65%,
+    rgba(213, 168, 136, 0.18539915966386555) 98%
+  );
+  color: rgb(58, 57, 57);
   width: 50vw;
   justify-content: center;
   align-self: center;
@@ -294,7 +305,6 @@ color: rgb(58, 57, 57);
   margin: 0 auto 15vh;
   margin-top: 15vh;
   border-radius: 40px;
-
 }
 
 /* ---------- END HOME ---------- */
@@ -508,9 +518,6 @@ color: rgb(58, 57, 57);
 }
 /* ------------ END BOOKS ------------ */
 
-/* ------------ MONTHLY SUBJECT ------------ */
-/* ------------ END MONTHLY SUBJECT ------------ */
-
 /* ------------ APPOINTMENTS ------------ */
 .appointmentsBody {
   display: flex;
@@ -567,7 +574,7 @@ color: rgb(58, 57, 57);
 
 .editTherapyButton:hover {
   border: 1px solid rgb(95, 140, 122);
-  background-color: rgb(95, 140, 122);
+  background-color: #5f8c7a;
   color: white;
   box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.7);
 
@@ -583,23 +590,35 @@ color: rgb(58, 57, 57);
   border-bottom-right-radius: 10px;
   box-shadow: 0 5px 20px -5px black;
   width: 60vw;
-  margin: 0 auto 20vh;
+  margin: 20vh auto 20vh;
   color: white;
-  padding: 20vh 0;
+  padding: 10vh 0;
 }
 
 .contactsSectionContacts,
 .contactsSectionLinks {
   display: flex;
   justify-content: center;
-  width: 40vw;
+  width: 50vw;
   margin: auto;
 }
 
 .contactsSectionContacts {
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
   text-align: center;
-  gap: 100px;
+  gap: 10px;
+}
+
+.contactsSectionContacts div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1vh;
+  width: 50%;
+}
+
+.contactsSectionContacts img {
+  width: 2vw;
 }
 
 .separator {
@@ -865,25 +884,24 @@ footer p {
   margin-left: 12%;
 }
 
-.whatsapp{
+.whatsapp {
   width: 3vw;
-  margin-bottom: 2vh ;
+  margin-bottom: 2vh;
 }
 
-.contactWhatsapp{
+.contactWhatsapp {
   margin-top: 5vh;
   border: 3px solid #5f8c7a;
   border-radius: 7px;
-  padding-top: 2.5vh ;
-  padding-bottom: 2.5vh ;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
   padding-left: 3.5vh;
   padding-right: 3.5vh;
 }
 
-.contactWhatsapp h5{
-    font-size: 100%;
+.contactWhatsapp h5 {
+  font-size: 100%;
 }
-
 
 .createMS hr {
   overflow: visible; /* For IE */
@@ -895,7 +913,8 @@ footer p {
   margin-left: 5vw;
   margin-right: 5vw;
 }
-.createMS hr:before { /* Not really supposed to work, but does */
+.createMS hr:before {
+  /* Not really supposed to work, but does */
   display: block;
   content: "";
   height: 30px;
@@ -906,11 +925,11 @@ footer p {
   border-radius: 20px;
 }
 
-.descriptionMS{
+.descriptionMS {
   height: 20vh;
 }
 
-.MSSContainer{
+.MSSContainer {
   padding: 5%;
   margin-top: 10vh;
 }
