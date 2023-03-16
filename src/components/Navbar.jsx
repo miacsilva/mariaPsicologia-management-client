@@ -28,7 +28,7 @@ function Navbar() {
             to="/"
             onClick={() =>
               scroller.scrollTo("App", {
-                offset: -10,
+                offset: 0,
               })
             }
           >
@@ -81,7 +81,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("monthlySubjectComponentSection", {
               duration: 500,
-              offset: -5,
+              offset: 0, // fica a 0
             })
           }
         >
