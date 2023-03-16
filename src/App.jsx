@@ -65,8 +65,8 @@ function App() {
     getContacts();
   }, []);
 
- /* /*  /*--- NAVBAR HIDE/SHOW --- */
-   let lastScrollUp; // This Varibale will store the top position
+  /* /*  /*--- NAVBAR HIDE/SHOW --- */
+  let lastScrollUp; // This Varibale will store the top position
 
   let navbar = document.getElementById("navbar"); // Get The NavBar
 
@@ -85,7 +85,7 @@ function App() {
 
     lastScrollUp = scrollUp; //New Position Stored
   });
-  /*--- NAVBAR HIDE/SHOW END--- */ 
+  /*--- NAVBAR HIDE/SHOW END--- */
   return (
     <div className={"App"}>
       <Navbar />
@@ -100,7 +100,10 @@ function App() {
             </Private>
           }
         />
-        <Route path="/appointments" element={<Appointments />} />
+        <Route
+          path="/appointments"
+          element={<Appointments contacts={contacts} />}
+        />
         <Route path="/books" element={<Books />} />
         <Route
           path="/books/create"

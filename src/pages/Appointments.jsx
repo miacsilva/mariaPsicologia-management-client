@@ -8,9 +8,10 @@ import projectService from "../services/project.service";
 import lovingDoodle from "../assets/images/DoodlesLoving.png";
 import whatsapp from "../assets/images/whatsappverde.svg";
 
-function Appointments() {
+function Appointments({ contacts }) {
   const { user } = useContext(AuthContext);
   const [therapies, setTherapies] = useState([]);
+
   const getTherapies = async () => {
     try {
       const response = await projectService.getTherapies();
@@ -21,31 +22,18 @@ function Appointments() {
     }
   };
 
-  const [contacts, setContacts] = useState([]);
-
-  const getContacts = async () => {
-    try {
-      const response = await projectService.getContacts();
-      /* console.log(response.data); */
-      setContacts(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
-    getContacts();
     getTherapies();
   }, []);
   return (
     <>
       <section className="appointmentSection">
         <h1> Appointments</h1>
-        {user && (
+        {/* {user && (
           <NavLink to="/appointments/edit">
             <button className={"editApButton"}>Edit Appointment Section</button>
           </NavLink>
-        )}
+        )} */}
       </section>
       <hr className="separatorAppointments" />
       {therapies.length && (
@@ -64,12 +52,12 @@ function Appointments() {
               </button>
             </NavLink>
           </div>
-          <div class="appoinDoodle">
+          <div className="appoinDoodle">
             <img src={lovingDoodle} alt="loving doodle" className="doodle" />
           </div>
 
           <div className="AppointContainerText">
-            <div class="appoinText">
+            <div className="appoinText">
               <h4 className="therapiesAppointTitle">Book an Appointment!</h4>
 
               <Link

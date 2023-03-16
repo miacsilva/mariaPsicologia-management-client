@@ -35,7 +35,7 @@ function Therapies() {
         <>
           {therapies &&
             therapies.map((therapy) => (
-              <div className="therapiesContainer">
+              <div className="therapiesContainer" key={therapy._id}>
                 <div className="col">
                   <div className="card h-100">
                     <div key={therapy._id}>

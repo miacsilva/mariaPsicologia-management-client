@@ -72,44 +72,80 @@ function About() {
               deleniti aut id quidem deserunt ullam corporis vitae! Quam aliquid
               laborum voluptate illum inventore, veniam totam voluptatibus sunt,
               deserunt accusamus, consectetur debitis animi ipsum iusto ducimus
-              sint sed id reprehenderit mollitia itaque facere cumque? Obcaecati
-              nulla enim quisquam harum at explicabo dolorum quidem ullam
-              inventore magnam ea dolores deleniti, ab temporibus beatae error
-              optio ducimus nihil, ipsa velit! Minus similique cupiditate eos
-              doloremque? Sint nam eligendi quam expedita repellat accusantium
-              consequuntur facere quaerat ipsum officiis accusamus tempora,
-              praesentium commodi! Reiciendis nisi dolor in sit. Eos facilis non
-              reiciendis recusandae in fugit mollitia debitis ducimus veniam
-              provident ipsum sequi, voluptatibus exercitationem quidem, animi
-              quos alias similique ratione hic nihil consequatur amet! Minus
-              veniam quasi esse enim voluptate sapiente ipsa exercitationem
-              ipsam recusandae, ipsum eius sint sit, corporis saepe. Labore illo
-              eaque ducimus culpa nobis. Ratione nesciunt asperiores nulla ex
-              doloremque eius dolore et eos quas, facilis molestiae quis,
-              expedita, nam accusantium sapiente vero? Pariatur veniam eligendi
-              id corporis non incidunt, eos tempora aut, sequi soluta labore
-              rerum ullam, iure libero aspernatur porro laboriosam quae unde
-              laborum ipsam quo nemo numquam! Ducimus nihil dicta ipsa quo
-              atque? Maxime at provident amet tempore illum inventore delectus
-              molestias. Quidem expedita ratione aliquam minus sed voluptatem
-              ullam vitae! Minus magnam adipisci, laudantium perferendis velit
-              facere voluptatum earum excepturi aspernatur dolore totam maiores
-              fuga labore assumenda molestiae numquam delectus officia tempore
-              error reprehenderit eum? Atque in omnis similique tenetur
-              perferendis repellat ut repellendus molestias voluptate, ratione a
-              fugit labore earum nam provident dolor ullam aut illo ducimus?
-              Dolore, officiis labore, eaque accusantium ea perspiciatis
-              obcaecati autem veritatis doloribus eum, aperiam quasi? Maiores
-              quos optio suscipit eos nemo mollitia, veritatis perferendis
-              officiis voluptates cum facere minima nostrum, deserunt sequi.
-              Dolore, quasi. Id quibusdam hic quisquam ab adipisci quae cum
-              optio. Quidem, eius adipisci perspiciatis rem nostrum ab obcaecati
-              facere. Dignissimos, repudiandae.
+              sint sed id reprehenderit mollitia itaque facere cumque.
             </p>
           </section>
           <section className="aboutSectionEducation">
             <h1>Education</h1>
-            <p>{about[0].education}</p>
+            {/* <p>{about[0].education}</p> */}
+            <ul>
+              <li>
+                Psicóloga, membro efetivo da ordem de Psicólogos Portugueses com
+                a cédula profissional nº026216.
+              </li>
+              <li>Mestrado Integrado Psicologia Universidade do Minho</li>
+              <li>
+                Certificado Hipnose Clinica London College Clinical Hypnosis
+              </li>
+              <li>
+                Pós Graduação Hipnose Clinica Experimental Faculdade Medicina
+                Lisboa{" "}
+              </li>
+              <li>
+                Dupla Graduação de NeuroPsicologia Clinica no Instituto
+                Português Psicologia no Porto
+              </li>
+              <li>
+                Dupla Graduação de sexualidade Clinica e Terapia de Casal
+                Instituto Português Psicologia no Porto
+              </li>
+              <li>Curso de Desenvolvimento Espiritual</li>
+            </ul>
+            The Arthur Findlay College. Congressos e participações:
+            <ul>
+              <li>
+                Neuropsicofarmacologia da Criança e do Adolescente” INSPSIC
+              </li>
+              <li>Neuropsicofarmacologia Do Adulto” - INSPSIC</li>
+              <li>
+                3ª Jornada de Criminologia: A importância da existência de
+                respostas para a diversidade de questões e paradigmas criminais
+                , Universidade Fernando Pessoa-Porto
+              </li>
+              <li>
+                Curso de Neurodesenvolvimento e Pedopsiquiatria, Escola De
+                Ciências da Saúde da Universidade do Minho
+              </li>
+              <li>
+                1º Congresso Internacional de Parentalidade, do Instituto de
+                Psicologia e Neupsicologia do Porto
+              </li>
+              <li>
+                “Saídas profissionais e contextos de futuro em Psicologia”,
+                proferida pelo Sr. Bastonário da Ordem dos Psicólogos
+                Portugueses, na Faculdade de Psicologia da Educação Universidade
+                do Porto.
+              </li>
+              <li>
+                III Seminário de Investigação em Psicologia da Universidade Do
+                Minho
+              </li>
+              <li>Avaliação de Famílias em Risco</li>
+              <li>Universidade Católica Portuguesa Braga</li>
+              <li>
+                II Congresso de Psicologia de Estarreja "Pelos Trilhos da
+                Infância e da Adolescência"
+              </li>
+              <li>
+                IV Seminário de Investigação em Psicologia da Universidade Do
+                Minho-06/2013.
+              </li>
+              <li>
+                Curso em Análise de Contos de Fadas - CRIAP — ”Violência
+                Doméstica ”
+              </li>
+              <li>Associação de Investigação e Debate em Serviço Social</li>
+            </ul>
           </section>
         </>
       )}

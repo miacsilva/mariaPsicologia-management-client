@@ -47,9 +47,8 @@ function CreateColaborator() {
       </section>
       <hr className="separatorAppointments" />
       <section className="createColaborator">
-        <h1>Criar novo colaborador!</h1>
+        <h1>Add new colaborator!</h1>
 
-          
         <form onSubmit={handleSubmit} className={"createColaboratorForm"}>
           <div className="createColaborator__name">
             <label htmlFor="name"> Nome</label>
@@ -85,7 +84,7 @@ function CreateColaborator() {
           </div>
 
           <button type="submit" className="buttonCreate">
-            Criar nova conta de colaborador
+            Create colaborator
           </button>
         </form>
       </section>

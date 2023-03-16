@@ -40,16 +40,11 @@ function AddTherapies() {
       .catch((err) => console.log("Error while adding the new therapy: ", err));
   };
   return (
-    <div>
-      <h2>Add Therapies</h2>
-      <form onSubmit={handleSubmit}>
+    <section className="addTherapiesSection">
+      <h2>Add Therapy</h2>
+      <form onSubmit={handleSubmit} className="addTherapiesSectionForm">
         <label>Name</label>
-        <input
-          type="text"
-          name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
+        <input value={title} onChange={(e) => setTitle(e.target.value)} />
         <label>Description</label>
         <textarea
           type="text"
@@ -57,10 +52,13 @@ function AddTherapies() {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
+        <img src={image} alt={title} />
         <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
-        <button type="submit">Save new therapy</button>
+        <button type="submit" className="buttonCreateTherapy">
+          Save new therapy
+        </button>
       </form>
-    </div>
+    </section>
   );
 }
 export default AddTherapies;
