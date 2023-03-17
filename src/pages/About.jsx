@@ -46,33 +46,7 @@ function About() {
 
             <h1>About</h1>
             <p>
-              {about[0].bigAbout} Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Harum, voluptatem alias, quibusdam, dicta
-              pariatur sit vel nesciunt ex debitis consequuntur tempora soluta?
-              Inventore aliquid harum, autem dolorem dolorum nobis dolores atque
-              eos ratione similique vel iusto necessitatibus eveniet laborum
-              ipsam. Eius debitis deleniti sunt repudiandae cum perspiciatis
-              consequuntur totam, velit ut nobis non nesciunt distinctio, quas
-              aut quod fugit, quibusdam necessitatibus! Aliquam labore, facere
-              perspiciatis atque eligendi consectetur repellat voluptates eius
-              aperiam molestias quos impedit ex quasi adipisci tempora est minus
-              repudiandae. Tempora, quod ea veritatis numquam cupiditate quos
-              ullam delectus, facilis at error enim! Molestiae sit accusantium
-              iste laboriosam unde quod enim sed nostrum placeat, excepturi
-              aliquam suscipit, doloremque quibusdam, qui et nisi repellendus.
-              Cupiditate eveniet voluptates quia dolor ad, perspiciatis optio
-              error aliquam id quis eaque in quae unde fugiat, distinctio
-              quisquam! Non odio blanditiis iure fugiat est deleniti porro? Eum,
-              laudantium facilis minus tenetur veniam doloribus iusto! Explicabo
-              perferendis impedit deserunt eaque accusamus, animi repellat amet.
-              Tempora rem quidem non dicta a minus eum inventore veritatis,
-              fugiat suscipit reprehenderit distinctio adipisci eligendi earum
-              natus ut qui eius. Earum possimus numquam quasi magnam, voluptas
-              iusto nam sunt in aspernatur animi tempore, dolores facilis culpa
-              deleniti aut id quidem deserunt ullam corporis vitae! Quam aliquid
-              laborum voluptate illum inventore, veniam totam voluptatibus sunt,
-              deserunt accusamus, consectetur debitis animi ipsum iusto ducimus
-              sint sed id reprehenderit mollitia itaque facere cumque.
+              {about[0].bigAbout} 
             </p>
           </section>
           <section className="aboutSectionEducation">

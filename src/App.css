@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: "roboto";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* ---------- END BODY ---------- */
@@ -174,7 +174,7 @@ body {
 }
 
 .editApButton {
-  font-family: "roboto";
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 10px 30px;
@@ -241,7 +241,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: "roboto";
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 10px 30px;
@@ -1044,7 +1044,7 @@ footer p {
 .btnbtn {
   margin-bottom: 2%;
   margin-left: 2%;
-  font-family: "roboto";
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 10px 30px;
@@ -1054,8 +1054,8 @@ footer p {
   border-radius: 1.7vh;
 }
 
-.btnAddMSForm {
-  font-family: "roboto";
+.btnAddMSForm{
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 10px 30px;
@@ -1066,10 +1066,10 @@ footer p {
   margin-bottom: -15%;
 }
 
-.btnGoBackAddMS {
-  margin-bottom: 2%;
-  margin-left: 2%;
-  font-family: "roboto";
+.btnGoBackAddMS{
+  margin-bottom: 2% ;
+  margin-left: 2% ;
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
   padding: 5px 20px;
@@ -1081,7 +1081,7 @@ footer p {
 
 .createMS label {
   color: #436255;
-  font-family: "roboto";
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
   margin-right: 2%;
 }
 .createMS input {
