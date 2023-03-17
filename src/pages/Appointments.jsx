@@ -60,10 +60,7 @@ function Appointments({ contacts }) {
             <div className="appoinText">
               <h4 className="therapiesAppointTitle">Book an Appointment!</h4>
 
-              <Link
-                to="https://koalendar.com/e/meet-with-maria-luisa"
-                target="_blank"
-              >
+              <Link to="https://koalendar.com/e/maria-luisa" target="_blank">
                 <button className={"editApButton"}>
                   Go to Appointments Book
                 </button>
