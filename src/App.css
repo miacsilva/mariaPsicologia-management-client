@@ -997,7 +997,7 @@ footer p {
   width: 30%;
   border-radius: 15px;
   margin:2% ;
-  margin-left: 35%;
+  margin-left: 7%;
 }
 
 .cardTextMs{
@@ -1014,4 +1014,25 @@ footer p {
 .maps{
   margin-left: 25%;
   margin-top: 7%;
+}
+
+.miniContainerMS{
+  display: flex;
+  justify-content: space-around;
+}
+.titleContaiMS{
+  margin-top: 10%;
+}
+
+.btnbtn{
+  margin-bottom: 2% ;
+  margin-left: 2% ;
+  font-family: "roboto";
+  border: 1px solid white;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #cabaa9;
+  color: white;
+  border-radius: 1.7vh;
 }
