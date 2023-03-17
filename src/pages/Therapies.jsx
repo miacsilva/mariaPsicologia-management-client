@@ -26,18 +26,28 @@ function Therapies() {
     <>
       {user && (
         <>
-          <NavLink to="/add-therapies" className="therapySection">
-            <button className="addTherapies-btn">Add Therapy</button>
+        <section className="appointmentSection">
+        <h1>Therapies</h1>
+        {user && (
+          <NavLink to="/add-therapies">
+            <button className={"editApButton"}>Add Therapy</button>
           </NavLink>
+        )}
+      </section>
+      <hr className="separatorAppointments" />
+          
+        
         </>
       )}
       {therapies.length && (
         <>
+
+        <div className="therapiesContainer" >
           {therapies &&
             therapies.map((therapy) => (
-              <div className="therapiesContainer" key={therapy._id}>
+              <div  key={therapy._id}>
                 <div className="col">
-                  <div className="card h-100">
+                  <div className="card cardTherapiesss ">
                     <div key={therapy._id}>
                       <img
                         src={therapy.image}
@@ -60,6 +70,7 @@ function Therapies() {
                 </div>
               </div>
             ))}
+            </div>
         </>
       )}
     </>

@@ -298,14 +298,10 @@ body {
   );
   color: rgb(58, 57, 57);
   width: 50vw;
-  justify-content: center;
-  align-self: center;
-  align-content: center;
   padding: 5vh 0 15vh 0;
   margin: 0 auto 15vh;
   margin-top: 15vh;
-  border-radius: 40px;
-}
+  border-radius: 40px;}
 
 /* ---------- END HOME ---------- */
 
@@ -877,7 +873,12 @@ footer p {
   flex-direction: row;
   width: 35vw;
   padding: 10%;
-  margin-top: 20vh;
+  flex-wrap: wrap;
+}
+
+.cardTherapiesss{
+  margin: 2%;
+  width: 200%;
 }
 /* ---------- END COLABORATOR ---------- */
 
@@ -1036,3 +1037,40 @@ footer p {
   color: white;
   border-radius: 1.7vh;
 }
+
+.btnAddMSForm{
+  font-family: "roboto";
+  border: 1px solid white;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #cabaa9;
+  color: white;
+  border-radius: 1.7vh;
+  margin-bottom: -15%;
+}
+
+.btnGoBackAddMS{
+  margin-bottom: 2% ;
+  margin-left: 2% ;
+  font-family: "roboto";
+  border: 1px solid white;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
+  padding: 5px 20px;
+  text-decoration: none;
+  background-color: #cabaa9;
+  color: white;
+  border-radius: 1.7vh;
+}
+
+.createMS label{
+  color: #436255;
+  font-family: "roboto";
+  margin-right: 2%;
+}
+.createMS input{
+  border-radius: 5px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+

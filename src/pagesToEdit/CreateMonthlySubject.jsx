@@ -60,7 +60,7 @@ function CreateMonthlySubject() {
       </section>
       <hr className="separatorAppointments" />
 
-      <NavLink to="/monthlySubjects"> « Go Back </NavLink>
+      <NavLink to="/monthlySubjects"> <button className="btnGoBackAddMS">« Go Back</button>  </NavLink>
 
 
      <section  className="createMS">
@@ -76,7 +76,7 @@ function CreateMonthlySubject() {
           onChange={(e) => setTitle(e.target.value)}
         />
           </div>
-                      <hr />
+                      
           <div className="descriptionMS">
 
         <label>Description</label>
@@ -88,7 +88,7 @@ function CreateMonthlySubject() {
         />
 
           </div>
-          <hr />
+         
           <div>
 
         <label>Date</label>
@@ -101,7 +101,7 @@ function CreateMonthlySubject() {
 
           </div>
 
-          <hr />
+          
           <div>
 
         <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
@@ -110,7 +110,7 @@ function CreateMonthlySubject() {
           <hr />
           <div>
 
-        <button type="submit">Add new Monthly Subject</button>
+        <button type="submit" className="btnAddMSForm">Add new Monthly Subject</button>
 
           </div>
 
