@@ -94,6 +94,7 @@ body {
   color: white;
   padding: 0 10px;
   font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .navbar__navlinks:hover {
@@ -223,6 +224,7 @@ body {
   margin: 0 auto 10vh;
   padding: 10vh;
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .monthlySeeMoreBtn {
@@ -696,6 +698,7 @@ footer {
 
 .footerLinks {
   text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .footerLinks p {
@@ -982,51 +985,50 @@ footer p {
   margin-top: 5vh;
 }
 
-.MSScard{
-  
+.MSScard {
   margin-bottom: 5vh;
 }
 
-.cardMS{
+.cardMS {
   border-radius: 15px;
   border: 1px solid black;
   width: 80%;
 }
 
-.cardImgMs{
+.cardImgMs {
   width: 30%;
   border-radius: 15px;
-  margin:2% ;
+  margin: 2%;
   margin-left: 7%;
 }
 
-.cardTextMs{
+.cardTextMs {
   margin: 2%;
 }
-.cardTitleMS{
+.cardTitleMS {
   text-align: center;
 }
-.cardDateMs{
+.cardDateMs {
   text-align: center;
   font-size: 100%;
 }
 
-.maps{
+.maps {
   margin-left: 25%;
   margin-top: 7%;
 }
 
-.miniContainerMS{
+.miniContainerMS {
   display: flex;
   justify-content: space-around;
 }
-.titleContaiMS{
+.titleContaiMS {
   margin-top: 10%;
 }
 
-.btnbtn{
-  margin-bottom: 2% ;
-  margin-left: 2% ;
+.btnbtn {
+  margin-bottom: 2%;
+  margin-left: 2%;
   font-family: "roboto";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
