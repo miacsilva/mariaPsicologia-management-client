@@ -979,7 +979,36 @@ footer p {
 
 .MSSContainer {
   padding: 5%;
-  margin-top: 10vh;
+  margin-top: 5vh;
+}
+
+.MSScard{
+  
+  margin-bottom: 5vh;
+}
+
+.cardMS{
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 80%;
+}
+
+.cardImgMs{
+  width: 30%;
+  border-radius: 15px;
+  margin:2% ;
+  margin-left: 35%;
+}
+
+.cardTextMs{
+  margin: 2%;
+}
+.cardTitleMS{
+  text-align: center;
+}
+.cardDateMs{
+  text-align: center;
+  font-size: 100%;
 }
 
 .maps{

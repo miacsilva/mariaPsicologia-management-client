@@ -49,18 +49,18 @@ function MonthlySubjects() {
           {monthlySubjects &&
             monthlySubjects.map((MS) => (
               <div>
-                <div className="col-3">
-                  <div className="card h-100">
+                <div className="MSScard">
+                  <div className="cardMS">
                     <div key={MS._id}>
                       <img
                         src={MS.image}
-                        className="card-img-top"
+                        className="cardImgMs"
                         alt="imagem de terapia"
                       />
                       <div className="card-body">
-                        <h5 className="card-title">{MS.title}</h5>
-                        <h5 className="card-title">{MS.month}</h5>
-                        <p className="card-text">{MS.description}</p>
+                        <h5 className="cardTitleMS">{MS.title}</h5>
+                        <h5 className="cardDateMs">{MS.month}</h5>
+                        <p className="cardTextMs">{MS.description}</p>
                         {user && (
                           <NavLink to={`/monthly-subject/edit/${MS._id}`}>
                             <button className="addTherapies-btn">
