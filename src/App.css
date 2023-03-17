@@ -303,7 +303,8 @@ body {
   padding: 5vh 0 15vh 0;
   margin: 0 auto 15vh;
   margin-top: 15vh;
-  border-radius: 40px;}
+  border-radius: 40px;
+}
 
 /* ---------- END HOME ---------- */
 
@@ -853,7 +854,7 @@ footer p {
   position: relative;
   top: 10vh;
   right: 0.5vw;
-  width: 80%;
+  width: 50%;
   opacity: 0.5;
   z-index: -10s;
 }
@@ -878,16 +879,14 @@ footer p {
 
 .therapiesContainer {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  width: 35vw;
-  padding: 10%;
+  justify-content: center;
+  padding: 5vw;
   flex-wrap: wrap;
 }
 
-.cardTherapiesss{
+.cardTherapiesss {
   margin: 2%;
-  width: 200%;
+  width: 25vw;
 }
 /* ---------- END COLABORATOR ---------- */
 
@@ -1046,7 +1045,7 @@ footer p {
   border-radius: 1.7vh;
 }
 
-.btnAddMSForm{
+.btnAddMSForm {
   font-family: "roboto";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
@@ -1058,9 +1057,9 @@ footer p {
   margin-bottom: -15%;
 }
 
-.btnGoBackAddMS{
-  margin-bottom: 2% ;
-  margin-left: 2% ;
+.btnGoBackAddMS {
+  margin-bottom: 2%;
+  margin-left: 2%;
   font-family: "roboto";
   border: 1px solid white;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
@@ -1071,14 +1070,13 @@ footer p {
   border-radius: 1.7vh;
 }
 
-.createMS label{
+.createMS label {
   color: #436255;
   font-family: "roboto";
   margin-right: 2%;
 }
-.createMS input{
+.createMS input {
   border-radius: 5px;
   margin-top: 2%;
   margin-bottom: 2%;
 }
-
