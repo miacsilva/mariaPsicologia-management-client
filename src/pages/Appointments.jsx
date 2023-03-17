@@ -67,6 +67,7 @@ function Appointments({ contacts }) {
                 height="600px"
                 frameborder="0"
               ></iframe>
+              <div className="coverGreen"></div>
 
               <div className="contactWhatsapp">
                 <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
