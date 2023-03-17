@@ -888,6 +888,7 @@ footer p {
   margin: 2%;
   width: 25vw;
 }
+
 /* ---------- END COLABORATOR ---------- */
 
 /* HOMEPAGE Styling */
@@ -939,6 +940,14 @@ footer p {
   background: #080808;
   background-image: linear-gradient(to right, #ccc, #080808, #050505);
   margin-left: 12%;
+}
+
+.coverGreen {
+  width: 40vw;
+  height: 10vh;
+  background-color: rgb(95, 140, 122);
+  position: relative;
+  top: -10vh;
 }
 
 .whatsapp {
