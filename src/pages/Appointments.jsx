@@ -39,6 +39,7 @@ function Appointments({ contacts }) {
       {therapies.length && (
         <div className="appointmentsBody">
           <div className="therapiesAppoint">
+            <img src={lovingDoodle} alt="loving doodle" className="doodle" />
             <h3 className="therapiesAppointTitle">Therapies</h3>
             {therapies &&
               therapies.map((therapy) => (
@@ -52,19 +53,21 @@ function Appointments({ contacts }) {
               </button>
             </NavLink>
           </div>
-          <div className="appoinDoodle">
+          {/* <div className="appoinDoodle">
             <img src={lovingDoodle} alt="loving doodle" className="doodle" />
-          </div>
+          </div> */}
 
           <div className="AppointContainerText">
             <div className="appoinText">
               <h4 className="therapiesAppointTitle">Book an Appointment!</h4>
 
-              <Link to="https://koalendar.com/e/maria-luisa" target="_blank">
-                <button className={"editApButton"}>
-                  Go to Appointments Book
-                </button>
-              </Link>
+              <iframe
+                src="https://koalendar.com/e/maria-luisa?embed=true"
+                width="600px"
+                height="600px"
+                frameborder="0"
+              ></iframe>
+
               <div className="contactWhatsapp">
                 <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
                 <h5>
