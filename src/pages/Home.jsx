@@ -62,7 +62,7 @@ function Home() {
         <div className="nameContainer">
           <h1 className="nameTitle">Maria Luísa Silva</h1>
           <h2 className="presentationTitle">
-            Psycology | Personal Development | much more....
+            Psicologia | Desenvolvimento Pessoal 
           </h2>
         </div>
       </div>
