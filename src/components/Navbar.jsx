@@ -19,7 +19,7 @@ function Navbar() {
               })
             }
           >
-            Home
+            HomePage
           </NavLink>
         )}
         {user && (
@@ -61,7 +61,7 @@ function Navbar() {
             })
           }
         >
-          About
+          Sobre
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
@@ -73,7 +73,7 @@ function Navbar() {
             })
           }
         >
-          Books
+          Livros
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
@@ -85,7 +85,7 @@ function Navbar() {
             })
           }
         >
-          Monthly Subject
+          Tema do Mês
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
@@ -97,7 +97,7 @@ function Navbar() {
             })
           }
         >
-          Appointments
+          Terapias
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
@@ -109,7 +109,7 @@ function Navbar() {
             })
           }
         >
-          Contacts
+          Contactos
         </NavLink>
         {user && (
           <NavLink className={"navbar__navlinks"} onClick={logout}>

@@ -31,12 +31,12 @@ function AboutHome() {
             <img src={about[0].imageHome} alt="" className={"photoAbout"} />
           </div>
           <div className="aboutSectionTwo">
-            <h1>About {about[0].name}</h1>
+            <h1>Sobre {about[0].name}</h1>
             <p>{about[0].smallAbout}</p>
 
             <div className={"buttonAbout"}>
               <NavLink to="/about">
-                <button>Know more...</button>
+                <button>Saber Mais</button>
               </NavLink>
             </div>
           </div>

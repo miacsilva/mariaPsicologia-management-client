@@ -70,7 +70,10 @@ function Home() {
         <img src={scroll} className="scroll" alt="scroll icon" />
       </div>
 
-      {books.length && (
+
+
+{/* ------------CAROUSEL-------------------------------- */}
+     {/*  {books.length && (
         <div className="carousselContainer">
           <div
             id="carouselExampleInterval"
@@ -142,7 +145,9 @@ function Home() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
+
+      {/* ------------CAROUSEL FIM-------------------------------- */}
       <AboutHome />
       <MonthlySubject />
     </>
