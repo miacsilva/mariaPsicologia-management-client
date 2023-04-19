@@ -28,7 +28,7 @@ function Appointments({ contacts }) {
   return (
     <>
       <section className="appointmentSection">
-        <h1> Appointments</h1>
+        <h1>Terapias e Consultas</h1>
         {/* {user && (
           <NavLink to="/appointments/edit">
             <button className={"editApButton"}>Edit Appointment Section</button>
@@ -40,7 +40,7 @@ function Appointments({ contacts }) {
         <div className="appointmentsBody">
           <div className="therapiesAppoint">
             <img src={lovingDoodle} alt="loving doodle" className="doodle" />
-            <h3 className="therapiesAppointTitle">Therapies</h3>
+            <h3 className="therapiesAppointTitle">Terapias</h3>
             {therapies &&
               therapies.map((therapy) => (
                 <div key={therapy._id}>
@@ -49,7 +49,7 @@ function Appointments({ contacts }) {
               ))}
             <NavLink to="/therapies">
               <button className={"editApButton"}>
-                Learn more about therapies
+                Descobre mais sobre as terapias
               </button>
             </NavLink>
           </div>
@@ -59,15 +59,9 @@ function Appointments({ contacts }) {
 
           <div className="AppointContainerText">
             <div className="appoinText">
-              <h4 className="therapiesAppointTitle">Book an Appointment!</h4>
+              {/* <h4 className="therapiesAppointTitle">Book an Appointment!</h4> */}
 
-              <iframe
-                src="https://koalendar.com/e/maria-luisa?embed=true"
-                width="600px"
-                height="600px"
-                frameborder="0"
-              ></iframe>
-              <div className="coverGreen"></div>
+             {/*  <div className="coverGreen"></div> */}
 
               <div className="contactWhatsapp">
                 <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />

@@ -44,18 +44,18 @@ function About() {
               className="aboutPhoto"
             />
 
-            <h1>About</h1>
+            <h1>Sobre</h1>
             <p>
               {about[0].bigAbout} 
             </p>
           </section>
           <section className="aboutSectionEducation">
-            <h1>Education</h1>
+            <h1>Educação</h1>
             {/* <p>{about[0].education}</p> */}
             <ul>
               <li>
                 Psicóloga, membro efetivo da ordem de Psicólogos Portugueses com
-                a cédula profissional nº026216.
+                a cédula profissional nº 026216
               </li>
               <li>Mestrado Integrado Psicologia Universidade do Minho</li>
               <li>
@@ -70,34 +70,33 @@ function About() {
                 Português Psicologia no Porto
               </li>
               <li>
-                Dupla Graduação de sexualidade Clinica e Terapia de Casal
-                Instituto Português Psicologia no Porto
+                Dupla Graduação de sexualidade Clinica e Terapia de Casal - Instituto Português Psicologia no Porto
               </li>
-              <li>Curso de Desenvolvimento Espiritual</li>
+              <li>Curso de Desenvolvimento Espiritual - The Arthur Findlay College</li>
             </ul>
-            The Arthur Findlay College. Congressos e participações:
+             Congressos e participações:
             <ul>
               <li>
-                Neuropsicofarmacologia da Criança e do Adolescente” INSPSIC
+                Neuropsicofarmacologia da Criança e do Adolescente” -INSPSIC
               </li>
               <li>Neuropsicofarmacologia Do Adulto” - INSPSIC</li>
               <li>
                 3ª Jornada de Criminologia: A importância da existência de
                 respostas para a diversidade de questões e paradigmas criminais
-                , Universidade Fernando Pessoa-Porto
+                - Universidade Fernando Pessoa-Porto
               </li>
               <li>
-                Curso de Neurodesenvolvimento e Pedopsiquiatria, Escola De
+                Curso de Neurodesenvolvimento e Pedopsiquiatria - Escola De
                 Ciências da Saúde da Universidade do Minho
               </li>
               <li>
-                1º Congresso Internacional de Parentalidade, do Instituto de
+                1º Congresso Internacional de Parentalidade - do Instituto de
                 Psicologia e Neupsicologia do Porto
               </li>
               <li>
                 “Saídas profissionais e contextos de futuro em Psicologia”,
                 proferida pelo Sr. Bastonário da Ordem dos Psicólogos
-                Portugueses, na Faculdade de Psicologia da Educação Universidade
+                Portugueses - na Faculdade de Psicologia da Educação Universidade
                 do Porto.
               </li>
               <li>
