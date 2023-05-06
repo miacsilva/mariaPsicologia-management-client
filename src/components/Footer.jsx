@@ -15,12 +15,12 @@ function Footer({ books, contacts }) {
         <footer>
           <div>
             <NavLink to="/about" className={"footerLinks"}>
-              <h5>About</h5>
+              <h5>Sobre</h5>
             </NavLink>
           </div>
           <div>
             <NavLink to="/books" className={"footerLinks"}>
-              <h5>Books</h5>
+              <h5>Livros</h5>
             </NavLink>
             {books.map((book) => {
               return (
@@ -36,24 +36,22 @@ function Footer({ books, contacts }) {
           </div>
           <div>
             <NavLink to="/appointments" className={"footerLinks"}>
-              <h5>Appointments</h5>
+              <h5>Terapias e consultas</h5>
             </NavLink>
             <NavLink
-              to="https://koalendar.com/e/meet-with-maria-luisa"
+              to="/appointments"
               className={"footerLinks"}
-              target="_blank"
             >
-              <p>Book an appointment</p>
+              <p>Ver mais</p>
             </NavLink>
           </div>
           <div>
             <NavLink to="/contacts" className={"footerLinks"}>
-              <h5>Contacts</h5>
+              <h5>Contactos</h5>
             </NavLink>
             <p>{contacts[0].address}</p>
             <p>{contacts[0].email}</p>
             <p>{contacts[0].phoneNumber}</p>
-            {/* <p>{contacts[0].facebook}</p> */}
           </div>
           <div className="footerIcons">
             <NavLink target="_blank" to={contacts[0].facebook}>

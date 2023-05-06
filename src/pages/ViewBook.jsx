@@ -47,18 +47,18 @@ function ViewBook() {
             <p className="bookIdDescription">{book.description}</p>
             <br />
             <div className="booksIdSection__info">
-              <p>Author: {book.author}</p>
-              <p>Publisher: {book.publisher}</p>
-              <p>Published date: {book.publishedDate}</p>
+              <p>Autor: {book.author}</p>
+              <p>Editora: {book.publisher}</p>
+              <p>Data de publicação: {book.publishedDate}</p>
               <p>
-                Languages:
+                Idiomas:
                 {languages.map((language, i) => {
                   return i === languages.length - 1
                     ? ` ${language} `
                     : ` ${language},`;
                 })}
               </p>
-              <p>Pages: {book.pages}</p>
+              <p>Páginas: {book.pages}</p>
             </div>
           </section>
         </>
