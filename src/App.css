@@ -845,7 +845,7 @@ footer p {
   margin-bottom: 10%;
   margin-top: 10%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 50vw;
 }
 
@@ -962,6 +962,7 @@ footer p {
   padding-bottom: 2.5vh;
   padding-left: 3.5vh;
   padding-right: 3.5vh;
+  height: fit-content;
 }
 
 .contactWhatsapp h5 {

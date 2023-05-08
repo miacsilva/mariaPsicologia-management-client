@@ -58,7 +58,7 @@ function Appointments({ contacts }) {
           </div> */}
 
           <div className="AppointContainerText">
-            <div className="appoinText">
+            
               {/* <h4 className="therapiesAppointTitle">Book an Appointment!</h4> */}
 
              {/*  <div className="coverGreen"></div> */}
@@ -66,11 +66,11 @@ function Appointments({ contacts }) {
               <div className="contactWhatsapp">
                 <img src={whatsapp} alt="whatsapp icon" className="whatsapp" />
                 <h5>
-                  Any questions? <br></br> Feel free to contact via whatsaap!{" "}
+                  Tem alguma questão? <br></br> Sinta-se à vontade para contactar por whatsapp!{" "}
                 </h5>
                 <p>{contacts[0].phoneNumber}</p>
               </div>
-            </div>
+          
           </div>
         </div>
       )}
