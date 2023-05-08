@@ -30,7 +30,7 @@ function Books() {
       {books.length && (
         <>
           <section className="booksSection">
-            <h1>Books</h1>
+            <h1>Livros</h1>
             {user && (
               <NavLink to="/books/create">
                 <button className={"editButton"}>Add new book</button>

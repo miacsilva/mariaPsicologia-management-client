@@ -30,7 +30,7 @@ function MonthlySubject() {
       <div>
         {monthlySubject.length && (
           <>
-            <h2>Monthly Subject</h2>
+            <h2>Tema do Mês</h2>
             <h6>{monthlySubject[0].month}</h6>
             <h1>{monthlySubject[0].title}</h1>
             <p> {monthlySubject[0].description} </p>
@@ -39,7 +39,7 @@ function MonthlySubject() {
       </div>
       <div className="monthlysubButton">
         <NavLink to="/monthlySubjects">
-          <button className="editApButton">See past months «</button>
+          <button className="editApButton">« Ver meses passados</button>
         </NavLink>
       </div>
     </section>
