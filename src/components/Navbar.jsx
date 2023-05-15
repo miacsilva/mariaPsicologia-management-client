@@ -61,7 +61,7 @@ function Navbar() {
             })
           }
         >
-          Sobre
+        Sobre
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}

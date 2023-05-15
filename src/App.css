@@ -75,7 +75,6 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: rgb(0, 212, 255);
   background: linear-gradient(
     0deg,
     rgba(0, 212, 255, 0.02853641456582634) 0%,
@@ -98,7 +97,7 @@ body {
 }
 
 .navbar__navlinks:hover {
-  color: white;
+  color: rgb(213, 168, 136);
 }
 
 .navbar__navlinks__user {
@@ -107,6 +106,7 @@ body {
   color: #cabaa9;
   font-weight: bold;
 }
+
 /* ---------- END NAVBAR ---------- */
 
 /* ------------ EDITS ------------ */
@@ -154,6 +154,8 @@ body {
 }
 
 /* About Section */
+
+
 .aboutSection,
 .contactsSection,
 .booksSection,
@@ -168,6 +170,8 @@ body {
   border-top-left-radius: 10px;
   /* font-family: "Dancing Script", cursive; */
 }
+
+
 
 .appointmentSection h1 {
   font-size: 400%;
@@ -933,6 +937,19 @@ footer p {
   width: 15%;
 }
 
+@media (max-width: 450px){
+  .homeContainer h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    /*  text-align: center; */
+  }
+
+  .homeContainer h2{
+    font-size: 1rem;
+  }
+}
+/* --------- HOMEPAGE Styling -------------*/
+
 .separatorAppointments {
   border: 0;
   height: 3px;
@@ -1088,4 +1105,25 @@ footer p {
   border-radius: 5px;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+@media (max-width: 450px){
+  .aboutSection{
+  margin: 0;
+  flex-direction: column;
+}
+
+.aboutSectionOne{
+  display: flex;
+  align-self: center;
+}
+.aboutSectionTwo h1{
+  text-align: center;
+}
+.aboutSectionTwo p{
+  margin-top: 30px;
+  text-align:left;
+  font-size: 90%;
+  color: #3d3b3b;
+}
 }
