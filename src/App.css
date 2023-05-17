@@ -48,7 +48,7 @@ body {
 }
 
 .formLogin {
-  display: flex;
+  display: flex;  
   flex-direction: column;
   gap: 3vh;
 }
@@ -71,7 +71,16 @@ body {
 
 /* ---------- END LOGIN ---------- */
 
+
+
+
+
+
+
+
+
 /* ------------ NAVBAR ------------ */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -93,7 +102,6 @@ body {
   color: white;
   padding: 0 10px;
   font-size: 18px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .navbar__navlinks:hover {
@@ -107,7 +115,63 @@ body {
   font-weight: bold;
 }
 
+
+
+.toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle-button .bar{
+  height: 4px;
+  width: 100%;
+  background-color:white;
+  border-radius: 10px;
+}
+
+.navbar-navlinks ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+@media (max-width: 950px) {
+
+  .toggle-button{
+    display: flex;
+  }
+  .navbar-navlinks {
+  display: none;
+  }
+
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar-navlinks ul {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-navlinks.active {
+    display: flex;
+  }
+
+}
+
 /* ---------- END NAVBAR ---------- */
+
+
+
+
 
 /* ------------ EDITS ------------ */
 .editButton {
@@ -980,9 +1044,8 @@ footer p {
   width: 15%;
 }
 
-@media (max-width: 450px){
+@media (max-width: 700px){
   .homeContainer h1 {
-    font-family: "Dancing Script", cursive;
     font-size: 3rem;
     /*  text-align: center; */
   }
@@ -1150,7 +1213,7 @@ footer p {
   margin-bottom: 2%;
 }
 
-@media (max-width: 450px){
+@media (max-width: 1049px){
   .aboutSection{
   margin: 0;
   flex-direction: column;

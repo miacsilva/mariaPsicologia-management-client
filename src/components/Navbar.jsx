@@ -6,6 +6,12 @@ import { scroller } from "react-scroll";
 function Navbar() {
   const { user, logout } = useContext(AuthContext);
 
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = () => {
+    setIsActive(!isActive)
+  }
+
   return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
@@ -15,7 +21,7 @@ function Navbar() {
             to="/"
             onClick={() =>
               scroller.scrollTo("App", {
-                offset: -10,
+                offset: -300,
               })
             }
           >
@@ -51,6 +57,17 @@ function Navbar() {
             View Colaborators
           </NavLink>
         )}
+{/* --------------------------HAMBURGUER MENU----------------------------------- */}
+        <div  className={`toggle-button ${isActive ? "active" : ""}`} onClick={handleClick}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+{/* --------------------------HAMBURGUER MENU--END------------------------------ */}
+
+<div className={`navbar-navlinks ${isActive ? "active" : ""}`}>
+
+            <ul>
         <NavLink
           className={"navbar__navlinks"}
           to="/about"
@@ -81,7 +98,7 @@ function Navbar() {
           onClick={() =>
             scroller.scrollTo("monthlySubjectComponentSection", {
               duration: 500,
-              offset: 0, // fica a 0
+              offset: 0, 
             })
           }
         >
@@ -116,6 +133,10 @@ function Navbar() {
             Logout
           </NavLink>
         )}
+        </ul>
+        </div>
+
+
       </div>
     </nav>
   );
