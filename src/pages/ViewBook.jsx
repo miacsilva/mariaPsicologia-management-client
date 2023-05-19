@@ -33,7 +33,7 @@ function ViewBook() {
     <>
       {book && (
         <>
-          <section className="booksSection">
+          <section className="singleBooksSection">
             <h1>{book.title}</h1>
             {user && (
               <NavLink to="/books">
@@ -42,11 +42,21 @@ function ViewBook() {
             )}
           </section>
           <hr className="separatorAppointments" />
+
           <section className="booksIdSection">
+
+          <div className="upperSingleBook">
+
             <img src={book.image} alt={book.title} className="bookIdImage" />
+            
             <p className="bookIdDescription">{book.description}</p>
+            </div>
+            
             <br />
-            <div className="booksIdSection__info">
+
+            <details className="booksIdSection__info">
+              <summary>Ver Detalhes</summary>
+
               <p>Autor: {book.author}</p>
               <p>Editora: {book.publisher}</p>
               <p>Data de publicação: {book.publishedDate}</p>
@@ -59,6 +69,9 @@ function ViewBook() {
                 })}
               </p>
               <p>Páginas: {book.pages}</p>
+
+            </details>
+            <div >
             </div>
           </section>
         </>

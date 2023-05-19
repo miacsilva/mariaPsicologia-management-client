@@ -577,7 +577,7 @@ body {
     margin: 2vw 2vw 5vh;
   }
 
-  .booksSection {       /* Header Pages */
+  .booksSection {       /* Header Page */
   margin: 7vh 0 0 30vh;
 }
 }
@@ -585,31 +585,54 @@ body {
 
 
 /* ------ Single Book Page ---------------*/
+
+.singleBooksSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 20vh 0 0 30vh;
+  gap: 50px;
+  color: #cabaa9;
+  padding: 35px 35px 0;
+  border-top-left-radius: 10px;
+
+}
 .booksIdSection {
-  background-color: rgba(188, 150, 15, 0.259);
-  color: rgba(36, 36, 36, 0.826);
-  width: 60vw;
-  margin: 0 auto 20vh;
-  padding: 3vw;
-  text-align: center;}
+  background-color: rgba(188, 150, 15, 0.108);
+  color: rgba(93, 82, 82, 0.826);
+  width: 80vw;
+  margin: 0 auto 7vh;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
 
 .bookIdImage {
   position: relative;
   top: 0;
-  float: right;
+  float: bottom;
   width: 45%;
-  margin: 10px 0 0 3vw;
+  margin: 10px 0 40px 3vw;
 }
 
 .bookIdDescription {
   margin: 0 2vw 0 10px;
-  text-align: justify;
-  font-size: 20%px;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .booksIdSection__info {
-  margin-top: 8vh;
+  margin-left: 10px;
   text-align: left;
+  font-size: 15px;
+}
+
+summary{
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+details p {
+  font-size: 13px;
 }
 
 .disabledInput {
@@ -637,6 +660,69 @@ textarea {
   background-color: rgb(95, 140, 122, 0.7);
   color: white;
 }
+
+
+
+
+@media(min-width:700px){   /* TABLET */
+  .bookIdImage {
+    position: relative;
+    top: 0;
+    float: left;
+    width: 25%;
+    margin: 10px 40px 40px 3vw;
+  }
+
+  .booksIdSection {
+    color: rgba(93, 82, 82, 0.826);
+    width: 60vw;
+    margin: 0 auto 7vh;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .bookIdDescription {
+    margin: 0 2vw 0 10px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .upperSingleBook{
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+
+
+@media(max-width:950px){   /* TABLET */
+  .singleBookHeader h1{
+    font-size: 30px;
+  }
+
+}
+
+@media(max-width:550px){    /* MOBILE */
+  
+  .singleBooksSection {       /* Header Page */
+    margin: 7vh 0 0 15vh;
+    padding: 35px 0px 0;
+  }
+  .singleBookHeader{
+    justify-content: space-around;
+  }
+
+  .singleBookHeader h1{
+    font-size: 20px;
+  }
+ 
+
+}
+
+
 /* ------------ END BOOKS ------------ */
 
 /* ------------ APPOINTMENTS ------------ */
