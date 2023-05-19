@@ -35,7 +35,7 @@ function Contacts() {
       {contacts.length && (
         <>
           <section className="contactsSection">
-            <h1>Contacts</h1>
+            <h1>Contactos</h1>
             {user && (
               <NavLink to={`/contacts/edit/${contacts[0]._id}`}>
                 <button className={"editButton"}>Edit Contacts Section</button>
@@ -44,18 +44,19 @@ function Contacts() {
           </section>
           <hr className="separatorAppointments" />
           <section className="contactsSectionBox">
+
             <section className="contactsSectionContacts">
               <div>
-                <img src={email} alt="" />
+                <img src={email} alt="email icon" />
                 <p>{contacts[0].email}</p>
               </div>
 
               <div>
-                <img src={phone} alt="" />
+                <img src={phone} alt="phone icon" />
                 <p>{contacts[0].phoneNumber}</p>
               </div>
               <div>
-                <img src={address} alt="" />
+                <img src={address} alt="adress icon" />
                 <p>{contacts[0].address}</p>
               </div>
             </section>
