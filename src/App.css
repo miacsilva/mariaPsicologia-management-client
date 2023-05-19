@@ -837,24 +837,31 @@ footer p {
   width: 3vw;
 }
 
-@media (max-width: 450px){
+@media (max-width: 550px){
   .iconSocialMedia {
     width: 10vw;
   }
 
   footer h5 {
-   font-size: 12px;
+   font-size: 14px;
   }
 
   footer {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    gap: 15px;
     padding: 20px 20px 20px;
     margin: 0px auto 0;
     box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
   }
+
+  .footerIcons{
+    display: flex;
+    justify-content: center;
+  }
+  
 
 }
 /* ---------- END FOOTER ---------- */
