@@ -482,6 +482,8 @@ body {
 }
 /* ------------ END ABOUT ------------ */
 
+
+
 /* ------------ BOOKS ------------ */
 .booksSectionBooksCards {
   display: flex;
@@ -493,28 +495,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(188, 150, 15, 0.259);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  box-shadow: 2px 2px 10px 1px #141e30;
-  max-width: 25%;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 10px 1px #141e30; */
+  max-width: 27vw;
   padding: 5vh;
-  margin: 2vw 2vw 20vh;
+  margin: 2vw 2vw 15vh;
   text-decoration: none;
   transition-duration: 0.5s;
 }
 
 .booksCards:hover {
-  background-color: rgb(95, 140, 122);
-  transition-duration: 1.5s;
+  background-color: rgba(95, 140, 122, 0.588);
+  transition-duration: 1s;
 }
 
 .booksCardsImage {
-  height: 40vh;
-  width: 90%;
+  width: 100%;
+  aspect-ratio: 16/22; /* responsiveness of image solved */
   box-shadow: 0 0 10px 3px grey;
   transition-duration: 0.5s;
-  
 }
 
 .booksCards:hover .booksCardsImage {
@@ -557,6 +558,33 @@ body {
   transition-duration: 0.5s;
 }
 
+@media(max-width:950px){   /* TABLET */
+  
+  .booksSectionBooksCards{
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .booksCards {
+    max-width: 50vw;
+    padding: 5vh;
+  }
+}
+
+@media(max-width:500px){    /* MOBILE */
+  .booksCards{
+    max-width: 70vw;
+    margin: 2vw 2vw 5vh;
+  }
+
+  .booksSection {       /* Header Pages */
+  margin: 7vh 0 0 30vh;
+}
+}
+
+
+
+/* ------ Single Book Page ---------------*/
 .booksIdSection {
   background-color: rgba(188, 150, 15, 0.259);
   color: rgba(36, 36, 36, 0.826);
