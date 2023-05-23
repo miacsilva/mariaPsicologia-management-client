@@ -220,7 +220,7 @@ body {
 /* About Section */
 
 
-.aboutSection,
+.AboutSection,
 .contactsSection,
 .booksSection,
 .monthlySubjectSection,
@@ -400,7 +400,12 @@ body {
 
 /* ---------- END HOME ---------- */
 
-/* ------------ ABOUT ------------ */
+
+
+
+
+
+/* --------------------------- ABOUT ------------ */
 
 
 .photoPlusAbout{
@@ -474,14 +479,14 @@ body {
 
 @media(max-width:550px){
 
-  .aboutSection {       /* Header Page */
+  .AboutSection {       /* Header Page */
     margin: 7vh 0 0 10vh;
     padding-right: -10px;
     padding-left: -10px;
   }
 
-  .aboutSection h1{
-    font-size: 21px;
+  .AboutSection h1{
+    font-size: 5vw;
   }
 
   .aboutContent{
@@ -1497,8 +1502,8 @@ footer p {
   margin-bottom: 2%;
 }
 
-/* @media (max-width: 1049px){
-  /* .aboutSection{
+@media (max-width: 1049px){
+  .aboutSection{
   margin: 0;
   flex-direction: column;
 } 
@@ -1516,4 +1521,4 @@ footer p {
   font-size: 90%;
   color: #3d3b3b;
 }
-} */
+}
