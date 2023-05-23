@@ -28,8 +28,8 @@ function About() {
     <>
       {about.length && (
         <>
-          <section className={"aboutSection"}>
-            <h1>About {about[0].name}</h1>
+          <section className="aboutSection">
+            <h1>Sobre {about[0].name}</h1>
             {user && (
               <NavLink to={`/about/edit/${about[0]._id}`}>
                 <button className={"editButton"}>Edit About Section</button>
@@ -37,18 +37,24 @@ function About() {
             )}
           </section>
           <hr className="separatorAppointments" />
-          <section className="aboutSectionAbout">
+
+
+          <section className="aboutContent">
+           
+          <div className="photoPlusAbout">
             <img
               src={about[0].imageAbout}
               alt={about[0].name}
               className="aboutPhoto"
             />
+           
+            <p className="aboutSectionBox">
+              {about[0].bigAbout} </p>
+              
+              </div>
 
-            <h1>Sobre</h1>
-            <p>
-              {about[0].bigAbout} 
-            </p>
-          </section>
+         
+          
           <section className="aboutSectionEducation">
             <h1>Educação</h1>
             {/* <p>{about[0].education}</p> */}
@@ -74,7 +80,7 @@ function About() {
               </li>
               <li>Curso de Desenvolvimento Espiritual - The Arthur Findlay College</li>
             </ul>
-             Congressos e participações:
+            <h2>Congressos e participações</h2>
             <ul>
               <li>
                 Neuropsicofarmacologia da Criança e do Adolescente” -INSPSIC
@@ -119,6 +125,7 @@ function About() {
               </li>
               <li>Associação de Investigação e Debate em Serviço Social</li>
             </ul>
+          </section>
           </section>
         </>
       )}

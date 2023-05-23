@@ -64,10 +64,10 @@ function Contacts() {
             <div className="separator"></div>
             <section className="contactsSectionLinks">
               <NavLink target="_blank" to={contacts[0].facebook}>
-                <img src={facebook} alt="" className="iconContacts" />
+                <img src={facebook} alt="facebook icon" className="iconContacts" />
               </NavLink>
               <NavLink target="_blank" to={contacts[0].instagram}>
-                <img src={instagram} alt="" className="iconContacts" />
+                <img src={instagram} alt="instagram icon" className="iconContacts" />
               </NavLink>
             </section>
             <div className="maps">
