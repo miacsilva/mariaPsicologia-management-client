@@ -1502,11 +1502,24 @@ footer p {
   margin-bottom: 2%;
 }
 
-@media (max-width: 1049px){
+.aboutSection {
+  display: flex;
+  justify-content: space-between;
+  margin: 20vh 0 0 30vh;
+  gap: 50px;
+  color: #cabaa9;
+  padding: 35px 35px 0;
+  border-top-left-radius: 10px;
+ 
+}
+
+@media (max-width: 500px){
   .aboutSection{
-  margin: 0;
+
+  margin: 0px;
   flex-direction: column;
-} 
+
+}
 
 .aboutSectionOne{
   display: flex;
@@ -1520,5 +1533,10 @@ footer p {
   text-align:left;
   font-size: 90%;
   color: #3d3b3b;
+  white-space: pre-wrap;
+}
+
+.scroll {
+  width: 40%;
 }
 }

@@ -27,6 +27,7 @@ function AboutHome() {
     <>
       {about.length && (
         <section className="aboutSection">
+        
           <div className="aboutSectionOne">
             <img src={about[0].imageHome} alt="" className={"photoAbout"} />
           </div>
