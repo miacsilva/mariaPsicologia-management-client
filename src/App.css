@@ -235,6 +235,10 @@ body {
   /* font-family: "Dancing Script", cursive; */
 }
 
+.X-Overflow{
+  
+  overflow-x: hidden;
+}
 
 .editApButton {
   font-family: "Verdana, Geneva, Tahoma, sans-serif";
@@ -477,6 +481,7 @@ body {
   .AboutSection {       /* Header Page */
     margin: 7vh 0 0 10vh;
     padding: 35px 0px 0;
+    
   }
 
   .AboutSection h1{
@@ -1239,7 +1244,8 @@ iframe {
 /* ------------ FOOTER ------------ */
 
 footer{
-
+  display: flex;
+  flex-direction: column;
   background-color: #5f8c7a;
   padding: 40px 0 40px;
   margin: 0px auto 0;

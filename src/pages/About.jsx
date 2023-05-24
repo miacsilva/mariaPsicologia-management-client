@@ -25,7 +25,7 @@ function About() {
     getAbout();
   }, []);
   return (
-    <>
+    <div className="X-Overflow">
       {about.length && (
         <>
           <section className="AboutSection">
@@ -129,7 +129,7 @@ function About() {
           </section>
         </>
       )}
-    </>
+      </div>
   );
 }
 
