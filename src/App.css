@@ -236,11 +236,6 @@ body {
 }
 
 
-
-.appointmentSection h1 {
-  font-size: 400%;
-}
-
 .editApButton {
   font-family: "Verdana, Geneva, Tahoma, sans-serif";
   border: 1px solid white;
@@ -343,7 +338,7 @@ body {
   padding-top: 2vh;
   padding-left: 3.5vh;
   padding-right: 3.5vh;
-  line-height: 200%;
+  line-height: 150%;
   white-space: pre-wrap;
 }
 
@@ -378,14 +373,14 @@ body {
   border-radius: 40px;
 }
 
-@media (max-width:450px){
+@media (max-width:550px){
 
   .monthlySubjectComponentSection p {
     font-size: 2vh;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    line-height: 120%;
+    line-height: 150%;
     white-space: pre-wrap;
   }
 
@@ -481,12 +476,11 @@ body {
 
   .AboutSection {       /* Header Page */
     margin: 7vh 0 0 10vh;
-    padding-right: -10px;
-    padding-left: -10px;
+    padding: 35px 0px 0;
   }
 
   .AboutSection h1{
-    font-size: 5vw;
+    font-size: 24px;
   }
 
   .aboutContent{
@@ -499,7 +493,7 @@ body {
   .aboutPhoto {
     width: 70vw;
     float: none;
-    margin: 0 0 40px 0;
+    margin: 0 0 70px 0;
     border-radius:50px;
     box-shadow: -4px -3px 10px 2px rgba(59, 59, 59, 0.244);
   }
@@ -704,7 +698,7 @@ body {
   }
 
   .booksSection {       /* Header Page */
-  margin: 7vh 0 0 30vh;
+  margin: 7vh 0 0 10vh;
 }
 }
 
@@ -851,7 +845,10 @@ textarea {
 
 /* ------------ END BOOKS ------------ */
 
+
+
 /* ------------ APPOINTMENTS ------------ */
+
 .appointmentsBody {
   display: flex;
   justify-content: space-between;
@@ -864,16 +861,139 @@ textarea {
   margin-bottom: 5vh;
 }
 
-.whatsapp {
-  width: 1.5vw;
-}
-
 .therapySection {
   position: absolute;
   top: 28vh;
   left: 5vw;
   z-index: 10;
 }
+
+.therapiesAppoint {
+  margin-bottom: 10%;
+  margin-top: 5vh;
+  width: 40vw;
+}
+
+.AppointContainerText {
+  margin-bottom: 10%;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.doodle {
+  position: relative;
+  top: 10vh;
+  right: 0.5vw;
+  width: 50%;
+  opacity: 0.4;
+  z-index: -10s;
+}
+
+.appoinDoodle {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 17vw;
+}
+
+.discoverButton {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid rgba(7, 7, 7, 0.621);
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #cabaa9;
+  color: white;
+  border-radius: 1.7vh;
+  font-size: 90%;
+  margin-top: 7%;
+}
+
+.contactWhatsapp {
+  margin-top: 5vh;
+  border: 3px solid #5f8c7a;
+  border-radius: 7px;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  padding-left: 3.5vh;
+  padding-right: 3.5vh;
+  height: fit-content;
+}
+
+.whatsapp {
+  width: 3vw;
+  margin-bottom: 2vh;
+}
+
+
+.contactWhatsapp h5 {
+  font-size: 100%;
+}
+
+@media (max-width:1000px){  /* tablet */
+  .appointmentsBody {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .therapiesAppoint {
+    margin-bottom:0;
+    margin-top: 0vh;
+    width: 55vw;
+  }
+
+  .AppointContainerText {
+    margin-bottom: 20%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+  }
+
+}
+
+@media (max-width: 550px){
+  .appointmentSection {       /* Header Page */
+    margin: 7vh 0 0 10vh;
+    padding: 35px 0px 0;
+  }
+  .appointmentSection h1{
+    font-size: 26px;
+  }
+
+  .therapiesAppoint {
+    width: 65vw;
+  }
+  .therapiesAppoint p {
+     color:#3d3b3bda ;
+  }
+
+  .doodle {
+    top: 5vh;
+    width: 70%;
+  }
+
+  .discoverButton {
+    padding: 10px 25px;
+    font-size: 80%;
+  }
+
+  .AppointContainerText{
+    margin-bottom: 20%;
+    width: 60vw;
+  }
+
+  .whatsapp {
+    width: 30px;
+  }
+}
+
+            /* ------ EDIT Appointments Section----------*/
+
 
 .editTherapySection {
   background-color: rgb(213, 168, 136);
@@ -1240,36 +1360,6 @@ footer p {
   transition-duration: 1s;
 }
 
-.therapiesAppoint {
-  margin-bottom: 10%;
-  margin-top: 5vh;
-  width: 40vw;
-}
-
-.AppointContainerText {
-  margin-bottom: 10%;
-  margin-top: 10%;
-  display: flex;
-  justify-content: center;
-  width: 50vw;
-}
-
-.doodle {
-  position: relative;
-  top: 10vh;
-  right: 0.5vw;
-  width: 50%;
-  opacity: 0.5;
-  z-index: -10s;
-}
-
-.appoinDoodle {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 17vw;
-}
 
 .addTherapies-btn {
   border-radius: 1.5vh;
@@ -1366,25 +1456,7 @@ footer p {
   top: -11.2vh;
 }
 
-.whatsapp {
-  width: 3vw;
-  margin-bottom: 2vh;
-}
 
-.contactWhatsapp {
-  margin-top: 5vh;
-  border: 3px solid #5f8c7a;
-  border-radius: 7px;
-  padding-top: 2.5vh;
-  padding-bottom: 2.5vh;
-  padding-left: 3.5vh;
-  padding-right: 3.5vh;
-  height: fit-content;
-}
-
-.contactWhatsapp h5 {
-  font-size: 100%;
-}
 
 .createMS hr {
   overflow: visible; /* For IE */

@@ -48,7 +48,7 @@ function Appointments({ contacts }) {
                 </div>
               ))}
             <NavLink to="/therapies">
-              <button className={"editApButton"}>
+              <button className={"discoverButton"}>
                 Descobre mais sobre as terapias
               </button>
             </NavLink>
