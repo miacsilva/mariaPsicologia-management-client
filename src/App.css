@@ -1275,6 +1275,21 @@ footer p {
   width: 3vw;
 }
 
+.developedBy{
+  font-size: 12px;
+  color: #3d3b3b;
+}
+
+.footerBar{
+  height: 5px;
+  border: #050505 solid 5px;
+}
+
+.github{
+  text-decoration: none;
+  color: #3d3b3b;
+}
+
 @media (max-width: 550px){
   .iconSocialMedia {
     width: 10vw;

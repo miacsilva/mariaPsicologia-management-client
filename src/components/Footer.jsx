@@ -38,10 +38,7 @@ function Footer({ books, contacts }) {
             <NavLink to="/appointments" className={"footerLinks"}>
               <h5>Terapias e consultas</h5>
             </NavLink>
-            <NavLink
-              to="/appointments"
-              className={"footerLinks"}
-            >
+            <NavLink to="/appointments" className={"footerLinks"}>
               <p>Ver mais</p>
             </NavLink>
           </div>
@@ -65,6 +62,15 @@ function Footer({ books, contacts }) {
               />
             </NavLink>
           </div>
+          <hr className="footerBar" />
+          <h5 className="developedBy">
+            {" "}
+            Developed by{" "}
+            <a href="https://github.com/miacsilva" className="github">
+              Maria Carvalho
+            </a>{" "}
+            and <a href="https://github.com/TiagoRato13" className="github">Tiago Rato</a>
+          </h5>
         </footer>
       )}
     </>
