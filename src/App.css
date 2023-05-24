@@ -956,8 +956,8 @@ textarea {
 
 }
 
-@media (max-width: 550px){
-  .appointmentSection {       /* Header Page */
+@media (max-width: 550px){    /* MOBILE  */
+  .appointmentSection {      
     margin: 7vh 0 0 10vh;
     padding: 35px 0px 0;
   }
@@ -983,7 +983,7 @@ textarea {
   }
 
   .AppointContainerText{
-    margin-bottom: 20%;
+    margin-bottom: 30%;
     width: 60vw;
   }
 
@@ -1075,6 +1075,65 @@ textarea {
 }
 
 /* ------------ END APPOINTMENTS ------------ */
+
+
+/* ------------ Therapies Cards Page ------------------- */
+
+.therapiesContainer {
+  display: flex;
+  justify-content: center;
+  padding: 5vw;
+  flex-wrap: wrap;
+}
+
+.cardTherapiesss {
+  margin: 2%;
+  width: 25vw;
+}
+
+.card-body h5{
+  font-size: 22px;
+  text-align: center;
+  margin-bottom:15px;
+  color:rgb(213, 168, 136); ;
+}
+
+@media(max-width:1000px){ 
+  .cardTherapiesss {
+    margin: 5%;
+    width: 40vw;
+  }
+
+}
+
+@media(max-width:550px){
+  .cardTherapiesss {
+    margin: 5%;
+    width: 70vw;
+  }
+
+  .therapiesContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0vw;
+    padding-top: 12vh;
+    padding-bottom: 7vh;
+    flex-wrap: wrap;
+  }
+  .card-body p{
+    font-size: 13px;
+  }
+
+  .card-body h5{
+    font-size: 17px;
+  }
+
+}
+
+
+
+/* ------------ Therapies Cards Page END------------------- */
+
 
 /* ------------ CONTACTS ------------ */
 .contactsSectionBox {
@@ -1371,17 +1430,7 @@ footer p {
   padding: 1vh 1vw;
 }
 
-.therapiesContainer {
-  display: flex;
-  justify-content: center;
-  padding: 5vw;
-  flex-wrap: wrap;
-}
 
-.cardTherapiesss {
-  margin: 2%;
-  width: 25vw;
-}
 
 /* ---------- END COLABORATOR ---------- */
 
