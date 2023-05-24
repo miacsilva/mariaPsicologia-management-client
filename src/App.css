@@ -1237,17 +1237,26 @@ iframe {
 /* ------------ END CONTACTS ------------ */
 
 /* ------------ FOOTER ------------ */
-footer {
+
+footer{
+
+  background-color: #5f8c7a;
+  padding: 40px 0 40px;
+  margin: 0px auto 0;
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+
+}
+
+.upperFooter {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
-  background-color: #5f8c7a;
   color: white;
-  padding: 40px 0 40px;
-  margin: 0px auto 0;
-  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  margin-bottom: 25px;
 }
+
+
 
 .footerLinks {
   text-decoration: none;
@@ -1275,14 +1284,25 @@ footer p {
   width: 3vw;
 }
 
+
+.bottomFooter {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
 .developedBy{
-  font-size: 12px;
+  text-align: center;
+  font-size: 10px;
   color: #3d3b3b;
 }
 
 .footerBar{
-  height: 5px;
-  border: #050505 solid 5px;
+  border: #050505 solid 1px;
+  width: 90%;
+  align-self: center;
+
 }
 
 .github{
@@ -1290,7 +1310,7 @@ footer p {
   color: #3d3b3b;
 }
 
-@media (max-width: 550px){
+@media (max-width: 1005px){
   .iconSocialMedia {
     width: 10vw;
   }
@@ -1299,15 +1319,15 @@ footer p {
    font-size: 14px;
   }
 
-  footer {
+  .upperFooter {
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 15px;
-    padding: 20px 20px 20px;
+    padding: 0px 20px 20px;
     margin: 0px auto 0;
-    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+/*     box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75); */
   }
 
   .footerIcons{

@@ -13,6 +13,7 @@ function Footer({ books, contacts }) {
     <>
       {contacts.length && books.length && (
         <footer>
+        <div className="upperFooter">
           <div>
             <NavLink to="/about" className={"footerLinks"}>
               <h5>Sobre</h5>
@@ -62,6 +63,16 @@ function Footer({ books, contacts }) {
               />
             </NavLink>
           </div>
+
+        
+                
+                </div>
+
+              <div className="bottomFooter">
+
+
+              
+
           <hr className="footerBar" />
           <h5 className="developedBy">
             {" "}
@@ -71,6 +82,9 @@ function Footer({ books, contacts }) {
             </a>{" "}
             and <a href="https://github.com/TiagoRato13" className="github">Tiago Rato</a>
           </h5>
+
+</div>
+
         </footer>
       )}
     </>
