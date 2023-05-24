@@ -1540,12 +1540,14 @@ footer p {
 
 .MSScard {
   margin-bottom: 5vh;
+  white-space: pre-wrap;
 }
 
 .cardMS {
   border-radius: 15px;
   border: 1px solid black;
   width: 80%;
+  color: #575757;
 }
 
 .cardImgMs {
@@ -1572,6 +1574,42 @@ footer p {
 }
 .titleContaiMS {
   margin-top: 10%;
+}
+
+@media (max-width:550px){
+  .MSSContainer {
+    padding: 2vw;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .MSScard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .miniContainerMS {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardImgMs {
+    width: 100%;
+    border-radius: 15px;
+    margin: 0;
+  }
+
+  .cardTextMs{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 6%;
+  }
+
 }
 
 .btnbtn {
