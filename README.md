@@ -5,7 +5,7 @@ Maria Luísa Silva - Psicologia
 
 # Quick Compo
 
-Public Website with only access to CRUD operations by administrator and collaborators
+Public Website with access to CRUD operations by administrator and collaborators only
 <br>
 
 ## Description
