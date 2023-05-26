@@ -63,16 +63,16 @@ function About() {
                 Psicóloga, membro efetivo da ordem de Psicólogos Portugueses com
                 a cédula profissional nº 026216
               </li>
-              <li>Mestrado Integrado Psicologia Universidade do Minho</li>
+              <li>Mestrado Integrado Psicologia - Universidade do Minho</li>
               <li>
-                Certificado Hipnose Clinica London College Clinical Hypnosis
+                Certificado Hipnose Clinica - London College Clinical Hypnosis
               </li>
               <li>
-                Pós Graduação Hipnose Clinica Experimental Faculdade Medicina
+                Pós Graduação Hipnose Clinica Experimental - Faculdade Medicina
                 Lisboa{" "}
               </li>
               <li>
-                Dupla Graduação de NeuroPsicologia Clinica no Instituto
+                Dupla Graduação de NeuroPsicologia Clinica - Instituto
                 Português Psicologia no Porto
               </li>
               <li>
@@ -83,47 +83,44 @@ function About() {
             <h2>Congressos e participações</h2>
             <ul>
               <li>
-                Neuropsicofarmacologia da Criança e do Adolescente” -INSPSIC
+              “Neuropsicofarmacologia da Criança e do Adolescente” - INSPSIC
               </li>
-              <li>Neuropsicofarmacologia Do Adulto” - INSPSIC</li>
+              <li>“Neuropsicofarmacologia do Adulto” - INSPSIC</li>
               <li>
-                3ª Jornada de Criminologia: A importância da existência de
-                respostas para a diversidade de questões e paradigmas criminais
-                - Universidade Fernando Pessoa-Porto
+                3ª Jornada de Criminologia: “A importância da existência de
+                respostas para a diversidade de questões e paradigmas criminais”
+                - Universidade Fernando Pessoa no Porto
               </li>
               <li>
                 Curso de Neurodesenvolvimento e Pedopsiquiatria - Escola De
                 Ciências da Saúde da Universidade do Minho
               </li>
               <li>
-                1º Congresso Internacional de Parentalidade - do Instituto de
+                1º Congresso Internacional de Parentalidade - Instituto de
                 Psicologia e Neupsicologia do Porto
               </li>
               <li>
-                “Saídas profissionais e contextos de futuro em Psicologia”,
-                proferida pelo Sr. Bastonário da Ordem dos Psicólogos
-                Portugueses - na Faculdade de Psicologia da Educação Universidade
-                do Porto.
+                “Saídas profissionais e contextos de futuro em Psicologia” - Faculdade de Psicologia da Educação Universidade
+                do Porto
               </li>
               <li>
                 III Seminário de Investigação em Psicologia da Universidade Do
                 Minho
               </li>
-              <li>Avaliação de Famílias em Risco</li>
-              <li>Universidade Católica Portuguesa Braga</li>
+              <li>Avaliação de Famílias em Risco - Universidade Católica Portuguesa Braga</li>
               <li>
-                II Congresso de Psicologia de Estarreja "Pelos Trilhos da
+                II Congresso de Psicologia de Estarreja “Pelos Trilhos da
                 Infância e da Adolescência"
               </li>
               <li>
                 IV Seminário de Investigação em Psicologia da Universidade Do
-                Minho-06/2013.
+                Minho-06/2013
               </li>
               <li>
-                Curso em Análise de Contos de Fadas - CRIAP — ”Violência
-                Doméstica ”
+                Curso em Análise de Contos de Fadas - CRIAP
               </li>
-              <li>Associação de Investigação e Debate em Serviço Social</li>
+              <li>- “Violência
+                Doméstica” - AIDSS - Associação de Investigação e Debate em Serviço SocialAssociação de Investigação e Debate em Serviço Social</li>
             </ul>
           </section>
           </section>
