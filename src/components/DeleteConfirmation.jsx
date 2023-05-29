@@ -5,7 +5,7 @@ const DeleteConfirmation = ({ showModal, hideModal, confirmModal, id, type, mess
     return (
         <Modal show={showModal} onHide={hideModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Delete Confirmation</Modal.Title>
+          <Modal.Title>Tem a certeza que quer eliminar?</Modal.Title>
         </Modal.Header>
         <Modal.Body><div className="alert alert-danger">{message}</div></Modal.Body>
         <Modal.Footer>
