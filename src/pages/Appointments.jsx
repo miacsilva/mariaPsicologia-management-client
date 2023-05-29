@@ -28,7 +28,7 @@ function Appointments({ contacts }) {
   return (
     <>
       <section className="appointmentSection">
-        <h1>Terapias e Consultas</h1>
+        <h1>Terapias e consultas</h1>
         {/* {user && (
           <NavLink to="/appointments/edit">
             <button className={"editApButton"}>Edit Appointment Section</button>
