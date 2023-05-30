@@ -1706,15 +1706,21 @@ footer p {
 .aboutSection {
   display: flex;
   justify-content: space-between;
-  margin: 20vh 0 0 30vh;
+  margin: 20vh 0 40px 30vh;
   gap: 50px;
   color: #cabaa9;
   padding: 35px 35px 0;
   border-top-left-radius: 10px;
- 
 }
 
-@media (max-width: 500px){
+@media (max-width: 1000px){
+  .aboutSection{
+
+  margin: 0px;
+
+}
+}
+@media (max-width: 550px){
   .aboutSection{
 
   margin: 0px;
