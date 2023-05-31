@@ -75,7 +75,7 @@ function ViewBook() {
 
             <NavLink to="/books/647768c249f6aebaf5fe44df" key={"647768c249f6aebaf5fe44df"}>
               <button className={"seeEnVersionBtn"}>
-              Ver versão em Inglês 
+              Ver edição em Inglês 
               </button>
             </NavLink>
 
