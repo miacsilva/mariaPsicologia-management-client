@@ -1,5 +1,5 @@
 //PACKAGES
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { Routes, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
@@ -65,8 +65,9 @@ function App() {
     getContacts();
   }, []);
 
-  /* /*  /*--- NAVBAR HIDE/SHOW --- */
-  let lastScrollUp; // This Varibale will store the top position
+
+   /* /*  /*--- NAVBAR HIDE/SHOW --- */
+   let lastScrollUp; // This Varibale will store the top position
 
   let navbar = document.getElementById("navbar"); // Get The NavBar
 
@@ -84,8 +85,11 @@ function App() {
     }
 
     lastScrollUp = scrollUp; //New Position Stored
-  });
-  /*--- NAVBAR HIDE/SHOW END--- */
+  }); 
+  /*--- NAVBAR HIDE/SHOW END--- */ 
+
+ 
+
   return (
     <div className={"App"}>
       <Navbar />

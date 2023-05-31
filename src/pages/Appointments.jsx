@@ -41,12 +41,12 @@ function Appointments({ contacts }) {
           <div className="therapiesAppoint">
             <img src={lovingDoodle} alt="loving doodle" className="doodle" />
             <h3 className="therapiesAppointTitle">Terapias</h3>
-            {therapies &&
+           {/*  {therapies &&
               therapies.map((therapy) => (
                 <div key={therapy._id}>
                   <p>{therapy.title}</p>
                 </div>
-              ))}
+              ))} */}
             <NavLink to="/therapies">
               <button className={"discoverButton"}>
                 Descobre mais sobre as terapias

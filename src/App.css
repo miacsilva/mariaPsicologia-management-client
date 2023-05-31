@@ -450,7 +450,7 @@ body {
   margin: auto;
   color: rgba(55, 40, 29, 0.562);
   backdrop-filter: blur(10px);
-  background-color: rgba(245, 216, 196, 0.178)
+  background-color:#9176171c;
 }
 
 .aboutSectionEducation h1{
@@ -723,7 +723,7 @@ body {
 
 }
 .booksIdSection {
-  background-color: rgba(188, 150, 15, 0.108);
+  background-color: #9176171c;
   color: rgba(93, 82, 82, 0.826);
   width: 80vw;
   margin: 0 auto 7vh;
@@ -865,6 +865,11 @@ textarea {
 
 .therapiesAppointTitle {
   margin-bottom: 5vh;
+  color: rgb(49, 49, 12);
+  font-size: 300%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style:italic;
+  letter-spacing: 10px;
 }
 
 .therapySection {
@@ -927,6 +932,7 @@ textarea {
   padding-left: 3.5vh;
   padding-right: 3.5vh;
   height: fit-content;
+  color: #5d5252d3;
 }
 
 .whatsapp {
@@ -1143,7 +1149,7 @@ textarea {
 
 /* ------------ CONTACTS ------------ */
 .contactsSectionBox {
-  background-color: rgba(188, 150, 15, 0.108);
+  background-color: #9176171c;
   border-radius: 10px;
   box-shadow: 0 5px 20px -5px rgb(100, 100, 100);
   width: 60vw;
@@ -1163,7 +1169,7 @@ textarea {
   padding-bottom: 2vh;
   text-align: center;
   gap: 10px;
-  color:rgba(93, 82, 82, 0.826);
+  color:#5d5252d3;
 }
 
 .contactsSectionContacts div {
