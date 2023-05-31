@@ -17,6 +17,7 @@ import Login from "./pages/Login";
 import Error from "./pages/Error";
 import Therapies from "./pages/Therapies";
 import MonthlySubjects from "./pages/MonthySubjects";
+import EnglishBook from "./pages/EnglishBook";
 
 //COMPONENTS EXTRA
 import Private from "./components/Private";
@@ -118,6 +119,7 @@ function App() {
           }
         />
         <Route path="/books/:id" element={<ViewBook />} />
+        <Route path="/books/647768c249f6aebaf5fe44df" element={<EnglishBook />} />
         <Route
           path="/books/edit/:id"
           element={

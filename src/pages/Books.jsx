@@ -40,7 +40,7 @@ function Books() {
           <hr className="separatorAppointments" />
           <section className="booksSectionBooksCards container">
             {books &&
-              books.map((book) => {
+              books.slice(0,2).map((book) => {
                 return (
                   <NavLink
                     to={`/books/${book._id}`}

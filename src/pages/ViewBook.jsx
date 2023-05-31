@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
 import axios from "axios";
@@ -44,14 +44,12 @@ function ViewBook() {
           <hr className="separatorAppointments" />
 
           <section className="booksIdSection">
+            <div className="upperSingleBook">
+              <img src={book.image} alt={book.title} className="bookIdImage" />
 
-          <div className="upperSingleBook">
-
-            <img src={book.image} alt={book.title} className="bookIdImage" />
-            
-            <p className="bookIdDescription">{book.description}</p>
+              <p className="bookIdDescription">{book.description}</p>
             </div>
-            
+
             <br />
 
             <details className="booksIdSection__info">
@@ -69,9 +67,21 @@ function ViewBook() {
                 })}
               </p>
               <p>Páginas: {book.pages}</p>
-
             </details>
-            <div >
+
+            <div className="containerButtonEnVersion">
+
+              {id === "64133c41484223ff3b850fb2" && (
+
+            <NavLink to="/books/647768c249f6aebaf5fe44df" key={"647768c249f6aebaf5fe44df"}>
+              <button className={"seeEnVersionBtn"}>
+              Ver edição em Inglês 
+              </button>
+            </NavLink>
+
+
+            
+              )}
             </div>
           </section>
         </>

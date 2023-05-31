@@ -254,6 +254,9 @@ body {
 .aboutSectionTwo {
   padding: 0 40px;
 }
+.aboutSectionTwo p{
+ color: #5d5252d3;
+}
 
 .photoAbout {
   width: 40vh;
@@ -684,6 +687,25 @@ body {
   transition-duration: 0.5s;
 }
 
+.containerButtonEnVersion{
+  display: flex;
+  padding: 15px;
+}
+
+.seeEnVersionBtn{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  text-decoration: none;
+  background-color: #cabaa988;
+  color: #5d5252d3;
+  border-radius: 1.7vh;
+  font-size: 90%;
+  margin-top: 7%;
+}
+
+
+
 @media(max-width:950px){   /* TABLET */
   
   .booksSectionBooksCards{
@@ -706,6 +728,13 @@ body {
   .booksSection {       /* Header Page */
   margin: 7vh 0 0 10vh;
 }
+
+.seeEnVersionBtn {
+  padding: 10px 25px;
+  font-size: 80%;
+  margin-top: 0%;
+}
+
 }
 
 
@@ -836,6 +865,12 @@ textarea {
   .singleBooksSection {       /* Header Page */
     margin: 7vh 0 0 15vh;
     padding: 35px 0px 0;
+  }
+
+  .myConversationsWithYou h1{
+    font-size: 7vw;
+    margin: 0vh 0 0 10vw;
+    padding: 35px 0px 0 0;
   }
   .singleBookHeader{
     justify-content: space-around;
