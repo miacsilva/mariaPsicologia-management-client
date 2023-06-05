@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import 'animate.css';
 
 //COMPONENTS
 import projectService from "../services/project.service";
@@ -60,8 +61,8 @@ function Home() {
     <>
       <div className="homeContainer">
         <div className="nameContainer">
-          <h1 className="nameTitle">Maria Luísa Silva</h1>
-          <h2 className="presentationTitle">
+          <h1 className="nameTitle animate__animated animate__fadeInDown">Maria Luísa Silva</h1>
+          <h2 className="presentationTitle ">
             Psicologia | Desenvolvimento Pessoal 
           </h2>
         </div>
