@@ -1263,6 +1263,10 @@ textarea {
 .iconContacts {
   width: 3vw;
   margin-bottom: 50px;
+  transition: 0.3s;
+}
+.iconContacts:hover {
+  filter:brightness(50%)
 }
 
 .maps {
