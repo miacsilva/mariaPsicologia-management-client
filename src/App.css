@@ -250,6 +250,23 @@ body {
   color: white;
   border-radius: 1.7vh;
 }
+.editApButtonMS {
+  font-family: "Verdana, Geneva, Tahoma, sans-serif";
+  border: 1px solid transparent;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: white;
+  border-radius: 1.7vh;
+  background-color: #a89988;
+  transition: 0.5s
+}
+
+.editApButtonMS:hover{
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px 0 rgb(213, 168, 136);
+  background-color: #cabaa9;
+  font-size: 17px;
+}
 
 .aboutSectionTwo {
   padding: 0 40px;
@@ -294,7 +311,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   max-height: unset;
-  margin: 0 auto 10vh;
+  margin: 0 auto 0vh;
   padding: 10vh;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -900,7 +917,7 @@ textarea {
 
 .therapiesAppointTitle {
   margin-bottom: 5vh;
-  color: rgb(49, 49, 12);
+  color: rgba(49, 49, 12, 0.8);
   font-size: 300%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style:italic;
@@ -980,6 +997,10 @@ textarea {
   font-size: 100%;
 }
 
+.breakBtnTherapies{
+  display: block;
+}
+
 @media (max-width:1000px){  /* tablet */
   .appointmentsBody {
     flex-direction: column;
@@ -1004,6 +1025,11 @@ textarea {
 }
 
 @media (max-width: 550px){    /* MOBILE  */
+
+  .therapiesAppointTitle{
+    font-size: 200%;
+  }
+
   .appointmentSection {      
     margin: 7vh 0 0 10vh;
     padding: 35px 0px 0;
@@ -1036,6 +1062,10 @@ textarea {
 
   .whatsapp {
     width: 30px;
+  }
+
+  .breakBtnTherapies{
+    display: none;
   }
 }
 

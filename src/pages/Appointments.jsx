@@ -40,7 +40,7 @@ function Appointments({ contacts }) {
         <div className="appointmentsBody">
           <div className="therapiesAppoint">
             <img src={lovingDoodle} alt="loving doodle" className="doodle" />
-            <h3 className="therapiesAppointTitle">Terapias</h3>
+            <h3 className="therapiesAppointTitle">Áreas de Intervenção</h3>
            {/*  {therapies &&
               therapies.map((therapy) => (
                 <div key={therapy._id}>
@@ -49,7 +49,7 @@ function Appointments({ contacts }) {
               ))} */}
             <NavLink to="/therapies">
               <button className={"discoverButton"}>
-                Descobre mais sobre as terapias
+                Descobre mais sobre as terapias <br className="breakBtnTherapies"></br> e áreas de intervenção
               </button>
             </NavLink>
           </div>
