@@ -41,11 +41,11 @@ function AddTherapies() {
   };
   return (
     <section className="addTherapiesSection">
-      <h2>Add Therapy</h2>
+      <h2>Adicione Terapia</h2>
       <form onSubmit={handleSubmit} className="addTherapiesSectionForm">
-        <label>Name</label>
+        <label>Nome</label>
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
-        <label>Description</label>
+        <label>Descrição</label>
         <textarea
           type="text"
           name="description"
@@ -55,7 +55,7 @@ function AddTherapies() {
         <img src={image} alt={title} />
         <input type="file" name="image" onChange={(e) => handleFileUpload(e)} />
         <button type="submit" className="buttonCreateTherapy">
-          Save new therapy
+          Salvar nova terapia
         </button>
       </form>
     </section>

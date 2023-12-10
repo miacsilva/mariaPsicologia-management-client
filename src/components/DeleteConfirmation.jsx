@@ -10,10 +10,10 @@ const DeleteConfirmation = ({ showModal, hideModal, confirmModal, id, type, mess
         <Modal.Body><div className="alert alert-danger">{message}</div></Modal.Body>
         <Modal.Footer>
           <Button variant="default" onClick={hideModal}>
-            Cancel
+            Cancelar
           </Button>
           <Button variant="danger" onClick={() => confirmModal(type, id) }>
-            Delete
+            Apagar
           </Button>
         </Modal.Footer>
       </Modal>

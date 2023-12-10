@@ -76,9 +76,9 @@ function EditMonthlySubject() {
 
   return (
     <section>
-      <h1>Edit Monthly Subject:</h1>
+      <h1>Editar Publicação:</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Subject of the Month:</label>
+        <label htmlFor="title">Título</label>
         <input
           type="text"
           name="title"
@@ -87,7 +87,7 @@ function EditMonthlySubject() {
           onChange={handleTitle}
         />
 
-        <label htmlFor="description">Description</label>
+        <label htmlFor="description">Descrição</label>
         <textarea
           name="description"
           id="description"
@@ -106,7 +106,7 @@ function EditMonthlySubject() {
         />
         
 <FormControl fullWidth> 
-  <InputLabel id="demo-simple-select-label">Date</InputLabel>
+  <InputLabel id="demo-simple-select-label">Data</InputLabel>
   <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
@@ -114,19 +114,19 @@ function EditMonthlySubject() {
     label="month"
     onChange={(e) => setMonth(e.target.value)}
   >
-    <MenuItem value={10}>Abril/2023</MenuItem>
-    <MenuItem value={20}>Maio/2023</MenuItem>
-    <MenuItem value={30}>Junho/2023</MenuItem>
-    <MenuItem value={10}>Julho/2023</MenuItem>
-    <MenuItem value={20}>Agosto/2023</MenuItem>
-    <MenuItem value={30}>Setembro/2023</MenuItem>
-    <MenuItem value={10}>Outubro/2023</MenuItem>
-    <MenuItem value={20}>Novembro/2023</MenuItem>
-    <MenuItem value={30}>Dezembro/2023</MenuItem>
+    <MenuItem value={10}>Janeiro/2024</MenuItem>
+    <MenuItem value={20}>Fevereiro/2024</MenuItem>
+    <MenuItem value={30}>Março/2024</MenuItem>
+    <MenuItem value={10}>Abril/2024</MenuItem>
+    <MenuItem value={20}>Maio/2024</MenuItem>
+    <MenuItem value={30}>Junho/2024</MenuItem>
+    <MenuItem value={10}>Julho/2024</MenuItem>
+    <MenuItem value={20}>Agosto/2024</MenuItem>
+    <MenuItem value={30}>Setembro/2024</MenuItem>
   </Select>
 </FormControl>
 
-        <button type="submit">Save Changes</button>
+        <button type="submit">Salvar</button>
       </form>
 
     

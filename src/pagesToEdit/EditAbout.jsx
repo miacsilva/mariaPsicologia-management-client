@@ -109,7 +109,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
               <h1>Editing About...</h1>
               {user && (
                 <NavLink to="/about">
-                  <button className={"editButton"}>Go back</button>
+                  <button className={"editButton"}>Voltar</button>
                 </NavLink>
               )}
             </section>
@@ -117,7 +117,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
             <section className="editAboutSection">
               <form onSubmit={handleSubmit}>
                 <div className="inputAbout">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="name">Nome</label>
                   <input
                     className="inputAboutName"
                     type="text"
@@ -129,7 +129,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="education">Education</label>
+                  <label htmlFor="education">Educação</label>
                   <textarea
                     name="education"
                     id="education"
@@ -140,7 +140,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="imageHome">Image Home Page</label>
+                  <label htmlFor="imageHome">Imagem Home Page</label>
                   {imageHome && (
                     <img
                       src={imageHome}
@@ -155,7 +155,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="imageAbout">Image About Page</label>
+                  <label htmlFor="imageAbout">Imagem Sobre</label>
                   {imageAbout && (
                     <img
                       src={imageAbout}
@@ -170,7 +170,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="bigAbout">Big About</label>
+                  <label htmlFor="bigAbout">Sobre grande</label>
                   <textarea
                     name="bigAbout"
                     id="bigAbout"
@@ -181,7 +181,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <div className="inputAbout">
-                  <label htmlFor="smallAbout">Small About</label>
+                  <label htmlFor="smallAbout">Sobre pequeno</label>
                   <textarea
                     name="smallAbout"
                     id="smallAbout"
@@ -192,7 +192,7 @@ Pós-graduada em hipnose clínica experimental pela Faculdade de Medicina da Uni
                 </div>
 
                 <button type="submit" className="editAboutbutton">
-                  Edit Section
+                  Editar Secção
                 </button>
               </form>
             </section>

@@ -25,7 +25,7 @@ function Navbar() {
               })
             }
           >
-            HomePage
+            Início
           </NavLink>
         )}
         {user && (
@@ -38,7 +38,7 @@ function Navbar() {
               })
             }
           >
-            <h4 className={"navbar__navlinks__user"}>Welcome {user.name}</h4>
+            <h4 className={"navbar__navlinks__user"}>Olá {user.name}</h4>
           </NavLink>
         )}
       </div>
@@ -54,7 +54,7 @@ function Navbar() {
               })
             }
           >
-            View Colaborators
+            Ver Colaboradores
           </NavLink>
         )}
 {/* --------------------------HAMBURGUER MENU----------------------------------- */}
@@ -102,7 +102,7 @@ function Navbar() {
             })
           }
         >
-          Tema do Mês
+          Blog
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}

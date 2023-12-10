@@ -27,10 +27,10 @@ function Therapies() {
       {user && (
         <>
           <section className="appointmentSection">
-            <h1>Therapies</h1>
+            <h1>Terapias</h1>
             {user && (
               <NavLink to="/add-therapies">
-                <button className={"editApButton"}>Add Therapy</button>
+                <button className={"editApButton"}>Adicionar Terapia</button>
               </NavLink>
             )}
           </section>
@@ -55,7 +55,7 @@ function Therapies() {
                       {user && (
                         <NavLink to={`/therapies/edit/${therapy._id}`}>
                           <button className="addTherapies-btn">
-                            Edit Therapy
+                            Editar Therapia
                           </button>
                         </NavLink>
                       )}

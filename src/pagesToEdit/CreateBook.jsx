@@ -63,16 +63,16 @@ function CreateBook() {
   return (
     <>
       <section className="booksSection">
-        <h1>Adding new book...</h1>
+        <h1>Adicionar novo livro</h1>
         {user && (
           <NavLink to="/books">
-            <button className={"editButton"}>Go back</button>
+            <button className={"editButton"}>Voltar</button>
           </NavLink>
         )}
       </section>
       <hr className="separatorAppointments" />
       <section className="createColaborator">
-        <h1>New book form</h1>
+        <h1>Novo Livro</h1>
 
         <form onSubmit={handleSubmit} className={"createColaboratorForm"}>
           <div>
@@ -84,7 +84,7 @@ function CreateBook() {
             <img src={image} alt="" className="photoAboutEdit" />
           </div>
           <div className="createColaborator__name">
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title">Título</label>;
             <input
               type="text"
               name="title"
@@ -94,7 +94,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__email">
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">Descrição</label>
             <input
               type="text"
               name="description"
@@ -104,7 +104,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__password">
-            <label htmlFor="publisher">Publisher</label>
+            <label htmlFor="publisher">Editora</label>
             <input
               type="text"
               name="publisher"
@@ -114,7 +114,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__password">
-            <label htmlFor="publishedDate">Published Date</label>
+            <label htmlFor="publishedDate">Data de publicação</label>
             <input
               type="text"
               name="publishedDate"
@@ -124,7 +124,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__password">
-            <label htmlFor="author">Author</label>
+            <label htmlFor="author">Autor</label>
             <input
               type="text"
               name="author"
@@ -134,7 +134,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__password">
-            <label htmlFor="languages">Languages</label>
+            <label htmlFor="languages">Idiomas</label>
             <input
               type="text"
               name="languages"
@@ -144,7 +144,7 @@ function CreateBook() {
           </div>
 
           <div className="createColaborator__password">
-            <label htmlFor="pages">Pages</label>
+            <label htmlFor="pages">Páginas</label>
             <input
               type="number"
               name="pages"
@@ -154,7 +154,7 @@ function CreateBook() {
           </div>
 
           <button type="submit" className="buttonCreate">
-            Add book
+            Adicionar Livro
           </button>
         </form>
       </section>

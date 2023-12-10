@@ -38,16 +38,16 @@ function CreateColaborator() {
   return (
     <>
       <section className="contactsSection">
-        <h1>Colaborator</h1>
+        <h1>Colaborador</h1>
         {user && (
           <NavLink to="/colaborators">
-            <button className={"editButton"}>Go back</button>
+            <button className={"editButton"}>Voltar</button>
           </NavLink>
         )}
       </section>
       <hr className="separatorAppointments" />
       <section className="createColaborator">
-        <h1>Add new colaborator!</h1>
+        <h1>Adiciona um novo colaborador!</h1>
 
         <form onSubmit={handleSubmit} className={"createColaboratorForm"}>
           <div className="createColaborator__name">
@@ -84,7 +84,7 @@ function CreateColaborator() {
           </div>
 
           <button type="submit" className="buttonCreate">
-            Create colaborator
+            Criar colaborador
           </button>
         </form>
       </section>

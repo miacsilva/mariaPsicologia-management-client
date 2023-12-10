@@ -25,11 +25,11 @@ function MonthlySubjects() {
   return (
     <>
       <section className="appointmentSection">
-        <h1>Temas do Mês</h1>
+        <h1>Última Publicação</h1> 
         {user && (
           <NavLink to="/create/monthly-subject">
             <button className={"editApButton"}>
-              Create new Monthly Subject
+              Criar nova publicação
             </button>
           </NavLink>
         )}
@@ -63,7 +63,7 @@ function MonthlySubjects() {
                           {user && (
                             <NavLink to={`/monthly-subject/edit/${MS._id}`}>
                               <button className="addTherapies-btn btnbtn">
-                                Edit Monthly Subject
+                                Editar Publicação
                               </button>
                             </NavLink>
                           )}

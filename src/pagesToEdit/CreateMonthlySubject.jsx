@@ -51,16 +51,16 @@ function CreateMonthlySubject() {
   return (
     <div>
       <section className="createMsSection">
-        <h1>Create new Monthly Subject</h1>
+        <h1>Criar nova publicação</h1>
         {user && (
           <NavLink to="/appointments/edit">
-            <button className={"editApButton"}>Edit Monthly Subjects Section</button>
+            <button className={"editApButton"}>Editar secção do Blog</button>
           </NavLink>
         )}
       </section>
       <hr className="separatorAppointments" />
 
-      <NavLink to="/monthlySubjects"> <button className="btnGoBackAddMS">« Go Back</button>  </NavLink>
+      <NavLink to="/monthlySubjects"> <button className="btnGoBackAddMS">« Voltar</button>  </NavLink>
 
 
      <section  className="createMS">
@@ -68,7 +68,7 @@ function CreateMonthlySubject() {
 
           <div>
 
-        <label>Subject of the Month</label>
+        <label>Título</label>
         <input
           type="text"
           name="title"
@@ -79,7 +79,7 @@ function CreateMonthlySubject() {
                       
           <div className="descriptionMS">
 
-        <label>Description</label>
+        <label>Descrição</label>
         <textarea
           type="text"
           name="description"
@@ -91,7 +91,7 @@ function CreateMonthlySubject() {
          
           <div>
 
-        <label>Date</label>
+        <label>Data</label>
         <input
           type="text"
           name="month"
@@ -110,7 +110,7 @@ function CreateMonthlySubject() {
           <hr />
           <div>
 
-        <button type="submit" className="btnAddMSForm">Add new Monthly Subject</button>
+        <button type="submit" className="btnAddMSForm">Adicionar nova publicação</button>
 
           </div>
 
