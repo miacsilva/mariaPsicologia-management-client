@@ -13,7 +13,7 @@ const DeleteConfirmation = ({ showModal, hideModal, confirmModal, id, type, mess
             Cancelar
           </Button>
           <Button variant="danger" onClick={() => confirmModal(type, id) }>
-            Apagar
+            Eliminar
           </Button>
         </Modal.Footer>
       </Modal>

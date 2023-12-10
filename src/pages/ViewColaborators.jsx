@@ -23,7 +23,7 @@ function ViewColaborators() {
 
   //
   const showDeleteModal = (id) => {
-    setDeleteMessage(`Are you sure you want to delete this Colaborator?`);
+    setDeleteMessage(`Tem a certeza que quer eliminar este colaborador?`);
     setuserToDelete(id);
     setDisplayConfirmationModal(true);
   };
@@ -68,10 +68,10 @@ function ViewColaborators() {
         {user && user.admin && (
           <>
             <section className="booksSection">
-              <h1>Viewing Colaborators</h1>
+              <h1>Ver Colaboradores</h1>
               {user && (
                 <NavLink to="/createColaborator">
-                  <button className={"editButton"}>Add new colaborator</button>
+                  <button className={"editButton"}>Adicionar colaborador</button>
                 </NavLink>
               )}
             </section>
@@ -92,7 +92,7 @@ function ViewColaborators() {
                             type="submit"
                             onClick={() => showDeleteModal(colaborators._id)}
                           >
-                            Delete this colaborator
+                            Apagar colaborador
                           </button>
                           <DeleteConfirmation
                             showModal={displayConfirmationModal}
