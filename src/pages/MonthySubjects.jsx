@@ -25,7 +25,7 @@ function MonthlySubjects() {
   return (
     <>
       <section className="appointmentSection">
-        <h1>Última Publicação</h1> 
+        <h1>Blog</h1> 
         {user && (
           <NavLink to="/create/monthly-subject">
             <button className={"editApButton"}>
