@@ -18,15 +18,7 @@ This is an app to manage unofficial tournaments within communities. The app help
 - **Signup:** As an anonymous user I can sign up on the platform so that I can start creating and managing tournaments.
 - **Login:** As a user I can login to the platform so that I can access my profile and start creating and managing tournaments.
 - **Logout:** As a logged in user I can logout from the platform so no one else can use it.
-- **Profile Page**: As a logged in user I can visit my profile page so that I can access the edit page and see the list of tournaments I have created.
-- **Add Tournaments:** As a logged in user I can access the add tournament page so that I can create a new tournament.
-- **Edit Tournaments:** As a logged in user I can access the edit tournament page so that I can edit the tournament I created.
-- **Add Players:** As a user I can add players to a tournament.
-- **View Tournament Table:** As a user I want to see the tournament details, players list and the time table.
-- **View Ranks:** As a user I can see the rankings list for the tournament.
-
-
-
+- **Profile Page**: As a logged in user I can visit my profile page so that I can access the edit page and see the list of tournaments I have created
 <br>
 
 # Client / Frontend
