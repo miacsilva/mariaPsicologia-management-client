@@ -25,12 +25,7 @@ This is an app to manage unofficial tournaments within communities. The app help
 - **View Tournament Table:** As a user I want to see the tournament details, players list and the time table.
 - **View Ranks:** As a user I can see the rankings list for the tournament.
 
-## Backlog
 
-- Add weather widget
-- lottie interactions
-- users can bet
-- add geolocation to events when creating
 
 <br>
 
@@ -69,25 +64,6 @@ Pages:
 
 - HomePage
 
-- ProfilePage
-
-- EditProfilePage
-
-- CreateTournamentPage
-
-- TournamentListPage
-
-- TournamentDetailsPage
-
-- PlayerDetailsPage
-
-- RankingsPage
-
-Components:
-
-- PlayerCard
-- TournamentCard
-- Navbar
 
 ## Services
 
