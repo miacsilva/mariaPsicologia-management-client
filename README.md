@@ -8,19 +8,6 @@ Maria Luísa Silva - Psicologia
 Public Website with access to CRUD operations by administrator and collaborators only
 <br>
 
-## Description
-
-This is an app to manage unofficial tournaments within communities. The app helps to organize, manage and track competitions.
-
-## User Stories
-
-- **404:** As a user I get to see a 404 page with a feedback message if I try to reach a page that does not exist so that I know the page does not exist.
-- **Signup:** As an anonymous user I can sign up on the platform so that I can start creating and managing tournaments.
-- **Login:** As a user I can login to the platform so that I can access my profile and start creating and managing tournaments.
-- **Logout:** As a logged in user I can logout from the platform so no one else can use it.
-- **Profile Page**: As a logged in user I can visit my profile page so that I can access the edit page and see the list of tournaments I have created
-<br>
-
 # Client / Frontend
 
 ## React Router Routes (React App)
