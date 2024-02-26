@@ -14,7 +14,7 @@ This is an app to manage unofficial tournaments within communities. The app help
 
 ## User Stories
 
-- **404:** As a user I get to see a 404 page with a feedback message if I try to reach a page that does not exist so that I know it's my fault.
+- **404:** As a user I get to see a 404 page with a feedback message if I try to reach a page that does not exist so that I know the page does not exist.
 - **Signup:** As an anonymous user I can sign up on the platform so that I can start creating and managing tournaments.
 - **Login:** As a user I can login to the platform so that I can access my profile and start creating and managing tournaments.
 - **Logout:** As a logged in user I can logout from the platform so no one else can use it.
