@@ -69,7 +69,7 @@ function Navbar() {
 
             <ul>
         <NavLink
-          className={"navbar__navlinks"}
+          className={"navbar__navlinks navAbout"}
           to="/about"
           onClick={() =>
             scroller.scrollTo("aboutSection", {

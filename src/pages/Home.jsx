@@ -2,18 +2,21 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import 'animate.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 //COMPONENTS
 import projectService from "../services/project.service";
 import AboutHome from "../components/AboutHome";
 import MonthlySubject from "../components/MonthlySubjectComponent";
 
-//pics to remove
-import carrossel1 from "../assets/images/book2.jpg";
+//carrossel
+/* import carrossel1 from "../assets/images/book2.jpg";
 import carrossel2 from "../assets/images/FotoCarrossel.jpg";
 import carrossel3 from "../assets/images/book2.jpg";
-import carrossel4 from "../assets/images/book2.jpg";
+import carrossel4 from "../assets/images/book2.jpg"; */
+
+import video from "../assets/videos/happyPeople.mp4";
 import scroll from "../assets/images/scroll.png";
 
 function Home() {
@@ -55,25 +58,26 @@ function Home() {
     getAbout();
     getBooks();
     getContacts();
+    Aos.init();
   }, []);
 
   return (
     <>
       <div className="homeContainer">
         <div className="nameContainer">
-          <h1 className="nameTitle animate__animated animate__fadeInDown">Maria Luísa Silva</h1>
-          <h2 className="presentationTitle ">
-            Psicologia | Desenvolvimento Pessoal 
-          </h2>
+          <h1  data-aos="fade-up" data-aos-duration="2500">Maria Luísa Silva</h1>
+          <h2 className="presentationTitle ">Psicologia | Desenvolvimento Pessoal</h2>
         </div>
+        <div className="iconContainer">
+          <img src={scroll} className="scroll" alt="scroll icon" />
+        </div>
+        <video className="videoBg" autoPlay muted loop>
+          <source src={video} type="video/mp4" />
+        </video>
       </div>
-      <div className="iconContainer">
-        <img src={scroll} className="scroll" alt="scroll icon" />
-      </div>
 
 
-
-{/* ------------CAROUSEL-------------------------------- */}
+{/* {/* {/* ------------CAROUSEL-------------------------------- */}
      {/*  {books.length && (
         <div className="carousselContainer">
           <div
@@ -146,7 +150,7 @@ function Home() {
             </button>
           </div>
         </div>
-      )} */}
+      )}  */}
 
       {/* ------------CAROUSEL FIM-------------------------------- */}
       <AboutHome />
