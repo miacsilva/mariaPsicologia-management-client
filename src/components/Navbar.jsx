@@ -69,7 +69,7 @@ function Navbar() {
 
             <ul>
         <NavLink
-          className={"navbar__navlinks navAbout"}
+          className={"navbar__navlinks navAbout navMobile"}
           to="/about"
           onClick={() =>
             scroller.scrollTo("aboutSection", {
@@ -81,7 +81,7 @@ function Navbar() {
         Sobre
         </NavLink>
         <NavLink
-          className={"navbar__navlinks"}
+          className={"navbar__navlinks navMobile"}
           to="/books"
           onClick={() =>
             scroller.scrollTo("booksSection", {
@@ -93,7 +93,7 @@ function Navbar() {
           Livros
         </NavLink>
         <NavLink
-          className={"navbar__navlinks"}
+          className={"navbar__navlinks navMobile"}
           to="/"
           onClick={() =>
             scroller.scrollTo("monthlySubjectComponentSection", {
@@ -105,7 +105,7 @@ function Navbar() {
           Blog
         </NavLink>
         <NavLink
-          className={"navbar__navlinks"}
+          className={"navbar__navlinks navMobile"}
           to="/appointments"
           onClick={() =>
             scroller.scrollTo("appointmentSection", {

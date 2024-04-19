@@ -64,12 +64,12 @@ function Home() {
   return (
     <>
       <div className="homeContainer">
-        <div className="nameContainer">
-          <h1  data-aos="fade-up" data-aos-duration="2500">Maria Luísa Silva</h1>
+        <div className="nameContainer" data-aos="fade-up" data-aos-duration="2500">
+          <h1>Maria Luísa Silva</h1>
           <h2 className="presentationTitle ">Psicologia | Desenvolvimento Pessoal</h2>
         </div>
         <div className="iconContainer">
-          <img src={scroll} className="scroll" alt="scroll icon" />
+          <a href="#aboutHome"><img src={scroll} className="scroll" alt="scroll icon" /></a>
         </div>
         <video className="videoBg" autoPlay muted loop>
           <source src={video} type="video/mp4" />

@@ -39,7 +39,7 @@ function MonthlySubject() {
       </div>
       <div className="monthlysubButton">
         <NavLink to="/monthlySubjects">
-          <button className="editApButtonMS">« Ver publicações passadas</button>
+          <button className="editApButtonMS">Ver publicações passadas</button>
         </NavLink>
       </div>
     </section>

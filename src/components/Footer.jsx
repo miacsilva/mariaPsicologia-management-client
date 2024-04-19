@@ -47,7 +47,7 @@ function Footer({ books, contacts }) {
             <NavLink to="/contacts" className={"footerLinks"}>
               <h5>Contactos</h5>
             </NavLink>
-            <p>{contacts[0].address}</p>
+            <p className="footerContact">{contacts[0].address}</p>
             <p>{contacts[0].email}</p>
             <p>{contacts[0].phoneNumber}</p>
           </div>

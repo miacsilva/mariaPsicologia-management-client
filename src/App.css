@@ -1,6 +1,11 @@
 :root{
   --darkText:  #2e2d2d;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* ------------ BODY ------------ */
@@ -106,7 +111,7 @@ body {
 }
 
 .navbar__navlinks:hover {
-  color: rgb(213, 168, 136);
+  color: #d5a888;
 }
 
 .navbar__navlinks__user {
@@ -146,7 +151,8 @@ body {
     display: flex;
   }
   .navbar-navlinks {
-  display: none;
+    display: none;
+   
   }
 
   .navbar{
@@ -155,14 +161,14 @@ body {
     background: linear-gradient(
     0deg,
     rgba(0, 212, 255, 0.02853641456582634) 0%,
-    rgba(76, 112, 98, 0.866) 48%
+    rgba(76, 112, 98, 0.93) 48%
   );
   }
   
   .navbar-navlinks ul {
     flex-direction: column;
     width: 100%;
-    justify-content: center;
+    justify-content: center;   
   }
 
   .navbar-navlinks.active {
@@ -170,7 +176,11 @@ body {
   }
 
   .navAbout{
-    padding-top: 20px;
+    
+  }
+
+  .navMobile{
+    margin-bottom: -20px;
   }
 
 }
@@ -264,6 +274,14 @@ body {
   transition: 0.5s
 }
 
+#aboutHome{
+  margin: 0;
+  padding: 20vh 100px 20vh 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .editApButtonMS:hover{
   border: 1px solid transparent;
   box-shadow: 0 0 5px 0 rgb(213, 168, 136);
@@ -271,11 +289,23 @@ body {
   font-size: 17px;
 }
 
+.contentAboutHome{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
 .aboutSectionTwo {
-  padding: 0 40px;
+  padding: 0;
+  max-width: 600px;
 }
 .aboutSectionTwo p{
- color: #5d5252d3;
+ color: var(--darkText);
+ font-size: 15px;
+}
+
+.aboutSectionTwo h1{
+  font-size: 24px;
 }
 
 .photoAbout {
@@ -284,14 +314,13 @@ body {
 
 .buttonAbout {
   text-align: right;
-  margin: 20px 0 30px;
+  margin-top: 20px;
 }
 
 .buttonAbout button {
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 10px 20px;
-  font-weight: 600;
   border: 1px solid white;
   text-decoration: none;
   background-color: rgb(95, 140, 122);
@@ -300,10 +329,28 @@ body {
 }
 
 .buttonAbout button:hover {
-  border: 1px solid black;
   box-shadow: 0 0 10px 0px rgb(91, 91, 91);
   transition-duration: 1s;
 }
+
+@media (max-width:1000px){
+  .contentAboutHome{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #aboutHome{
+    padding: 100px 100px 100px 100px;
+  }
+}
+
+@media (max-width:500px){
+  .aboutSectionTwo h1{
+    font-size: 20px;
+    color: #d5a888;
+  }
+}
+
 
 
 /* ----------------Monthly Subject -------------*/
@@ -317,7 +364,7 @@ body {
   margin: 0 auto 0vh;
   padding: 10vh;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
 .monthlySeeMoreBtn {
@@ -356,12 +403,13 @@ body {
   color: rgb(47, 41, 41);
   margin-top: 3vh;
   margin-bottom: 5vh;
+  font-size: 24px;
 }
 .monthlySubjectComponentSection p {
   color: white;
   margin-top: 3vh;
   margin-bottom: 5vh;
-  font-size: 2.8vh;
+  font-size: 16px;
   padding-top: 2vh;
   padding-left: 3.5vh;
   padding-right: 3.5vh;
@@ -1395,6 +1443,10 @@ footer p {
   color: #3d3b3b;
 }
 
+.footerContact{
+  max-width: 200px;
+}
+
 @media (max-width: 1005px){
   .iconSocialMedia {
     width: 10vw;
@@ -1565,6 +1617,7 @@ footer p {
   height: 100svh;
   overflow: hidden;
   position: relative;
+  
 }
 
 .homeContainer h1 {
@@ -1584,7 +1637,7 @@ footer p {
   justify-content: end;
   align-items: center;
   z-index: 5;
-  height: 60vh;
+  height: 60svh;
 }
 
 .iconContainer {
@@ -1593,7 +1646,12 @@ footer p {
   justify-content: end;
   align-items: center;
   width: 30%;
-  height: 40vh;
+  height: 40svh;
+}
+
+.iconContainer a{
+  display: flex;
+  justify-content: center;
 }
 
 .scroll {
@@ -1612,7 +1670,6 @@ footer p {
 @media (max-width: 700px){
   .homeContainer h1 {
     font-size: 3rem;
-    /*  text-align: center; */
   }
 
   .homeContainer h2{
@@ -1621,10 +1678,8 @@ footer p {
 
   .videoBg{
     position: absolute;
-    top: -150px;
-    left: -100px;
-    min-height: 100%;
-    min-width: 100%;
+    top: -350px;
+    left: -200px;
     z-index: -1;
   }
 }
