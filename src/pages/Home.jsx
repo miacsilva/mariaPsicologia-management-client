@@ -17,7 +17,6 @@ import carrossel4 from "../assets/images/book2.jpg"; */
 
 import video from "../assets/videos/happyPeople.mp4";
 import scroll from "../assets/images/scroll.png";
-import videoPoster from "../assets/images/videoPoster.png"
 
 function Home() {
   const [about, setAbout] = useState([]);
