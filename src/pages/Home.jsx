@@ -71,7 +71,7 @@ function Home() {
         <div className="iconContainer">
           <a href="#aboutHome"><img src={scroll} className="scroll" alt="scroll icon" /></a>
         </div>
-        <video className="videoBg" autoPlay muted loop>
+        <video className="videoBg" autoPlay muted loop playsinline>
           <source src={video} type="video/mp4" />
         </video>
       </div>
