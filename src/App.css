@@ -1617,7 +1617,8 @@ footer p {
   height: 100svh;
   overflow: hidden;
   position: relative;
-  
+  background-image: url(./assets/images/videoPoster.png);
+  background-size:cover
 }
 
 .homeContainer h1 {
@@ -1656,6 +1657,7 @@ footer p {
 
 .scroll {
   width: 15%;
+  filter: opacity(0.7);
 }
 
 .videoBg{
@@ -1664,7 +1666,7 @@ footer p {
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  z-index: -1;
+  z-index: 2;
 }
 
 @media (max-width: 700px){
