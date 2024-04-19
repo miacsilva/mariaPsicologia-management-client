@@ -12,6 +12,10 @@ function Navbar() {
     setIsActive(!isActive)
   }
 
+  const closeNavbar = () => {
+    setIsActive(false);
+  }
+
   return (
     <nav className="navbar" id="navbar">
       <div className="navbar__left">
@@ -23,6 +27,7 @@ function Navbar() {
               scroller.scrollTo("App", {
                 offset: -300,
               })
+              
             }
           >
             Início
@@ -67,64 +72,69 @@ function Navbar() {
 
 <div className={`navbar-navlinks ${isActive ? "active" : ""}`}>
 
-            <ul>
+      <ul>
         <NavLink
-          className={"navbar__navlinks navAbout navMobile"}
-          to="/about"
-          onClick={() =>
-            scroller.scrollTo("aboutSection", {
-              duration: 500,
-              offset: -150,
-            })
-          }
-        >
-        Sobre
+              className={"navbar__navlinks navAbout navMobile"}
+              to="/about"
+              onClick={() => {
+                scroller.scrollTo("aboutSection", {
+                  duration: 500,
+                  offset: -150,
+                });
+                closeNavbar(); // Call closeNavbar function to close the navbar
+                }}
+              >
+                Sobre
         </NavLink>
         <NavLink
           className={"navbar__navlinks navMobile"}
           to="/books"
-          onClick={() =>
-            scroller.scrollTo("booksSection", {
-              duration: 500,
-              offset: -150,
-            })
-          }
+          onClick={() => {
+              scroller.scrollTo("aboutSection", {
+                duration: 500,
+                offset: -150,
+              });
+              closeNavbar(); // Call closeNavbar function to close the navbar
+              }}
         >
           Livros
         </NavLink>
         <NavLink
           className={"navbar__navlinks navMobile"}
           to="/"
-          onClick={() =>
-            scroller.scrollTo("monthlySubjectComponentSection", {
-              duration: 500,
-              offset: 0, 
-            })
-          }
+          onClick={() => {
+              scroller.scrollTo("aboutSection", {
+                duration: 500,
+                offset: -150,
+              });
+              closeNavbar(); // Call closeNavbar function to close the navbar
+              }}
         >
           Blog
         </NavLink>
         <NavLink
           className={"navbar__navlinks navMobile"}
           to="/appointments"
-          onClick={() =>
-            scroller.scrollTo("appointmentSection", {
-              duration: 500,
-              offset: -150,
-            })
-          }
+          onClick={() => {
+              scroller.scrollTo("aboutSection", {
+                duration: 500,
+                offset: -150,
+              });
+              closeNavbar(); // Call closeNavbar function to close the navbar
+              }}
         >
           Terapias
         </NavLink>
         <NavLink
           className={"navbar__navlinks"}
           to="/contacts"
-          onClick={() =>
-            scroller.scrollTo("contactsSection", {
-              duration: 500,
-              offset: -150,
-            })
-          }
+          onClick={() => {
+              scroller.scrollTo("aboutSection", {
+                duration: 500,
+                offset: -150,
+              });
+              closeNavbar(); // Call closeNavbar function to close the navbar
+              }}
         >
           Contactos
         </NavLink>
