@@ -1,7 +1,6 @@
 //PACKAGES
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -18,6 +17,7 @@ import carrossel4 from "../assets/images/book2.jpg"; */
 
 import video from "../assets/videos/happyPeople.mp4";
 import scroll from "../assets/images/scroll.png";
+import videoPoster from "../assets/images/videoPoster.png"
 
 function Home() {
   const [about, setAbout] = useState([]);
@@ -69,9 +69,9 @@ function Home() {
           <h2 className="presentationTitle ">Psicologia | Desenvolvimento Pessoal</h2>
         </div>
         <div className="iconContainer">
-          <a href="#aboutHome"><img src={scroll} className="scroll" alt="scroll icon" /></a>
+          <a href="#aboutHome"><img src={scroll} className="scroll" alt="scroll icon"/></a>
         </div>
-        <video className="videoBg" autoPlay muted loop playsInline>
+        <video className="videoBg" autoPlay muted loop playsInline poster={videoPoster}>
           <source src={video} type="video/mp4" />
         </video>
       </div>
