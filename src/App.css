@@ -1656,8 +1656,9 @@ footer p {
 }
 
 .scroll {
-  width: 15%;
+  width: 70px;
   filter: opacity(0.7);
+  z-index: 4;
 }
 
 .videoBg{
@@ -1682,7 +1683,7 @@ footer p {
     position: absolute;
     top: -350px;
     left: -200px;
-    z-index: -1;
+    z-index: 0;
   }
 }
 /* --------- HOMEPAGE Styling -------------*/
@@ -1900,6 +1901,6 @@ footer p {
 }
 
 .scroll {
-  width: 40%;
+  width: 60px;
 }
 }
