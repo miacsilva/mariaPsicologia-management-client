@@ -1,5 +1,6 @@
 :root{
   --darkText:  #2e2d2d;
+  --lightText: #feecd6;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
@@ -1377,7 +1378,6 @@ footer{
   padding: 40px 0 40px;
   margin: 0px auto 0;
   box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
-
 }
 
 .upperFooter {
@@ -1453,7 +1453,7 @@ footer p {
   }
 
   footer h5 {
-   font-size: 14px;
+   font-size: 15px;
   }
 
   .upperFooter {
@@ -1463,8 +1463,7 @@ footer p {
     flex-direction: column;
     gap: 15px;
     padding: 0px 20px 20px;
-    margin: 0px auto 0;
-/*     box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75); */
+    margin: 40px;
   }
 
   .footerIcons{
@@ -1625,7 +1624,7 @@ footer p {
 .homeContainer h1 {
   font-family: "Dancing Script", cursive;
   font-size: 600%;
-  color: var(--darkText);
+  color: var(--lightText);
 }
 .homeContainer h2 {
   font-size: 130%;
@@ -1669,7 +1668,6 @@ footer p {
   min-height: 100%;
   min-width: 100%;
   z-index: 3;
-  background-attachment: ;
 }
 
 @media (max-width: 700px){

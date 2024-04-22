@@ -62,17 +62,10 @@ function Footer({ books, contacts }) {
                 className="iconSocialMedia"
               />
             </NavLink>
-          </div>
+          </div> 
+        </div>
 
-        
-                
-                </div>
-
-              <div className="bottomFooter">
-
-
-              
-
+        <div className="bottomFooter">
           <hr className="footerBar" />
           <h5 className="developedBy">
             {" "}
@@ -82,8 +75,7 @@ function Footer({ books, contacts }) {
             </a>{" "}
             and <a href="https://github.com/TiagoRato13" className="github">Tiago Rato</a>
           </h5>
-
-</div>
+        </div>
 
         </footer>
       )}
