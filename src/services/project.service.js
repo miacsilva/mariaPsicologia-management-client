@@ -5,7 +5,7 @@ class ProjectService {
     this.api = axios.create({
      /*  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5005", */
       baseURL: "https://mariapsicologia-management-server-5xee.onrender.com/" || "http://localhost:5005", 
-      /* withCredentials: true  */
+      withCredentials: true 
     });
 
     //here we intercept every request thtat uses this api and call a middleware function
