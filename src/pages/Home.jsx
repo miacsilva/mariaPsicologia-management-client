@@ -65,7 +65,7 @@ function Home() {
       <div className="homeContainer">
         <div className="nameContainer" data-aos="fade-up" data-aos-duration="2500">
           <h1>Maria Luísa Silva</h1>
-          <h2 className="presentationTitle ">Psicologia | Desenvolvimento Pessoal</h2>
+          <h2 className="presentationTitle">Psicologia | Desenvolvimento Pessoal</h2>
         </div>
         <div className="iconContainer">
           <a href="#aboutHome"><img src={scroll} className="scroll" alt="scroll icon"/></a>

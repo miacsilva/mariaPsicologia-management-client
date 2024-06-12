@@ -1,6 +1,7 @@
 :root{
   --darkText:  #2e2d2d;
   --lightText: #feecd6;
+  --lightText2: #cabaa9;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
 }
@@ -105,14 +106,15 @@ body {
 
 .navbar__navlinks {
   text-decoration: none;
-  color: var(--darkText);
+  color: var(--lightText);
   padding: 10px 10px;
   font-size: 18px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 
 .navbar__navlinks:hover {
   color: #d5a888;
+  transform: translateY(-4px);
 }
 
 .navbar__navlinks__user {
@@ -1621,7 +1623,6 @@ footer p {
   height: 100svh;
   overflow: hidden;
   position: relative;
-  background-image: url(./assets/images/videoPoster.png);
   background-size:cover
 }
 
@@ -1639,10 +1640,11 @@ footer p {
 .nameContainer {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   z-index: 5;
-  height: 60svh;
+  height: 95svh;
+  bottom:-10px;
 }
 
 .iconContainer {
@@ -1651,7 +1653,7 @@ footer p {
   justify-content: end;
   align-items: center;
   width: 30%;
-  height: 40svh;
+  height: 5svh;
 }
 
 .iconContainer a{
@@ -1660,7 +1662,7 @@ footer p {
 }
 
 .scroll {
-  width: 100px;
+  width: 70px;
   filter: opacity(0.7);
   z-index: 4;
 }
@@ -1668,7 +1670,7 @@ footer p {
 .videoBg{
   position: absolute;
   top: -30px;
-  left: 0;
+  left:0;
   min-height: 100%;
   min-width: 100%;
   z-index: 3;
@@ -1684,7 +1686,7 @@ footer p {
   }
 
   .videoBg{
-    top: 10px;
+ /*    top: 10px; */
     left: -950px;
     z-index: 0;
   }

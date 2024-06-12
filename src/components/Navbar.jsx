@@ -18,10 +18,10 @@ function Navbar() {
 
   return (
     <nav className="navbar" id="navbar">
-      <div className="navbar__left">
+      <div className="navbar__left  homeLink">
         {!user && (
           <NavLink
-            className={"navbar__navlinks"}
+            className={"navbar__navlinks homeLink"}
             to="/"
             onClick={() =>
               scroller.scrollTo("App", {
